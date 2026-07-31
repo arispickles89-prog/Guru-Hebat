@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Geografi Kelas 10</title>
+<style>
+    body { font-family: 'Arial'; background: #e0f2f1; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #00695c; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #b2dfdb; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #00695c; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #004d40; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #00695c; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌍 Kuis Geografi Kelas 10</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Kata "geografi" berasal dari bahasa Yunani "geo" dan "graphein" yang artinya ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Bumi dan tulisan</label>
+                <label><input type="radio" name="q1" value="B"> B. Alam dan lingkungan</label>
+                <label><input type="radio" name="q1" value="C"> C. Manusia dan ruang</label>
+                <label><input type="radio" name="q1" value="D"> D. Peta dan wilayah</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Objek kajian geografi yang mempelajari hubungan timbal balik antara manusia dengan lingkungannya disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Objek material</label>
+                <label><input type="radio" name="q2" value="B"> B. Objek formal</label>
+                <label><input type="radio" name="q2" value="C"> C. Pendekatan kewilayahan</label>
+                <label><input type="radio" name="q2" value="D"> D. Pendekatan ekologi</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Cabang geografi yang mempelajari tentang batuan dan struktur bumi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Geografi Sosial</label>
+                <label><input type="radio" name="q3" value="B"> B. Geografi Ekonomi</label>
+                <label><input type="radio" name="q3" value="C"> C. Geologi</label>
+                <label><input type="radio" name="q3" value="D"> D. Klimatologi</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Garis khayal yang menghubungkan tempat-tempat dengan tekanan udara sama disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Isobar</label>
+                <label><input type="radio" name="q4" value="B"> B. Isohip</label>
+                <label><input type="radio" name="q4" value="C"> C. Isohyet</label>
+                <label><input type="radio" name="q4" value="D"> D. Isoterm</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Lapisan atmosfer yang terjadi peristiwa cuaca dan iklim adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Troposfer</label>
+                <label><input type="radio" name="q5" value="B"> B. Stratosfer</label>
+                <label><input type="radio" name="q5" value="C"> C. Mesosfer</label>
+                <label><input type="radio" name="q5" value="D"> D. Ionosfer</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Proses pelapukan batuan karena perubahan suhu disebut pelapukan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Kimia</label>
+                <label><input type="radio" name="q6" value="B"> B. Biologi</label>
+                <label><input type="radio" name="q6" value="C"> C. Fisika</label>
+                <label><input type="radio" name="q6" value="D"> D. Organik</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Gunung api yang meletus secara eksplosif dan membentuk kaldera disebut tipe ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Hawai</label>
+                <label><input type="radio" name="q7" value="B"> B. Stromboli</label>
+                <label><input type="radio" name="q7" value="C"> C. Perret</label>
+                <label><input type="radio" name="q7" value="D"> D. Plinian</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Gempa yang pusatnya berada di dasar laut dan dapat menimbulkan tsunami adalah gempa ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Tektonik</label>
+                <label><input type="radio" name="q8" value="B"> B. Vulkanik</label>
+                <label><input type="radio" name="q8" value="C"> C. Runtuhan</label>
+                <label><input type="radio" name="q8" value="D"> D. Tumbukan</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Skala peta 1:50.000 artinya ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. 1 cm di peta = 50 km di lapangan</label>
+                <label><input type="radio" name="q9" value="B"> B. 1 cm di peta = 500 m di lapangan</label>
+                <label><input type="radio" name="q9" value="C"> C. 1 cm di peta = 5.000 m di lapangan</label>
+                <label><input type="radio" name="q9" value="D"> D. 1 cm di peta = 50.000 m di lapangan</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Garis yang menghubungkan tempat-tempat dengan ketinggian yang sama disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Kontur</label>
+                <label><input type="radio" name="q10" value="B"> B. Isobar</label>
+                <label><input type="radio" name="q10" value="C"> C. Isohyet</label>
+                <label><input type="radio" name="q10" value="D"> D. Isoterm</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Penduduk yang tinggal di suatu wilayah dalam jangka waktu lebih dari 6 bulan disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Imigran</label>
+                <label><input type="radio" name="q11" value="B"> B. Emigran</label>
+                <label><input type="radio" name="q11" value="C"> C. Penduduk tetap</label>
+                <label><input type="radio" name="q11" value="D"> D. Penduduk tidak tetap</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Perpindahan penduduk dari desa ke kota disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Urbanisasi</label>
+                <label><input type="radio" name="q12" value="B"> B. Ruralisasi</label>
+                <label><input type="radio" name="q12" value="C"> C. Migrasi</label>
+                <label><input type="radio" name="q12" value="D"> D. Transmigrasi</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Interaksi antar ruang yang ditandai dengan adanya pergerakan manusia, barang, dan informasi disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Ketergantungan</label>
+                <label><input type="radio" name="q13" value="B"> B. Konektivitas</label>
+                <label><input type="radio" name="q13" value="C"> C. Mobilitas</label>
+                <label><input type="radio" name="q13" value="D"> D. Difusi</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Kegiatan ekonomi yang mengolah bahan mentah menjadi barang setengah jadi atau jadi termasuk sektor ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Primer</label>
+                <label><input type="radio" name="q14" value="B"> B. Sekunder</label>
+                <label><input type="radio" name="q14" value="C"> C. Tersier</label>
+                <label><input type="radio" name="q14" value="D"> D. Kuarter</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Dampak negatif dari urbanisasi yang berlebihan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Meningkatnya produksi pertanian</label>
+                <label><input type="radio" name="q15" value="B"> B. Munculnya pemukiman kumuh</label>
+                <label><input type="radio" name="q15" value="C"> C. Meningkatnya lapangan kerja di desa</label>
+                <label><input type="radio" name="q15" value="D"> D. Meratanya pembangunan</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"A", q2:"D", q3:"C", q4:"A", q5:"A", 
+    q6:"C", q7:"D", q8:"A", q9:"B", q10:"A",
+    q11:"C", q12:"A", q13:"B", q14:"B", q15:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Hitung skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        // Tandai jawaban benar dan salah
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        // Tampilkan kunci jawaban jika salah/kosong
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

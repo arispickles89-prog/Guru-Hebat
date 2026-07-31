@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>English Quiz Grade 6</title>
+<style>
+    body { font-family: 'Arial'; background: #eef5ff; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #007bff; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #cce5ff; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #007bff; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #0056b3; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #007bff; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇬🇧 English Quiz Grade 6</h1>
+    <div id="timer">Time: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Good morning, students. How are you today?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. I'm fine, thank you.</label>
+                <label><input type="radio" name="q1" value="B"> B. Good night.</label>
+                <label><input type="radio" name="q1" value="C"> C. Goodbye.</label>
+                <label><input type="radio" name="q1" value="D"> D. See you tomorrow.</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Rina : "Good afternoon, Sinta."<br>Sinta : "________"</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Good afternoon.</label>
+                <label><input type="radio" name="q2" value="B"> B. Goodbye.</label>
+                <label><input type="radio" name="q2" value="C"> C. Good night.</label>
+                <label><input type="radio" name="q2" value="D"> D. See you.</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> What is the English word for "ibu"?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Sister</label>
+                <label><input type="radio" name="q3" value="B"> B. Mother</label>
+                <label><input type="radio" name="q3" value="C"> C. Aunt</label>
+                <label><input type="radio" name="q3" value="D"> D. Grandmother</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> My father is a ______. He teaches students at school.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Doctor</label>
+                <label><input type="radio" name="q4" value="B"> B. Farmer</label>
+                <label><input type="radio" name="q4" value="C"> C. Teacher</label>
+                <label><input type="radio" name="q4" value="D"> D. Pilot</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> There are seven days in a ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Month</label>
+                <label><input type="radio" name="q5" value="B"> B. Week</label>
+                <label><input type="radio" name="q5" value="C"> C. Year</label>
+                <label><input type="radio" name="q5" value="D"> D. Hour</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> The first month of the year is ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. February</label>
+                <label><input type="radio" name="q6" value="B"> B. January</label>
+                <label><input type="radio" name="q6" value="C"> C. March</label>
+                <label><input type="radio" name="q6" value="D"> D. April</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Which one is a fruit?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Carrot</label>
+                <label><input type="radio" name="q7" value="B"> B. Potato</label>
+                <label><input type="radio" name="q7" value="C"> C. Apple</label>
+                <label><input type="radio" name="q7" value="D"> D. Onion</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> I drink ______ every morning.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Water</label>
+                <label><input type="radio" name="q8" value="B"> B. Pencil</label>
+                <label><input type="radio" name="q8" value="C"> C. Table</label>
+                <label><input type="radio" name="q8" value="D"> D. Bag</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> What color is the sky on a clear day?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Green</label>
+                <label><input type="radio" name="q9" value="B"> B. Blue</label>
+                <label><input type="radio" name="q9" value="C"> C. Red</label>
+                <label><input type="radio" name="q9" value="D"> D. Black</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> How many legs does a cat have?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Two</label>
+                <label><input type="radio" name="q10" value="B"> B. Three</label>
+                <label><input type="radio" name="q10" value="C"> C. Four</label>
+                <label><input type="radio" name="q10" value="D"> D. Six</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Which one is a school object?</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Eraser</label>
+                <label><input type="radio" name="q11" value="B"> B. Banana</label>
+                <label><input type="radio" name="q11" value="C"> C. Chicken</label>
+                <label><input type="radio" name="q11" value="D"> D. Mango</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Open your ______ and read page ten.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Book</label>
+                <label><input type="radio" name="q12" value="B"> B. Shoe</label>
+                <label><input type="radio" name="q12" value="C"> C. Plate</label>
+                <label><input type="radio" name="q12" value="D"> D. Cup</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> We write with a ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Spoon</label>
+                <label><input type="radio" name="q13" value="B"> B. Pencil</label>
+                <label><input type="radio" name="q13" value="C"> C. Fork</label>
+                <label><input type="radio" name="q13" value="D"> D. Knife</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> My brother likes playing ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Football</label>
+                <label><input type="radio" name="q14" value="B"> B. Rice</label>
+                <label><input type="radio" name="q14" value="C"> C. Milk</label>
+                <label><input type="radio" name="q14" value="D"> D. Shirt</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> The opposite of "big" is ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Tall</label>
+                <label><input type="radio" name="q15" value="B"> B. Small</label>
+                <label><input type="radio" name="q15" value="C"> C. Long</label>
+                <label><input type="radio" name="q15" value="D"> D. Wide</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> The sun rises in the ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. West</label>
+                <label><input type="radio" name="q16" value="B"> B. East</label>
+                <label><input type="radio" name="q16" value="C"> C. North</label>
+                <label><input type="radio" name="q16" value="D"> D. South</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> There are ______ months in a year.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Ten</label>
+                <label><input type="radio" name="q17" value="B"> B. Eleven</label>
+                <label><input type="radio" name="q17" value="C"> C. Twelve</label>
+                <label><input type="radio" name="q17" value="D"> D. Thirteen</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> My mother cooks in the ______.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Bedroom</label>
+                <label><input type="radio" name="q18" value="B"> B. Kitchen</label>
+                <label><input type="radio" name="q18" value="C"> C. Bathroom</label>
+                <label><input type="radio" name="q18" value="D"> D. Garden</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> The Indonesian flag is ______ and white.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Blue</label>
+                <label><input type="radio" name="q19" value="B"> B. Green</label>
+                <label><input type="radio" name="q19" value="C"> C. Red</label>
+                <label><input type="radio" name="q19" value="D"> D. Yellow</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Choose the correct spelling.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Elefant</label>
+                <label><input type="radio" name="q20" value="B"> B. Elephant</label>
+                <label><input type="radio" name="q20" value="C"> C. Elephent</label>
+                <label><input type="radio" name="q20" value="D"> D. Eliphant</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Submit & See Score</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// ANSWER KEY
+const kunci = { 
+    q1:"A", q2:"A", q3:"B", q4:"C", q5:"B", 
+    q6:"B", q7:"C", q8:"A", q9:"B", q10:"C",
+    q11:"A", q12:"A", q13:"B", q14:"A", q15:"B", 
+    q16:"B", q17:"C", q18:"B", q19:"C", q20:"B" 
+};
+
+// TIMER 20 MINUTES
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Time: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Time is up! Answers will be submitted automatically.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CHECK ANSWER + SHOW INDICATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Cek skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        // Mark correct and wrong answers
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Green
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Red
+            }
+            input.disabled = true;
+        });
+        
+        // Show correct answer if wrong
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Correct Answer: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "PASSED 🎉" : "KEEP LEARNING 💪";
+    document.getElementById('hasil').innerHTML = `Your Score: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

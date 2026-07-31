@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis SBdP Kelas 4</title>
+<style>
+    body { font-family: 'Arial'; background: #f3e5f5; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #6a1b9a; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #e1bee7; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #6a1b9a; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #4a148c; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #6a1b9a; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎨 Kuis SBdP Kelas 4</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Garis yang digunakan untuk membuat gambar disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Warna</label>
+                <label><input type="radio" name="q1" value="B"> B. Garis</label>
+                <label><input type="radio" name="q1" value="C"> C. Tekstur</label>
+                <label><input type="radio" name="q1" value="D"> D. Ruang</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Alat yang biasa digunakan untuk mewarnai gambar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Penggaris</label>
+                <label><input type="radio" name="q2" value="B"> B. Krayon</label>
+                <label><input type="radio" name="q2" value="C"> C. Gunting</label>
+                <label><input type="radio" name="q2" value="D"> D. Lem</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Lagu "Naik Delman" memiliki tempo yang ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Sangat cepat</label>
+                <label><input type="radio" name="q3" value="B"> B. Lambat</label>
+                <label><input type="radio" name="q3" value="C"> C. Sedang</label>
+                <label><input type="radio" name="q3" value="D"> D. Sangat lambat</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Bunyi yang teratur dalam musik disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Nada</label>
+                <label><input type="radio" name="q4" value="B"> B. Warna</label>
+                <label><input type="radio" name="q4" value="C"> C. Gerak</label>
+                <label><input type="radio" name="q4" value="D"> D. Bentuk</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Tari yang berasal dari daerah biasanya disebut tari ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Modern</label>
+                <label><input type="radio" name="q5" value="B"> B. Tradisional</label>
+                <label><input type="radio" name="q5" value="C"> C. Kontemporer</label>
+                <label><input type="radio" name="q5" value="D"> D. Kreasi asing</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Gerakan tari harus dilakukan dengan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Malas</label>
+                <label><input type="radio" name="q6" value="B"> B. Semaunya</label>
+                <label><input type="radio" name="q6" value="C"> C. Kompak dan sesuai irama</label>
+                <label><input type="radio" name="q6" value="D"> D. Terburu-buru</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Kegiatan melipat kertas hingga membentuk suatu benda disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Menggambar</label>
+                <label><input type="radio" name="q7" value="B"> B. Melukis</label>
+                <label><input type="radio" name="q7" value="C"> C. Origami</label>
+                <label><input type="radio" name="q7" value="D"> D. Menjahit</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Warna merah dicampur kuning akan menghasilkan warna ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Hijau</label>
+                <label><input type="radio" name="q8" value="B"> B. Ungu</label>
+                <label><input type="radio" name="q8" value="C"> C. Oranye</label>
+                <label><input type="radio" name="q8" value="D"> D. Biru</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Contoh alat musik ritmis adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Pianika</label>
+                <label><input type="radio" name="q9" value="B"> B. Recorder</label>
+                <label><input type="radio" name="q9" value="C"> C. Tamborin</label>
+                <label><input type="radio" name="q9" value="D"> D. Seruling</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Lagu wajib dinyanyikan dengan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Nada yang tepat</label>
+                <label><input type="radio" name="q10" value="B"> B. Berteriak</label>
+                <label><input type="radio" name="q10" value="C"> C. Sangat pelan</label>
+                <label><input type="radio" name="q10" value="D"> D. Sambil berlari</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Kolase dibuat dengan cara ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Menjahit kain</label>
+                <label><input type="radio" name="q11" value="B"> B. Menempel berbagai bahan pada gambar</label>
+                <label><input type="radio" name="q11" value="C"> C. Mencetak gambar</label>
+                <label><input type="radio" name="q11" value="D"> D. Melukis menggunakan cat air</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Bahan alam yang dapat digunakan untuk membuat kolase adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Batu bata</label>
+                <label><input type="radio" name="q12" value="B"> B. Daun kering</label>
+                <label><input type="radio" name="q12" value="C"> C. Plastik</label>
+                <label><input type="radio" name="q12" value="D"> D. Kaca</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Ekspresi wajah saat menari harus sesuai dengan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Warna pakaian</label>
+                <label><input type="radio" name="q13" value="B"> B. Tema tarian</label>
+                <label><input type="radio" name="q13" value="C"> C. Ukuran panggung</label>
+                <label><input type="radio" name="q13" value="D"> D. Jumlah penonton</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Alat musik melodis berfungsi untuk memainkan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Irama saja</label>
+                <label><input type="radio" name="q14" value="B"> B. Melodi lagu</label>
+                <label><input type="radio" name="q14" value="C"> C. Gerakan tari</label>
+                <label><input type="radio" name="q14" value="D"> D. Warna musik</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Karya seni yang memiliki panjang dan lebar disebut karya seni ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Tiga dimensi</label>
+                <label><input type="radio" name="q15" value="B"> B. Dua dimensi</label>
+                <label><input type="radio" name="q15" value="C"> C. Empat dimensi</label>
+                <label><input type="radio" name="q15" value="D"> D. Lima dimensi</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> Contoh karya seni tiga dimensi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. Lukisan</label>
+                <label><input type="radio" name="q16" value="B"> B. Poster</label>
+                <label><input type="radio" name="q16" value="C"> C. Patung</label>
+                <label><input type="radio" name="q16" value="D"> D. Foto</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> Salah satu manfaat berkarya seni adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Menambah sampah</label>
+                <label><input type="radio" name="q17" value="B"> B. Melatih kreativitas</label>
+                <label><input type="radio" name="q17" value="C"> C. Membuat malas belajar</label>
+                <label><input type="radio" name="q17" value="D"> D. Mengurangi teman</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> Sebelum menampilkan pertunjukan tari, sebaiknya melakukan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Bermain</label>
+                <label><input type="radio" name="q18" value="B"> B. Latihan</label>
+                <label><input type="radio" name="q18" value="C"> C. Tidur</label>
+                <label><input type="radio" name="q18" value="D"> D. Berlari</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> Bahan bekas yang dapat dimanfaatkan menjadi karya kerajinan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Botol plastik</label>
+                <label><input type="radio" name="q19" value="B"> B. Batu besar</label>
+                <label><input type="radio" name="q19" value="C"> C. Air</label>
+                <label><input type="radio" name="q19" value="D"> D. Pasir basah</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Sikap yang harus dimiliki saat mengapresiasi karya seni teman adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Mengejek hasil karya</label>
+                <label><input type="radio" name="q20" value="B"> B. Menghargai dan memberi pujian yang sopan</label>
+                <label><input type="radio" name="q20" value="C"> C. Merusak karya teman</label>
+                <label><input type="radio" name="q20" value="D"> D. Tidak memperhatikan</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"B", q3:"C", q4:"A", q5:"B", 
+    q6:"C", q7:"C", q8:"C", q9:"C", q10:"A",
+    q11:"B", q12:"B", q13:"B", q14:"B", q15:"B", 
+    q16:"C", q17:"B", q18:"B", q19:"A", q20:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN INDIKATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban yang benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

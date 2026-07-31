@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPAS Kelas 5</title>
+<style>
+    body { font-family: 'Arial'; background: #e8f5e9; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #2e7d32; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #c8e6c9; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #1b5e20; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #2e7d32; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔬 Kuis IPAS Kelas 5</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Organ tubuh yang berfungsi memompa darah ke seluruh tubuh adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Paru-paru</label>
+                <label><input type="radio" name="q1" value="B"> B. Jantung</label>
+                <label><input type="radio" name="q1" value="C"> C. Hati</label>
+                <label><input type="radio" name="q1" value="D"> D. Lambung</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Tumbuhan hijau dapat membuat makanan sendiri melalui proses ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Respirasi</label>
+                <label><input type="radio" name="q2" value="B"> B. Fotosintesis</label>
+                <label><input type="radio" name="q2" value="C"> C. Evaporasi</label>
+                <label><input type="radio" name="q2" value="D"> D. Transpirasi</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Salah satu sumber energi yang dapat diperbarui adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Batu bara</label>
+                <label><input type="radio" name="q3" value="B"> B. Minyak bumi</label>
+                <label><input type="radio" name="q3" value="C"> C. Matahari</label>
+                <label><input type="radio" name="q3" value="D"> D. Gas alam</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Hewan yang berkembang biak dengan cara bertelur disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Vivipar</label>
+                <label><input type="radio" name="q4" value="B"> B. Ovipar</label>
+                <label><input type="radio" name="q4" value="C"> C. Ovovivipar</label>
+                <label><input type="radio" name="q4" value="D"> D. Membelah diri</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Contoh perubahan wujud benda dari cair menjadi gas adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Membeku</label>
+                <label><input type="radio" name="q5" value="B"> B. Mencair</label>
+                <label><input type="radio" name="q5" value="C"> C. Menguap</label>
+                <label><input type="radio" name="q5" value="D"> D. Menyublim</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Planet yang menjadi tempat tinggal manusia adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Mars</label>
+                <label><input type="radio" name="q6" value="B"> B. Venus</label>
+                <label><input type="radio" name="q6" value="C"> C. Jupiter</label>
+                <label><input type="radio" name="q6" value="D"> D. Bumi</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Salah satu cara menjaga kelestarian lingkungan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Menebang pohon sembarangan</label>
+                <label><input type="radio" name="q7" value="B"> B. Membuang sampah ke sungai</label>
+                <label><input type="radio" name="q7" value="C"> C. Menanam pohon kembali</label>
+                <label><input type="radio" name="q7" value="D"> D. Membakar hutan</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Contoh gaya yang bekerja saat kita mengayuh sepeda adalah gaya ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Magnet</label>
+                <label><input type="radio" name="q8" value="B"> B. Otot</label>
+                <label><input type="radio" name="q8" value="C"> C. Listrik</label>
+                <label><input type="radio" name="q8" value="D"> D. Gesek udara</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Bunyi dapat terdengar karena merambat melalui ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Cahaya</label>
+                <label><input type="radio" name="q9" value="B"> B. Ruang hampa</label>
+                <label><input type="radio" name="q9" value="C"> C. Medium atau zat perantara</label>
+                <label><input type="radio" name="q9" value="D"> D. Bayangan</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Contoh sumber daya alam yang tidak dapat diperbarui adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Angin</label>
+                <label><input type="radio" name="q10" value="B"> B. Air</label>
+                <label><input type="radio" name="q10" value="C"> C. Batu bara</label>
+                <label><input type="radio" name="q10" value="D"> D. Matahari</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Keragaman budaya Indonesia harus disikapi dengan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Permusuhan</label>
+                <label><input type="radio" name="q11" value="B"> B. Rasa bangga dan saling menghargai</label>
+                <label><input type="radio" name="q11" value="C"> C. Sikap acuh tak acuh</label>
+                <label><input type="radio" name="q11" value="D"> D. Mementingkan budaya sendiri</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Peta digunakan untuk menunjukkan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Cuaca harian</label>
+                <label><input type="radio" name="q12" value="B"> B. Letak suatu wilayah</label>
+                <label><input type="radio" name="q12" value="C"> C. Jumlah penduduk dunia</label>
+                <label><input type="radio" name="q12" value="D"> D. Tinggi badan seseorang</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Kegiatan ekonomi yang menghasilkan barang disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Konsumsi</label>
+                <label><input type="radio" name="q13" value="B"> B. Distribusi</label>
+                <label><input type="radio" name="q13" value="C"> C. Produksi</label>
+                <label><input type="radio" name="q13" value="D"> D. Transportasi</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Contoh pekerjaan yang menghasilkan jasa adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Petani</label>
+                <label><input type="radio" name="q14" value="B"> B. Nelayan</label>
+                <label><input type="radio" name="q14" value="C"> C. Guru</label>
+                <label><input type="radio" name="q14" value="D"> D. Penambang</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Bencana alam yang disebabkan oleh pergerakan lempeng bumi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Banjir</label>
+                <label><input type="radio" name="q15" value="B"> B. Gempa bumi</label>
+                <label><input type="radio" name="q15" value="C"> C. Kekeringan</label>
+                <label><input type="radio" name="q15" value="D"> D. Puting beliung</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> Salah satu manfaat hutan bagi kehidupan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. Menyebabkan banjir</label>
+                <label><input type="radio" name="q16" value="B"> B. Mengurangi kadar oksigen</label>
+                <label><input type="radio" name="q16" value="C"> C. Menjadi habitat berbagai makhluk hidup</label>
+                <label><input type="radio" name="q16" value="D"> D. Mempercepat erosi tanah</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> Sikap yang tepat saat bekerja dalam kelompok adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Memaksakan pendapat sendiri</label>
+                <label><input type="radio" name="q17" value="B"> B. Menghargai pendapat teman</label>
+                <label><input type="radio" name="q17" value="C"> C. Tidak mau membantu</label>
+                <label><input type="radio" name="q17" value="D"> D. Bermain sendiri</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> Air hujan yang meresap ke dalam tanah akan menjadi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Air laut</label>
+                <label><input type="radio" name="q18" value="B"> B. Air sungai</label>
+                <label><input type="radio" name="q18" value="C"> C. Air tanah</label>
+                <label><input type="radio" name="q18" value="D"> D. Air es</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> Contoh interaksi manusia yang dapat merusak lingkungan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Menanam pohon</label>
+                <label><input type="radio" name="q19" value="B"> B. Mendaur ulang sampah</label>
+                <label><input type="radio" name="q19" value="C"> C. Membuang limbah ke sungai</label>
+                <label><input type="radio" name="q19" value="D"> D. Menghemat air</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Salah satu manfaat musyawarah dalam kehidupan bermasyarakat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Menimbulkan pertengkaran</label>
+                <label><input type="radio" name="q20" value="B"> B. Mempercepat perpecahan</label>
+                <label><input type="radio" name="q20" value="C"> C. Mencapai keputusan bersama</label>
+                <label><input type="radio" name="q20" value="D"> D. Mengutamakan kepentingan pribadi</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"B", q3:"C", q4:"B", q5:"C", 
+    q6:"D", q7:"C", q8:"B", q9:"C", q10:"C",
+    q11:"B", q12:"B", q13:"C", q14:"C", q15:"B", 
+    q16:"C", q17:"B", q18:"C", q19:"C", q20:"C" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN INDIKATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban yang benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

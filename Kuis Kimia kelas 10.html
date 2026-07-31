@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Kimia Kelas 10</title>
+<style>
+    body { font-family: 'Arial'; background: #e0f2f1; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #00695c; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #b2dfdb; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .rumus { font-style: italic; color: #555; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #00695c; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #004d40; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #00695c; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧪 Kuis Kimia Kelas 10</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Ilmu yang mempelajari komposisi, struktur, sifat, dan perubahan materi disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Fisika</label>
+                <label><input type="radio" name="q1" value="B"> B. Biologi</label>
+                <label><input type="radio" name="q1" value="C"> C. Kimia</label>
+                <label><input type="radio" name="q1" value="D"> D. Geologi</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Partikel subatom yang bermuatan positif adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Elektron</label>
+                <label><input type="radio" name="q2" value="B"> B. Proton</label>
+                <label><input type="radio" name="q2" value="C"> C. Neutron</label>
+                <label><input type="radio" name="q2" value="D"> D. Nukleon</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Nomor atom suatu unsur menunjukkan jumlah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Proton</label>
+                <label><input type="radio" name="q3" value="B"> B. Neutron</label>
+                <label><input type="radio" name="q3" value="C"> C. Elektron</label>
+                <label><input type="radio" name="q3" value="D"> D. Proton + Neutron</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Unsur dengan konfigurasi elektron 2.8.1 terletak pada golongan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. IA</label>
+                <label><input type="radio" name="q4" value="B"> B. IIA</label>
+                <label><input type="radio" name="q4" value="C"> C. VIIA</label>
+                <label><input type="radio" name="q4" value="D"> D. VIIIA</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Ikatan yang terjadi karena serah terima elektron disebut ikatan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Kovalen</label>
+                <label><input type="radio" name="q5" value="B"> B. Ion</label>
+                <label><input type="radio" name="q5" value="C"> C. Logam</label>
+                <label><input type="radio" name="q5" value="D"> D. Hidrogen</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Contoh senyawa dengan ikatan kovalen adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. NaCl</label>
+                <label><input type="radio" name="q6" value="B"> B. H₂O</label>
+                <label><input type="radio" name="q6" value="C"> C. MgO</label>
+                <label><input type="radio" name="q6" value="D"> D. CaCl₂</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Larutan yang dapat menghantarkan listrik disebut larutan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Non elektrolit</label>
+                <label><input type="radio" name="q7" value="B"> B. Elektrolit</label>
+                <label><input type="radio" name="q7" value="C"> C. Jenuh</label>
+                <label><input type="radio" name="q7" value="D"> D. Pekat</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Contoh larutan elektrolit kuat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Gula</label>
+                <label><input type="radio" name="q8" value="B"> B. Alkohol</label>
+                <label><input type="radio" name="q8" value="C"> C. HCl</label>
+                <label><input type="radio" name="q8" value="D"> D. Urea</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Reaksi: <span class="rumus">2H₂ + O₂ → 2H₂O</span> termasuk jenis reaksi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Penguraian</label>
+                <label><input type="radio" name="q9" value="B"> B. Penggabungan</label>
+                <label><input type="radio" name="q9" value="C"> C. Pergantian</label>
+                <label><input type="radio" name="q9" value="D"> D. Netralisasi</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Satuan jumlah zat dalam SI adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Gram</label>
+                <label><input type="radio" name="q10" value="B"> B. Mol</label>
+                <label><input type="radio" name="q10" value="C"> C. Liter</label>
+                <label><input type="radio" name="q10" value="D"> D. Partikel</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> 1 mol gas pada STP volumenya adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. 22,4 L</label>
+                <label><input type="radio" name="q11" value="B"> B. 24,4 L</label>
+                <label><input type="radio" name="q11" value="C"> C. 2,24 L</label>
+                <label><input type="radio" name="q11" value="D"> D. 224 L</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Massa 1 mol air <span class="rumus">(H₂O, Ar H=1, O=16)</span> adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. 16 gram</label>
+                <label><input type="radio" name="q12" value="B"> B. 17 gram</label>
+                <label><input type="radio" name="q12" value="C"> C. 18 gram</label>
+                <label><input type="radio" name="q12" value="D"> D. 20 gram</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Reaksi asam dan basa menghasilkan garam dan air disebut reaksi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Redoks</label>
+                <label><input type="radio" name="q13" value="B"> B. Netralisasi</label>
+                <label><input type="radio" name="q13" value="C"> C. Pengendapan</label>
+                <label><input type="radio" name="q13" value="D"> D. Pembakaran</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Unsur golongan VIIA disebut juga golongan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Alkali</label>
+                <label><input type="radio" name="q14" value="B"> B. Alkali tanah</label>
+                <label><input type="radio" name="q14" value="C"> C. Halogen</label>
+                <label><input type="radio" name="q14" value="D"> D. Gas mulia</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Metode pemisahan campuran dengan perbedaan titik didih disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Filtrasi</label>
+                <label><input type="radio" name="q15" value="B"> B. Destilasi</label>
+                <label><input type="radio" name="q15" value="C"> C. Kromatografi</label>
+                <label><input type="radio" name="q15" value="D"> D. Sublimasi</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"C", q2:"B", q3:"A", q4:"A", q5:"B", 
+    q6:"B", q7:"B", q8:"C", q9:"B", q10:"B",
+    q11:"A", q12:"C", q13:"B", q14:"C", q15:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban');
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban');
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

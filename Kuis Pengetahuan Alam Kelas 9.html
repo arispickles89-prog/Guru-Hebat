@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPA Kelas 9</title>
+<style>
+    body { font-family: 'Arial'; background: #e8f5e9; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #2e7d32; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #c8e6c9; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #1b5e20; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #2e7d32; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧪 Kuis IPA Kelas 9</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Muatan listrik yang sejenis akan saling ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Menarik</label>
+                <label><input type="radio" name="q1" value="B"> B. Menolak</label>
+                <label><input type="radio" name="q1" value="C"> C. Melebur</label>
+                <label><input type="radio" name="q1" value="D"> D. Menghilang</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Alat untuk mengukur besar muatan listrik adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Elektroskop</label>
+                <label><input type="radio" name="q2" value="B"> B. Voltmeter</label>
+                <label><input type="radio" name="q2" value="C"> C. Amperemeter</label>
+                <label><input type="radio" name="q2" value="D"> D. Ohmmeter</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Rumus Hukum Coulomb adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. F = k q1.q2 / r²</label>
+                <label><input type="radio" name="q3" value="B"> B. F = m x a</label>
+                <label><input type="radio" name="q3" value="C"> C. V = I x R</label>
+                <label><input type="radio" name="q3" value="D"> D. P = V x I</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Daerah di sekitar magnet yang masih dipengaruhi gaya magnet disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Kutub magnet</label>
+                <label><input type="radio" name="q4" value="B"> B. Medan magnet</label>
+                <label><input type="radio" name="q4" value="C"> C. Garis gaya magnet</label>
+                <label><input type="radio" name="q4" value="D"> D. Fluks magnet</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Cara membuat magnet dengan cara mengalirkan arus listrik disebut cara ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Gosokan</label>
+                <label><input type="radio" name="q5" value="B"> B. Induksi</label>
+                <label><input type="radio" name="q5" value="C"> C. Elektromagnetik</label>
+                <label><input type="radio" name="q5" value="D"> D. Alami</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Prinsip kerja generator berdasarkan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Hukum Ohm</label>
+                <label><input type="radio" name="q6" value="B"> B. Induksi elektromagnetik</label>
+                <label><input type="radio" name="q6" value="C"> C. Hukum Newton</label>
+                <label><input type="radio" name="q6" value="D"> D. Hukum Pascal</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Alat yang mengubah energi listrik menjadi gerak adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Generator</label>
+                <label><input type="radio" name="q7" value="B"> B. Motor listrik</label>
+                <label><input type="radio" name="q7" value="C"> C. Trafo</label>
+                <label><input type="radio" name="q7" value="D"> D. Dinomo</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Bioteknologi yang menggunakan mikroorganisme untuk membuat tempe adalah contoh bioteknologi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Modern</label>
+                <label><input type="radio" name="q8" value="B"> B. Tradisional</label>
+                <label><input type="radio" name="q8" value="C"> C. Rekayasa genetika</label>
+                <label><input type="radio" name="q8" value="D"> D. Kloning</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Contoh hasil bioteknologi modern adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Tempe</label>
+                <label><input type="radio" name="q9" value="B"> B. Keju</label>
+                <label><input type="radio" name="q9" value="C"> C. Insulin</label>
+                <label><input type="radio" name="q9" value="D"> D. Yogurt</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Pewarisan sifat dari orang tua kepada anak disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Adaptasi</label>
+                <label><input type="radio" name="q10" value="B"> B. Hereditas</label>
+                <label><input type="radio" name="q10" value="C"> C. Mutasi</label>
+                <label><input type="radio" name="q10" value="D"> D. Evolusi</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Sifat yang dikendalikan oleh gen disebut sifat ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Resesif</label>
+                <label><input type="radio" name="q11" value="B"> B. Dominan</label>
+                <label><input type="radio" name="q11" value="C"> C. Diturunkan</label>
+                <label><input type="radio" name="q11" value="D"> D. Doping</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Hukum Mendel I disebut juga hukum ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Segregasi</label>
+                <label><input type="radio" name="q12" value="B"> B. Asortasi</label>
+                <label><input type="radio" name="q12" value="C"> C. Dominansi</label>
+                <label><input type="radio" name="q12" value="D"> D. Resesif</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Jika magnet didekatkan ke besi, maka besi akan menjadi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Magnet tetap</label>
+                <label><input type="radio" name="q13" value="B"> B. Magnet sementara</label>
+                <label><input type="radio" name="q13" value="C"> C. Isolator</label>
+                <label><input type="radio" name="q13" value="D"> D. Konduktor</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Satuan kuat arus listrik adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Volt</label>
+                <label><input type="radio" name="q14" value="B"> B. Ampere</label>
+                <label><input type="radio" name="q14" value="C"> C. Ohm</label>
+                <label><input type="radio" name="q14" value="D"> D. Watt</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Keuntungan bioteknologi dalam bidang pertanian adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Menghasilkan tanaman tahan hama</label>
+                <label><input type="radio" name="q15" value="B"> B. Menyebabkan polusi</label>
+                <label><input type="radio" name="q15" value="C"> C. Merusak tanah</label>
+                <label><input type="radio" name="q15" value="D"> D. Mahal biayanya</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"A", q3:"A", q4:"B", q5:"C", 
+    q6:"B", q7:"B", q8:"B", q9:"C", q10:"B",
+    q11:"C", q12:"A", q13:"B", q14:"B", q15:"A" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban');
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban');
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

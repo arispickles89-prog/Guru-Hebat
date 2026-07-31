@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPA Kelas 8</title>
+<style>
+    body { font-family: 'Arial'; background: #e8f5e9; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #1b5e20; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #c8e6c9; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #1b5e20; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #0a3d0f; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #1b5e20; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧪 Kuis IPA Kelas 8</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Gerak suatu benda dikatakan lurus beraturan jika ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Kecepatannya berubah-ubah</label>
+                <label><input type="radio" name="q1" value="B"> B. Kecepatannya tetap</label>
+                <label><input type="radio" name="q1" value="C"> C. Arahnya berubah-ubah</label>
+                <label><input type="radio" name="q1" value="D"> D. Percepatannya tetap</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Rumus untuk menghitung kelajuan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. v = s x t</label>
+                <label><input type="radio" name="q2" value="B"> B. v = s / t</label>
+                <label><input type="radio" name="q2" value="C"> C. v = t / s</label>
+                <label><input type="radio" name="q2" value="D"> D. v = s + t</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Gaya yang dapat mengubah bentuk benda disebut gaya ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Gesek</label>
+                <label><input type="radio" name="q3" value="B"> B. Magnet</label>
+                <label><input type="radio" name="q3" value="C"> C. Otot</label>
+                <label><input type="radio" name="q3" value="D"> D. Pegas</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Hukum Newton I berbunyi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. F = m x a</label>
+                <label><input type="radio" name="q4" value="B"> B. Aksi = Reaksi</label>
+                <label><input type="radio" name="q4" value="C"> C. Benda diam akan tetap diam jika tidak ada gaya</label>
+                <label><input type="radio" name="q4" value="D"> D. Gaya berbanding terbalik dengan massa</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Energi yang dimiliki benda karena kedudukannya disebut energi ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Kinetik</label>
+                <label><input type="radio" name="q5" value="B"> B. Potensial</label>
+                <label><input type="radio" name="q5" value="C"> C. Listrik</label>
+                <label><input type="radio" name="q5" value="D"> D. Panas</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Tekanan dirumuskan sebagai ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. P = F x A</label>
+                <label><input type="radio" name="q6" value="B"> B. P = F / A</label>
+                <label><input type="radio" name="q6" value="C"> C. P = A / F</label>
+                <label><input type="radio" name="q6" value="D"> D. P = F + A</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Alat untuk mengukur tekanan darah disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Barometer</label>
+                <label><input type="radio" name="q7" value="B"> B. Manometer</label>
+                <label><input type="radio" name="q7" value="C"> C. Tensimeter</label>
+                <label><input type="radio" name="q7" value="D"> D. Hidrometer</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Getaran adalah gerak bolak-balik melalui ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Titik terjauh</label>
+                <label><input type="radio" name="q8" value="B"> B. Titik setimbang</label>
+                <label><input type="radio" name="q8" value="C"> C. Titik tertinggi</label>
+                <label><input type="radio" name="q8" value="D"> D. Titik terendah</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Gelombang yang arah getarnya sejajar dengan arah rambat disebut gelombang ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Transversal</label>
+                <label><input type="radio" name="q9" value="B"> B. Longitudinal</label>
+                <label><input type="radio" name="q9" value="C"> C. Mekanik</label>
+                <label><input type="radio" name="q9" value="D"> D. Elektromagnetik</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Sifat cahaya yang digunakan pada periskop adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Pemantulan</label>
+                <label><input type="radio" name="q10" value="B"> B. Pembiasan</label>
+                <label><input type="radio" name="q10" value="C"> C. Penguraian</label>
+                <label><input type="radio" name="q10" value="D"> D. Penyerapan</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Bagian mata yang berfungsi untuk mengatur banyak sedikitnya cahaya masuk adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Kornea</label>
+                <label><input type="radio" name="q11" value="B"> B. Iris</label>
+                <label><input type="radio" name="q11" value="C"> C. Pupil</label>
+                <label><input type="radio" name="q11" value="D"> D. Retina</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Enzim amilase berfungsi memecah zat makanan berupa ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Protein</label>
+                <label><input type="radio" name="q12" value="B"> B. Lemak</label>
+                <label><input type="radio" name="q12" value="C"> C. Karbohidrat</label>
+                <label><input type="radio" name="q12" value="D"> D. Vitamin</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Proses penyerapan sari-sari makanan terjadi di ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Lambung</label>
+                <label><input type="radio" name="q13" value="B"> B. Usus halus</label>
+                <label><input type="radio" name="q13" value="C"> C. Usus besar</label>
+                <label><input type="radio" name="q13" value="D"> D. Mulut</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Gaya sebesar 50 N bekerja pada luas 2 m². Tekanan yang dihasilkan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. 25 Pa</label>
+                <label><input type="radio" name="q14" value="B"> B. 50 Pa</label>
+                <label><input type="radio" name="q14" value="C"> C. 100 Pa</label>
+                <label><input type="radio" name="q14" value="D"> D. 200 Pa</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Contoh sumber energi terbarukan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Batu bara</label>
+                <label><input type="radio" name="q15" value="B"> B. Minyak bumi</label>
+                <label><input type="radio" name="q15" value="C"> C. Energi matahari</label>
+                <label><input type="radio" name="q15" value="D"> D. Gas alam</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"B", q3:"D", q4:"C", q5:"B", 
+    q6:"B", q7:"C", q8:"B", q9:"B", q10:"A",
+    q11:"C", q12:"C", q13:"B", q14:"A", q15:"C" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Hitung skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        // Tandai jawaban benar dan salah
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        // Tampilkan kunci jawaban jika salah/kosong
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

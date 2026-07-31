@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Bahasa Indonesia Kelas 6</title>
+<style>
+    body { font-family: 'Arial'; background: #fff7f0; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #ff6b35; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffe3db; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #ff6b35; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #e65a26; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #ff6b35; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📖 Kuis Bahasa Indonesia Kelas 6</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Perhatikan paragraf berikut!<br><br>
+            Indonesia memiliki banyak suku bangsa. Setiap suku memiliki bahasa, pakaian adat, dan rumah adat yang berbeda. Keberagaman tersebut menjadi kekayaan bangsa Indonesia.<br><br>
+            Ide pokok paragraf tersebut adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Rumah adat di Indonesia</label>
+                <label><input type="radio" name="q1" value="B"> B. Bahasa daerah di Indonesia</label>
+                <label><input type="radio" name="q1" value="C"> C. Keberagaman suku merupakan kekayaan bangsa</label>
+                <label><input type="radio" name="q1" value="D"> D. Pakaian adat Indonesia</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Berdasarkan paragraf pada soal nomor 1, kalimat utama terdapat pada ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Kalimat pertama</label>
+                <label><input type="radio" name="q2" value="B"> B. Kalimat kedua</label>
+                <label><input type="radio" name="q2" value="C"> C. Kalimat ketiga</label>
+                <label><input type="radio" name="q2" value="D"> D. Semua kalimat</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Sinonim kata cerdas adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Pintar</label>
+                <label><input type="radio" name="q3" value="B"> B. Lemah</label>
+                <label><input type="radio" name="q3" value="C"> C. Bodoh</label>
+                <label><input type="radio" name="q3" value="D"> D. Lambat</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Antonim kata hemat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Boros</label>
+                <label><input type="radio" name="q4" value="B"> B. Rajin</label>
+                <label><input type="radio" name="q4" value="C"> C. Murah</label>
+                <label><input type="radio" name="q4" value="D"> D. Kaya</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Penulisan kata baku yang benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Aktifitas</label>
+                <label><input type="radio" name="q5" value="B"> B. Aktivitas</label>
+                <label><input type="radio" name="q5" value="C"> C. Aktifitasnya</label>
+                <label><input type="radio" name="q5" value="D"> D. Aktifitaz</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Kalimat yang menggunakan tanda titik dengan benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Hari ini kami belajar Bahasa Indonesia.</label>
+                <label><input type="radio" name="q6" value="B"> B. Hari ini kami belajar Bahasa Indonesia</label>
+                <label><input type="radio" name="q6" value="C"> C. Hari ini kami belajar Bahasa Indonesia?</label>
+                <label><input type="radio" name="q6" value="D"> D. Hari ini kami belajar Bahasa Indonesia!</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Kalimat berikut yang termasuk kalimat berita adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Siapa yang datang?</label>
+                <label><input type="radio" name="q7" value="B"> B. Tolong buka jendela!</label>
+                <label><input type="radio" name="q7" value="C"> C. Burung itu terbang tinggi di langit.</label>
+                <label><input type="radio" name="q7" value="D"> D. Wah, indah sekali!</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> "Sinta selalu datang ke sekolah sebelum bel masuk berbunyi. Ia memanfaatkan waktu untuk membaca buku di perpustakaan."<br><br>Sifat Sinta adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Pemalas</label>
+                <label><input type="radio" name="q8" value="B"> B. Disiplin dan rajin</label>
+                <label><input type="radio" name="q8" value="C"> C. Ceroboh</label>
+                <label><input type="radio" name="q8" value="D"> D. Boros</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Kata tanya yang digunakan untuk menanyakan waktu adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Siapa</label>
+                <label><input type="radio" name="q9" value="B"> B. Apa</label>
+                <label><input type="radio" name="q9" value="C"> C. Kapan</label>
+                <label><input type="radio" name="q9" value="D"> D. Mengapa</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Kalimat berikut yang merupakan kalimat ajakan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Mari kita membuang sampah pada tempatnya.</label>
+                <label><input type="radio" name="q10" value="B"> B. Jangan bermain di jalan raya.</label>
+                <label><input type="radio" name="q10" value="C"> C. Apakah kamu sudah belajar?</label>
+                <label><input type="radio" name="q10" value="D"> D. Ayah sedang bekerja.</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> "Andi membaca buku di perpustakaan setiap sore."<br><br>Informasi yang diperoleh dari kalimat tersebut adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Andi bermain di perpustakaan.</label>
+                <label><input type="radio" name="q11" value="B"> B. Andi membaca buku setiap sore di perpustakaan.</label>
+                <label><input type="radio" name="q11" value="C"> C. Andi pergi ke pasar setiap sore.</label>
+                <label><input type="radio" name="q11" value="D"> D. Andi meminjam sepeda.</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> "Perpustakaan sekolah menyediakan berbagai jenis buku. Siswa dapat meminjam buku pelajaran maupun buku cerita."<br><br>Informasi tersurat dari bacaan tersebut adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Semua siswa suka membaca.</label>
+                <label><input type="radio" name="q12" value="B"> B. Perpustakaan menyediakan berbagai jenis buku.</label>
+                <label><input type="radio" name="q12" value="C"> C. Buku cerita lebih menarik daripada buku pelajaran.</label>
+                <label><input type="radio" name="q12" value="D"> D. Perpustakaan selalu ramai.</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Kalimat berikut yang menggunakan kata depan dengan benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Di rumah nenek terdapat pohon mangga.</label>
+                <label><input type="radio" name="q13" value="B"> B. Dirumah nenek terdapat pohon mangga.</label>
+                <label><input type="radio" name="q13" value="C"> C. DiRumah nenek terdapat pohon mangga.</label>
+                <label><input type="radio" name="q13" value="D"> D. Dirumahnenek terdapat pohon mangga.</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Amanat dalam sebuah cerita adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Nama tokoh utama</label>
+                <label><input type="radio" name="q14" value="B"> B. Latar cerita</label>
+                <label><input type="radio" name="q14" value="C"> C. Pesan yang ingin disampaikan penulis</label>
+                <label><input type="radio" name="q14" value="D"> D. Judul cerita</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Urutan struktur pantun yang benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Isi – Sampiran</label>
+                <label><input type="radio" name="q15" value="B"> B. Sampiran – Isi</label>
+                <label><input type="radio" name="q15" value="C"> C. Tema – Isi</label>
+                <label><input type="radio" name="q15" value="D"> D. Amanat – Sampiran</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> Kalimat yang menggunakan kata hubung karena dengan tepat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. Saya belajar karena besok ujian.</label>
+                <label><input type="radio" name="q16" value="B"> B. Karena saya pergi sekolah.</label>
+                <label><input type="radio" name="q16" value="C"> C. Saya karena belajar rajin.</label>
+                <label><input type="radio" name="q16" value="D"> D. Belajar saya karena.</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> "Hari Minggu, warga Desa Sukamaju bergotong royong membersihkan selokan. Kegiatan tersebut membuat lingkungan menjadi bersih dan bebas dari sampah."<br><br>Kesimpulan bacaan tersebut adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Warga sedang berlibur.</label>
+                <label><input type="radio" name="q17" value="B"> B. Gotong royong membuat lingkungan menjadi bersih.</label>
+                <label><input type="radio" name="q17" value="C"> C. Selokan selalu penuh sampah.</label>
+                <label><input type="radio" name="q17" value="D"> D. Desa Sukamaju berada di kota.</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> "Rani membeli <u>apel</u> di pasar."<br><br>Kata yang bercetak miring pada kalimat tersebut merupakan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Kata kerja</label>
+                <label><input type="radio" name="q18" value="B"> B. Kata sifat</label>
+                <label><input type="radio" name="q18" value="C"> C. Kata benda</label>
+                <label><input type="radio" name="q18" value="D"> D. Kata depan</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> Kalimat yang tepat untuk menutup surat pribadi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Demikian surat ini saya buat.</label>
+                <label><input type="radio" name="q19" value="B"> B. Hormat saya,</label>
+                <label><input type="radio" name="q19" value="C"> C. Sampai jumpa dan semoga kita segera bertemu.</label>
+                <label><input type="radio" name="q19" value="D"> D. Atas perhatian Bapak, saya ucapkan terima kasih.</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Tujuan membaca teks prosedur adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Mengetahui langkah-langkah melakukan sesuatu.</label>
+                <label><input type="radio" name="q20" value="B"> B. Mengetahui cerita rakyat.</label>
+                <label><input type="radio" name="q20" value="C"> C. Mengetahui isi puisi.</label>
+                <label><input type="radio" name="q20" value="D"> D. Mengetahui sejarah suatu daerah.</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"C", q2:"A", q3:"A", q4:"A", q5:"B", 
+    q6:"A", q7:"C", q8:"B", q9:"C", q10:"A",
+    q11:"B", q12:"B", q13:"A", q14:"C", q15:"B", 
+    q16:"A", q17:"B", q18:"C", q19:"C", q20:"A" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN INDIKATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Cek skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        // Tandai jawaban benar dan salah
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        // Tampilkan info jawaban benar jika salah
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban yang benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

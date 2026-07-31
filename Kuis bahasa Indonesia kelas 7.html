@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Bahasa Indonesia Kelas 7</title>
+<style>
+    body { font-family: 'Arial'; background: #e3f2fd; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #1565c0; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #bbdefb; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #1565c0; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #0d47a1; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #1565c0; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Kuis Bahasa Indonesia Kelas 7</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Teks yang berisi cerita fiksi yang bertujuan menghibur pembaca disebut teks ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Laporan</label>
+                <label><input type="radio" name="q1" value="B"> B. Narasi</label>
+                <label><input type="radio" name="q1" value="C"> C. Eksposisi</label>
+                <label><input type="radio" name="q1" value="D"> D. Argumentasi</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Struktur teks deskripsi yang berisi gambaran umum objek disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Identifikasi</label>
+                <label><input type="radio" name="q2" value="B"> B. Deskripsi Bagian</label>
+                <label><input type="radio" name="q2" value="C"> C. Simpulan</label>
+                <label><input type="radio" name="q2" value="D"> D. Penutup</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> "Buku itu tebal dan sampulnya berwarna biru." Kalimat tersebut termasuk ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Kalimat opini</label>
+                <label><input type="radio" name="q3" value="B"> B. Kalimat fakta</label>
+                <label><input type="radio" name="q3" value="C"> C. Kalimat perintah</label>
+                <label><input type="radio" name="q3" value="D"> D. Kalimat tanya</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Sinonim dari kata "kreatif" adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Malas</label>
+                <label><input type="radio" name="q4" value="B"> B. Inovatif</label>
+                <label><input type="radio" name="q4" value="C"> C. Lambat</label>
+                <label><input type="radio" name="q4" value="D"> D. Kaku</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Teks yang berisi langkah-langkah membuat sesuatu disebut teks ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Prosedur</label>
+                <label><input type="radio" name="q5" value="B"> B. Cerita</label>
+                <label><input type="radio" name="q5" value="C"> C. Puisi</label>
+                <label><input type="radio" name="q5" value="D"> D. Drama</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Kata baku dari "praktek" adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Praktik</label>
+                <label><input type="radio" name="q6" value="B"> B. Praktek</label>
+                <label><input type="radio" name="q6" value="C"> C. Praktiik</label>
+                <label><input type="radio" name="q6" value="D"> D. Praktekk</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Unsur intrinsik cerpen yang berisi pesan pengarang adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Tema</label>
+                <label><input type="radio" name="q7" value="B"> B. Tokoh</label>
+                <label><input type="radio" name="q7" value="C"> C. Amanat</label>
+                <label><input type="radio" name="q7" value="D"> D. Latar</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> "Dia seperti malaikat penolong." Gaya bahasa tersebut adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Metafora</label>
+                <label><input type="radio" name="q8" value="B"> B. Personifikasi</label>
+                <label><input type="radio" name="q8" value="C"> C. Simile</label>
+                <label><input type="radio" name="q8" value="D"> D. Hiperbola</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Tujuan teks eksposisi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Menghibur</label>
+                <label><input type="radio" name="q9" value="B"> B. Menyampaikan informasi</label>
+                <label><input type="radio" name="q9" value="C"> C. Mempengaruhi</label>
+                <label><input type="radio" name="q9" value="D"> D. Mendeskripsikan</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Antonim dari kata "ekspor" adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Impor</label>
+                <label><input type="radio" name="q10" value="B"> B. Jual</label>
+                <label><input type="radio" name="q10" value="C"> C. Beli</label>
+                <label><input type="radio" name="q10" value="D"> D. Dagang</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Kalimat yang menggunakan konjungsi kausalitas adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Dia belajar dan bermain</label>
+                <label><input type="radio" name="q11" value="B"> B. Karena hujan, jalanan banjir</label>
+                <label><input type="radio" name="q11" value="C"> C. Dia pintar tetapi malas</label>
+                <label><input type="radio" name="q11" value="D"> D. Dia pergi ke pasar</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Bagian akhir dari teks cerita yang berisi penyelesaian masalah disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Orientasi</label>
+                <label><input type="radio" name="q12" value="B"> B. Komplikasi</label>
+                <label><input type="radio" name="q12" value="C"> C. Resolusi</label>
+                <label><input type="radio" name="q12" value="D"> D. Koda</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Penulisan judul buku yang benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Laskar pelangi</label>
+                <label><input type="radio" name="q13" value="B"> B. Laskar Pelangi</label>
+                <label><input type="radio" name="q13" value="C"> C. laskar pelangi</label>
+                <label><input type="radio" name="q13" value="D"> D. LASKAR PELANGI</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Teks yang berisi pendapat penulis tentang suatu hal disebut teks ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Deskripsi</label>
+                <label><input type="radio" name="q14" value="B"> B. Narasi</label>
+                <label><input type="radio" name="q14" value="C"> C. Argumentasi</label>
+                <label><input type="radio" name="q14" value="D"> D. Prosedur</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> "Rajin pangkal pandai" adalah contoh ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Peribahasa</label>
+                <label><input type="radio" name="q15" value="B"> B. Idiom</label>
+                <label><input type="radio" name="q15" value="C"> C. Majas</label>
+                <label><input type="radio" name="q15" value="D"> D. Slogan</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> Ciri kebahasaan teks prosedur adalah menggunakan kata ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. Sifat</label>
+                <label><input type="radio" name="q16" value="B"> B. Kerja imperatif</label>
+                <label><input type="radio" name="q16" value="C"> C. Keterangan waktu</label>
+                <label><input type="radio" name="q16" value="D"> D. Benda abstrak</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> Informasi yang terdapat dalam teks laporan hasil observasi bersifat ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Fiksi</label>
+                <label><input type="radio" name="q17" value="B"> B. Subjektif</label>
+                <label><input type="radio" name="q17" value="C"> C. Objektif</label>
+                <label><input type="radio" name="q17" value="D"> D. Imajinatif</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> Kata "meja-meja" merupakan bentuk kata ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Ulang</label>
+                <label><input type="radio" name="q18" value="B"> B. Turunan</label>
+                <label><input type="radio" name="q18" value="C"> C. Dasar</label>
+                <label><input type="radio" name="q18" value="D"> D. Majemuk</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> Struktur teks eksposisi yang berisi pendapat penulis adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Tesis</label>
+                <label><input type="radio" name="q19" value="B"> B. Argumentasi</label>
+                <label><input type="radio" name="q19" value="C"> C. Penegasan ulang</label>
+                <label><input type="radio" name="q19" value="D"> D. Identifikasi</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Kalimat berikut yang termasuk kalimat kompleks adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Ibu memasak di dapur.</label>
+                <label><input type="radio" name="q20" value="B"> B. Ayah membaca koran dan adik menonton TV.</label>
+                <label><input type="radio" name="q20" value="C"> C. Karena hujan deras, sekolah diliburkan.</label>
+                <label><input type="radio" name="q20" value="D"> D. Budi berlari.</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"A", q3:"B", q4:"B", q5:"A", 
+    q6:"A", q7:"C", q8:"C", q9:"B", q10:"A",
+    q11:"B", q12:"C", q13:"B", q14:"C", q15:"A", 
+    q16:"B", q17:"C", q18:"A", q19:"A", q20:"C" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN INDIKATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban yang benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Seni Budaya Kelas 8</title>
+<style>
+    body { font-family: 'Arial'; background: #f3e5f5; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #6a1b9a; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #e1bee7; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #6a1b9a; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #4a148c; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #6a1b9a; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎨 Kuis Seni Budaya Kelas 8</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Alat musik yang menghasilkan bunyi karena dipukul disebut alat musik ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Tiup</label>
+                <label><input type="radio" name="q1" value="B"> B. Gesek</label>
+                <label><input type="radio" name="q1" value="C"> C. Petik</label>
+                <label><input type="radio" name="q1" value="D"> D. Pukul</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Contoh alat musik melodis adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Drum</label>
+                <label><input type="radio" name="q2" value="B"> B. Gitar</label>
+                <label><input type="radio" name="q2" value="C"> C. Kendang</label>
+                <label><input type="radio" name="q2" value="D"> D. Tamborin</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Tempo lagu yang cepat disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Largo</label>
+                <label><input type="radio" name="q3" value="B"> B. Andante</label>
+                <label><input type="radio" name="q3" value="C"> C. Allegro</label>
+                <label><input type="radio" name="q3" value="D"> D. Adagio</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Unsur seni rupa yang berupa garis pertemuan antara 2 bidang disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Titik</label>
+                <label><input type="radio" name="q4" value="B"> B. Garis</label>
+                <label><input type="radio" name="q4" value="C"> C. Bidang</label>
+                <label><input type="radio" name="q4" value="D"> D. Ruang</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Karya seni rupa yang hanya memiliki panjang dan lebar disebut karya ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. 3 Dimensi</label>
+                <label><input type="radio" name="q5" value="B"> B. 2 Dimensi</label>
+                <label><input type="radio" name="q5" value="C"> C. Terapan</label>
+                <label><input type="radio" name="q5" value="D"> D. Murni</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Contoh karya seni rupa 3 dimensi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Lukisan</label>
+                <label><input type="radio" name="q6" value="B"> B. Poster</label>
+                <label><input type="radio" name="q6" value="C"> C. Patung</label>
+                <label><input type="radio" name="q6" value="D"> D. Gambar</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Gerak tari yang gerakannya tidak memiliki makna disebut gerak ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Maknawi</label>
+                <label><input type="radio" name="q7" value="B"> B. Wira</label>
+                <label><input type="radio" name="q7" value="C"> C. Murni</label>
+                <label><input type="radio" name="q7" value="D"> D. Tradisional</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Tari Saman berasal dari daerah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Jawa Tengah</label>
+                <label><input type="radio" name="q8" value="B"> B. Bali</label>
+                <label><input type="radio" name="q8" value="C"> C. Aceh</label>
+                <label><input type="radio" name="q8" value="D"> D. Sumatera Barat</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Unsur utama dalam seni tari adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Musik</label>
+                <label><input type="radio" name="q9" value="B"> B. Kostum</label>
+                <label><input type="radio" name="q9" value="C"> C. Gerak</label>
+                <label><input type="radio" name="q9" value="D"> D. Tata lampu</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Orang yang menulis naskah drama disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Sutradara</label>
+                <label><input type="radio" name="q10" value="B"> B. Penata rias</label>
+                <label><input type="radio" name="q10" value="C"> C. Dramawan</label>
+                <label><input type="radio" name="q10" value="D"> D. Aktor</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Orang yang bertugas mengatur jalannya pementasan teater adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Produser</label>
+                <label><input type="radio" name="q11" value="B"> B. Sutradara</label>
+                <label><input type="radio" name="q11" value="C"> C. Penonton</label>
+                <label><input type="radio" name="q11" value="D"> D. Kritikus</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Fungsi musik dalam tari adalah sebagai ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Penghias</label>
+                <label><input type="radio" name="q12" value="B"> B. Pengiring</label>
+                <label><input type="radio" name="q12" value="C"> C. Pemeran</label>
+                <label><input type="radio" name="q12" value="D"> D. Penonton</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Warna yang dihasilkan dari campuran merah dan kuning adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Ungu</label>
+                <label><input type="radio" name="q13" value="B"> B. Hijau</label>
+                <label><input type="radio" name="q13" value="C"> C. Oranye</label>
+                <label><input type="radio" name="q13" value="D"> D. Coklat</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Alat musik tradisional dari Jawa Barat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Sasando</label>
+                <label><input type="radio" name="q14" value="B"> B. Angklung</label>
+                <label><input type="radio" name="q14" value="C"> C. Suling</label>
+                <label><input type="radio" name="q14" value="D"> D. Gamelan</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Pementasan drama yang ceritanya lucu disebut drama ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Tragedi</label>
+                <label><input type="radio" name="q15" value="B"> B. Komedi</label>
+                <label><input type="radio" name="q15" value="C"> C. Melodrama</label>
+                <label><input type="radio" name="q15" value="D"> D. Opera</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"D", q2:"B", q3:"C", q4:"B", q5:"B", 
+    q6:"C", q7:"C", q8:"C", q9:"C", q10:"C",
+    q11:"B", q12:"B", q13:"C", q14:"B", q15:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Hitung skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        // Tandai jawaban benar dan salah
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        // Tampilkan kunci jawaban jika salah/kosong
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

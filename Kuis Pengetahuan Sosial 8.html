@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPS Kelas 8</title>
+<style>
+    body { font-family: 'Arial'; background: #fff3e0; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #e65100; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffe0b2; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #e65100; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #bf360c; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #e65100; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌏 Kuis IPS Kelas 8</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Hubungan timbal balik antara individu dengan individu, individu dengan kelompok, atau kelompok dengan kelompok disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Interaksi sosial</label>
+                <label><input type="radio" name="q1" value="B"> B. Konflik sosial</label>
+                <label><input type="radio" name="q1" value="C"> C. Mobilitas sosial</label>
+                <label><input type="radio" name="q1" value="D"> D. Stratifikasi sosial</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Contoh interaksi sosial asosiatif adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Persaingan</label>
+                <label><input type="radio" name="q2" value="B"> B. Pertentangan</label>
+                <label><input type="radio" name="q2" value="C"> C. Kerja sama</label>
+                <label><input type="radio" name="q2" value="D"> D. Kontravensi</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Lembaga yang bertugas mengatur hubungan antar manusia dalam bidang pendidikan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Lembaga ekonomi</label>
+                <label><input type="radio" name="q3" value="B"> B. Lembaga pendidikan</label>
+                <label><input type="radio" name="q3" value="C"> C. Lembaga politik</label>
+                <label><input type="radio" name="q3" value="D"> D. Lembaga agama</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Keluarga sebagai lembaga sosial termasuk jenis lembaga ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Formal</label>
+                <label><input type="radio" name="q4" value="B"> B. Informal</label>
+                <label><input type="radio" name="q4" value="C"> C. Primer</label>
+                <label><input type="radio" name="q4" value="D"> D. Sekunder</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Proses masuknya budaya asing ke dalam suatu negara disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Akulturasi</label>
+                <label><input type="radio" name="q5" value="B"> B. Asimilasi</label>
+                <label><input type="radio" name="q5" value="C"> C. Globalisasi</label>
+                <label><input type="radio" name="q5" value="D"> D. Modernisasi</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Dampak positif globalisasi di bidang ekonomi adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Meningkatnya pengangguran</label>
+                <label><input type="radio" name="q6" value="B"> B. Masuknya budaya asing negatif</label>
+                <label><input type="radio" name="q6" value="C"> C. Terbuka pasar internasional</label>
+                <label><input type="radio" name="q6" value="D"> D. Menurunnya nilai tukar rupiah</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Perubahan yang terjadi secara cepat dan dikehendaki disebut perubahan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Evolusi</label>
+                <label><input type="radio" name="q7" value="B"> B. Revolusi</label>
+                <label><input type="radio" name="q7" value="C"> C. Kecil</label>
+                <label><input type="radio" name="q7" value="D"> D. Besar</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Faktor pendorong perubahan sosial dari dalam adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Peperangan</label>
+                <label><input type="radio" name="q8" value="B"> B. Bencana alam</label>
+                <label><input type="radio" name="q8" value="C"> C. Penemuan baru</label>
+                <label><input type="radio" name="q8" value="D"> D. Pengaruh budaya asing</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Indonesia terletak di antara 2 benua yaitu ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Asia dan Australia</label>
+                <label><input type="radio" name="q9" value="B"> B. Asia dan Afrika</label>
+                <label><input type="radio" name="q9" value="C"> C. Asia dan Eropa</label>
+                <label><input type="radio" name="q9" value="D"> D. Australia dan Amerika</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Indonesia juga terletak di antara 2 samudra yaitu ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Pasifik dan Hindia</label>
+                <label><input type="radio" name="q10" value="B"> B. Atlantik dan Pasifik</label>
+                <label><input type="radio" name="q10" value="C"> C. Hindia dan Arktik</label>
+                <label><input type="radio" name="q10" value="D"> D. Pasifik dan Arktik</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Keuntungan letak geografis Indonesia adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Sering terjadi gempa</label>
+                <label><input type="radio" name="q11" value="B"> B. Jalur perdagangan internasional</label>
+                <label><input type="radio" name="q11" value="C"> C. Iklim dingin</label>
+                <label><input type="radio" name="q11" value="D"> D. Tanah tandus</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Perpindahan penduduk dari desa ke kota disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Emigrasi</label>
+                <label><input type="radio" name="q12" value="B"> B. Imigrasi</label>
+                <label><input type="radio" name="q12" value="C"> C. Urbanisasi</label>
+                <label><input type="radio" name="q12" value="D"> D. Transmigrasi</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Lembaga yang mengatur hubungan jual beli dan produksi disebut lembaga ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Politik</label>
+                <label><input type="radio" name="q13" value="B"> B. Ekonomi</label>
+                <label><input type="radio" name="q13" value="C"> C. Agama</label>
+                <label><input type="radio" name="q13" value="D"> D. Hukum</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Contoh lembaga politik di Indonesia adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Sekolah</label>
+                <label><input type="radio" name="q14" value="B"> B. Pasar</label>
+                <label><input type="radio" name="q14" value="C"> C. DPR</label>
+                <label><input type="radio" name="q14" value="D"> D. Masjid</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Dampak negatif globalisasi di bidang sosial budaya adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Kemajuan teknologi</label>
+                <label><input type="radio" name="q15" value="B"> B. Lunturnya budaya bangsa</label>
+                <label><input type="radio" name="q15" value="C"> C. Komunikasi mudah</label>
+                <label><input type="radio" name="q15" value="D"> D. Perdagangan lancar</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"A", q2:"C", q3:"B", q4:"B", q5:"C", 
+    q6:"C", q7:"B", q8:"C", q9:"A", q10:"A",
+    q11:"B", q12:"C", q13:"B", q14:"C", q15:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=15; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        // Hitung skor
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 100/15;
+        }
+        
+        // Tandai jawaban benar dan salah
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        // Tampilkan kunci jawaban jika salah/kosong
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let nilai = Math.round(skor);
+    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

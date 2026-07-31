@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis PJOK Kelas 5</title>
+<style>
+    body { font-family: 'Arial'; background: #ffebee; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #c62828; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffcdd2; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
+    .opsi label:hover { background: #f0f0f0; }
+    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
+    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+    .btn-submit { width: 100%; padding: 15px; background: #c62828; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #b71c1c; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #c62828; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>⚽ Kuis PJOK Kelas 5</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal" id="soal1">
+            <p><b>1.</b> Pemanasan sebelum berolahraga bertujuan untuk ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. membuat tubuh cepat lelah</label>
+                <label><input type="radio" name="q1" value="B"> B. mengurangi risiko cedera</label>
+                <label><input type="radio" name="q1" value="C"> C. memperlambat gerakan tubuh</label>
+                <label><input type="radio" name="q1" value="D"> D. mengurangi kekuatan otot</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><b>2.</b> Pendinginan setelah berolahraga dilakukan agar ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. tubuh langsung berhenti bekerja</label>
+                <label><input type="radio" name="q2" value="B"> B. denyut jantung kembali normal secara bertahap</label>
+                <label><input type="radio" name="q2" value="C"> C. tubuh menjadi lebih panas</label>
+                <label><input type="radio" name="q2" value="D"> D. napas menjadi lebih cepat</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><b>3.</b> Gerakan menggiring bola dalam permainan sepak bola disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. shooting</label>
+                <label><input type="radio" name="q3" value="B"> B. passing</label>
+                <label><input type="radio" name="q3" value="C"> C. dribbling</label>
+                <label><input type="radio" name="q3" value="D"> D. heading</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><b>4.</b> Dalam permainan bola voli, pukulan pertama untuk memulai permainan disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. smash</label>
+                <label><input type="radio" name="q4" value="B"> B. servis</label>
+                <label><input type="radio" name="q4" value="C"> C. passing</label>
+                <label><input type="radio" name="q4" value="D"> D. block</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><b>5.</b> Teknik mengoper bola kepada teman dalam permainan bola basket disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. dribble</label>
+                <label><input type="radio" name="q5" value="B"> B. shooting</label>
+                <label><input type="radio" name="q5" value="C"> C. passing</label>
+                <label><input type="radio" name="q5" value="D"> D. rebound</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><b>6.</b> Lari jarak pendek dikenal juga dengan istilah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. marathon</label>
+                <label><input type="radio" name="q6" value="B"> B. sprint</label>
+                <label><input type="radio" name="q6" value="C"> C. jogging</label>
+                <label><input type="radio" name="q6" value="D"> D. estafet</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><b>7.</b> Sikap awal saat melakukan lompat jauh adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. duduk</label>
+                <label><input type="radio" name="q7" value="B"> B. berdiri santai</label>
+                <label><input type="radio" name="q7" value="C"> C. berlari menuju papan tolakan</label>
+                <label><input type="radio" name="q7" value="D"> D. tidur telungkup</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><b>8.</b> Alat yang digunakan dalam olahraga lompat tali adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. tongkat</label>
+                <label><input type="radio" name="q8" value="B"> B. bola</label>
+                <label><input type="radio" name="q8" value="C"> C. tali</label>
+                <label><input type="radio" name="q8" value="D"> D. raket</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><b>9.</b> Gerakan senam yang melatih keseimbangan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. berguling depan</label>
+                <label><input type="radio" name="q9" value="B"> B. berdiri satu kaki</label>
+                <label><input type="radio" name="q9" value="C"> C. berlari cepat</label>
+                <label><input type="radio" name="q9" value="D"> D. melompat jauh</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><b>10.</b> Makanan yang baik dikonsumsi sebelum berolahraga adalah makanan yang ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. bergizi seimbang</label>
+                <label><input type="radio" name="q10" value="B"> B. terlalu pedas</label>
+                <label><input type="radio" name="q10" value="C"> C. banyak minyak</label>
+                <label><input type="radio" name="q10" value="D"> D. basi</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><b>11.</b> Minuman yang paling baik dikonsumsi setelah berolahraga adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. kopi</label>
+                <label><input type="radio" name="q11" value="B"> B. minuman bersoda</label>
+                <label><input type="radio" name="q11" value="C"> C. air putih</label>
+                <label><input type="radio" name="q11" value="D"> D. sirup pekat</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><b>12.</b> Kebiasaan mencuci tangan sebelum makan bertujuan untuk ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. mempercantik tangan</label>
+                <label><input type="radio" name="q12" value="B"> B. menjaga kebersihan dan kesehatan</label>
+                <label><input type="radio" name="q12" value="C"> C. menghemat air</label>
+                <label><input type="radio" name="q12" value="D"> D. menghilangkan rasa lapar</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><b>13.</b> Saat teman mengalami cedera ringan ketika bermain, sikap yang tepat adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. menertawakannya</label>
+                <label><input type="radio" name="q13" value="B"> B. meninggalkannya</label>
+                <label><input type="radio" name="q13" value="C"> C. membantu dan melaporkan kepada guru</label>
+                <label><input type="radio" name="q13" value="D"> D. terus bermain tanpa peduli</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><b>14.</b> Permainan yang mengutamakan kerja sama tim adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. bulu tangkis tunggal</label>
+                <label><input type="radio" name="q14" value="B"> B. sepak bola</label>
+                <label><input type="radio" name="q14" value="C"> C. catur</label>
+                <label><input type="radio" name="q14" value="D"> D. tenis meja tunggal</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><b>15.</b> Salah satu manfaat olahraga secara teratur adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. tubuh mudah sakit</label>
+                <label><input type="radio" name="q15" value="B"> B. tubuh menjadi sehat dan bugar</label>
+                <label><input type="radio" name="q15" value="C"> C. cepat mengantuk</label>
+                <label><input type="radio" name="q15" value="D"> D. malas bergerak</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        <div class="soal" id="soal16">
+            <p><b>16.</b> Saat bermain, kita harus mematuhi aturan permainan agar ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. permainan menjadi kacau</label>
+                <label><input type="radio" name="q16" value="B"> B. terjadi perselisihan</label>
+                <label><input type="radio" name="q16" value="C"> C. permainan berjalan tertib dan adil</label>
+                <label><input type="radio" name="q16" value="D"> D. mudah menang sendiri</label>
+            </div>
+            <div class="kunci-info" id="kunci16"></div>
+        </div>
+
+        <div class="soal" id="soal17">
+            <p><b>17.</b> Gerakan memukul bola dengan telapak tangan pada permainan bola voli disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. servis bawah</label>
+                <label><input type="radio" name="q17" value="B"> B. dribble</label>
+                <label><input type="radio" name="q17" value="C"> C. shooting</label>
+                <label><input type="radio" name="q17" value="D"> D. heading</label>
+            </div>
+            <div class="kunci-info" id="kunci17"></div>
+        </div>
+
+        <div class="soal" id="soal18">
+            <p><b>18.</b> Sikap yang menunjukkan sportivitas adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. mengejek lawan yang kalah</label>
+                <label><input type="radio" name="q18" value="B"> B. menerima hasil pertandingan dengan lapang dada</label>
+                <label><input type="radio" name="q18" value="C"> C. marah kepada wasit</label>
+                <label><input type="radio" name="q18" value="D"> D. berbuat curang agar menang</label>
+            </div>
+            <div class="kunci-info" id="kunci18"></div>
+        </div>
+
+        <div class="soal" id="soal19">
+            <p><b>19.</b> Salah satu contoh aktivitas untuk meningkatkan daya tahan tubuh adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. berjalan santai atau jogging secara rutin</label>
+                <label><input type="radio" name="q19" value="B"> B. tidur sepanjang hari</label>
+                <label><input type="radio" name="q19" value="C"> C. bermain gawai seharian</label>
+                <label><input type="radio" name="q19" value="D"> D. duduk tanpa bergerak</label>
+            </div>
+            <div class="kunci-info" id="kunci19"></div>
+        </div>
+
+        <div class="soal" id="soal20">
+            <p><b>20.</b> Sebelum menggunakan alat olahraga, kita harus ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. langsung memakainya tanpa memeriksa</label>
+                <label><input type="radio" name="q20" value="B"> B. memastikan alat dalam kondisi baik dan aman digunakan</label>
+                <label><input type="radio" name="q20" value="C"> C. membiarkannya di lapangan</label>
+                <label><input type="radio" name="q20" value="D"> D. meminjam tanpa izin</label>
+            </div>
+            <div class="kunci-info" id="kunci20"></div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"B", q2:"B", q3:"C", q4:"B", q5:"C", 
+    q6:"B", q7:"C", q8:"C", q9:"B", q10:"A",
+    q11:"C", q12:"B", q13:"C", q14:"B", q15:"B", 
+    q16:"C", q17:"A", q18:"B", q19:"A", q20:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN INDIKATOR
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        let jawabanBenar = kunci[`q${i}`];
+        let labels = document.querySelectorAll(`input[name="q${i}"]`);
+        
+        if(jawaban && jawaban.value === jawabanBenar){
+            skor += 5;
+        }
+        
+        labels.forEach(input => {
+            let label = input.parentElement;
+            if(input.value === jawabanBenar){
+                label.classList.add('benar-jawaban'); // Hijau
+            }
+            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
+                label.classList.add('salah-jawaban'); // Merah
+            }
+            input.disabled = true;
+        });
+        
+        let infoEl = document.getElementById(`kunci${i}`);
+        if(!jawaban || jawaban.value !== jawabanBenar){
+            infoEl.innerText = `Jawaban yang benar: ${jawabanBenar}`;
+            infoEl.style.display = 'block';
+        }
+    }
+    
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

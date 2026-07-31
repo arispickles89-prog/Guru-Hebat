@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPAS Kelas 6</title>
+<style>
+    body { font-family: 'Arial'; background: #f0fff4; margin: 0; padding: 20px; }
+    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #28a745; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #d4edda; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .soal p { line-height: 1.6; }
+    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 8px; border-radius: 6px; }
+    .opsi label:hover { background: #f0f0f0; }
+    .btn-submit { width: 100%; padding: 15px; background: #28a745; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    .btn-submit:hover { background: #218838; }
+    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
+    .pembahasan { font-size: 14px; color: #555; margin-top: 10px; background: #fff3cd; padding: 10px; border-left: 4px solid #ffc107; display: none; }
+    .benar { color: green; }
+    .salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 Kuis IPAS Kelas 6</h1>
+    <div id="timer">Waktu: 20:00</div>
+    <form id="formKuis">
+
+        <div class="soal">
+            <p><b>1.</b> Makhluk hidup yang dapat membuat makanannya sendiri disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Konsumen</label>
+                <label><input type="radio" name="q1" value="B"> B. Pengurai</label>
+                <label><input type="radio" name="q1" value="C"> C. Produsen</label>
+                <label><input type="radio" name="q1" value="D"> D. Predator</label>
+            </div>
+            <div class="pembahasan" id="p1"><b>Pembahasan:</b> Produsen, seperti tumbuhan hijau, mampu membuat makanan sendiri melalui proses fotosintesis.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>2.</b> Berikut yang termasuk komponen biotik dalam ekosistem adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Air</label>
+                <label><input type="radio" name="q2" value="B"> B. Batu</label>
+                <label><input type="radio" name="q2" value="C"> C. Udara</label>
+                <label><input type="radio" name="q2" value="D"> D. Pohon</label>
+            </div>
+            <div class="pembahasan" id="p2"><b>Pembahasan:</b> Komponen biotik adalah semua makhluk hidup, seperti tumbuhan, hewan, manusia, dan mikroorganisme.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>3.</b> Organ tumbuhan yang berfungsi menyerap air dan zat hara adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Daun</label>
+                <label><input type="radio" name="q3" value="B"> B. Batang</label>
+                <label><input type="radio" name="q3" value="C"> C. Akar</label>
+                <label><input type="radio" name="q3" value="D"> D. Bunga</label>
+            </div>
+            <div class="pembahasan" id="p3"><b>Pembahasan:</b> Akar menyerap air dan mineral dari dalam tanah.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>4.</b> Fotosintesis berlangsung dengan bantuan ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Cahaya matahari</label>
+                <label><input type="radio" name="q4" value="B"> B. Angin</label>
+                <label><input type="radio" name="q4" value="C"> C. Hujan</label>
+                <label><input type="radio" name="q4" value="D"> D. Tanah</label>
+            </div>
+            <div class="pembahasan" id="p4"><b>Pembahasan:</b> Fotosintesis membutuhkan cahaya matahari sebagai sumber energi.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>5.</b> Hewan yang memakan tumbuhan disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Karnivora</label>
+                <label><input type="radio" name="q5" value="B"> B. Herbivora</label>
+                <label><input type="radio" name="q5" value="C"> C. Omnivora</label>
+                <label><input type="radio" name="q5" value="D"> D. Predator</label>
+            </div>
+            <div class="pembahasan" id="p5"><b>Pembahasan:</b> Herbivora adalah hewan yang makanannya berasal dari tumbuhan.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>6.</b> Contoh hewan omnivora adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Sapi</label>
+                <label><input type="radio" name="q6" value="B"> B. Kelinci</label>
+                <label><input type="radio" name="q6" value="C"> C. Ayam</label>
+                <label><input type="radio" name="q6" value="D"> D. Harimau</label>
+            </div>
+            <div class="pembahasan" id="p6"><b>Pembahasan:</b> Ayam memakan biji-bijian maupun hewan kecil.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>7.</b> Organisme yang menguraikan sisa makhluk hidup disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Produsen</label>
+                <label><input type="radio" name="q7" value="B"> B. Konsumen</label>
+                <label><input type="radio" name="q7" value="C"> C. Pengurai</label>
+                <label><input type="radio" name="q7" value="D"> D. Predator</label>
+            </div>
+            <div class="pembahasan" id="p7"><b>Pembahasan:</b> Pengurai mengembalikan unsur hara ke tanah.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>8.</b> Contoh pengurai adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Jamur</label>
+                <label><input type="radio" name="q8" value="B"> B. Padi</label>
+                <label><input type="radio" name="q8" value="C"> C. Kucing</label>
+                <label><input type="radio" name="q8" value="D"> D. Elang</label>
+            </div>
+            <div class="pembahasan" id="p8"><b>Pembahasan:</b> Jamur dan bakteri merupakan pengurai.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>9.</b> Hubungan makan dan dimakan dalam ekosistem disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Simbiosis</label>
+                <label><input type="radio" name="q9" value="B"> B. Habitat</label>
+                <label><input type="radio" name="q9" value="C"> C. Rantai makanan</label>
+                <label><input type="radio" name="q9" value="D"> D. Adaptasi</label>
+            </div>
+            <div class="pembahasan" id="p9"><b>Pembahasan:</b> Rantai makanan menunjukkan aliran energi antarmakhluk hidup.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>10.</b> Urutan rantai makanan yang benar adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Padi → Tikus → Ular → Elang</label>
+                <label><input type="radio" name="q10" value="B"> B. Tikus → Padi → Elang → Ular</label>
+                <label><input type="radio" name="q10" value="C"> C. Elang → Ular → Tikus → Padi</label>
+                <label><input type="radio" name="q10" value="D"> D. Ular → Elang → Tikus → Padi</label>
+            </div>
+            <div class="pembahasan" id="p10"><b>Pembahasan:</b> Energi mengalir dari produsen ke konsumen tingkat lebih tinggi.</div>
+        </div>
+
+        <div class="soal">
+            <p><b>11.</b> Makhluk hidup membutuhkan air untuk ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Bermain</label>
+                <label><input type="radio" name="q11" value="B"> B. Bernapas dan melakukan proses kehidupan</label>
+                <label><input type="radio" name="q11" value="C"> C. Tidur</label>
+                <label><input type="radio" name="q11" value="D"> D. Berpindah tempat saja</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>12.</b> Tempat tinggal makhluk hidup disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Habitat</label>
+                <label><input type="radio" name="q12" value="B"> B. Ekosistem</label>
+                <label><input type="radio" name="q12" value="C"> C. Populasi</label>
+                <label><input type="radio" name="q12" value="D"> D. Komunitas</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>13.</b> Sekumpulan makhluk hidup sejenis yang hidup di suatu tempat disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Individu</label>
+                <label><input type="radio" name="q13" value="B"> B. Populasi</label>
+                <label><input type="radio" name="q13" value="C"> C. Komunitas</label>
+                <label><input type="radio" name="q13" value="D"> D. Ekosistem</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>14.</b> Sekumpulan berbagai jenis makhluk hidup yang hidup bersama disebut ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Populasi</label>
+                <label><input type="radio" name="q14" value="B"> B. Individu</label>
+                <label><input type="radio" name="q14" value="C"> C. Komunitas</label>
+                <label><input type="radio" name="q14" value="D"> D. Habitat</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>15.</b> Ekosistem yang terbentuk secara alami adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Akuarium</label>
+                <label><input type="radio" name="q15" value="B"> B. Sawah</label>
+                <label><input type="radio" name="q15" value="C"> C. Kolam buatan</label>
+                <label><input type="radio" name="q15" value="D"> D. Hutan</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>16.</b> Contoh ekosistem buatan adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q16" value="A"> A. Sungai</label>
+                <label><input type="radio" name="q16" value="B"> B. Laut</label>
+                <label><input type="radio" name="q16" value="C"> C. Waduk</label>
+                <label><input type="radio" name="q16" value="D"> D. Gunung</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>17.</b> Tumbuhan hijau menghasilkan oksigen melalui proses ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q17" value="A"> A. Respirasi</label>
+                <label><input type="radio" name="q17" value="B"> B. Fotosintesis</label>
+                <label><input type="radio" name="q17" value="C"> C. Penguapan</label>
+                <label><input type="radio" name="q17" value="D"> D. Penyerbukan</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>18.</b> Berikut yang termasuk makhluk hidup adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q18" value="A"> A. Air</label>
+                <label><input type="radio" name="q18" value="B"> B. Batu</label>
+                <label><input type="radio" name="q18" value="C"> C. Rumput</label>
+                <label><input type="radio" name="q18" value="D"> D. Pasir</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>19.</b> Hubungan antara bunga dan lebah merupakan contoh ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q19" value="A"> A. Simbiosis mutualisme</label>
+                <label><input type="radio" name="q19" value="B"> B. Simbiosis parasitisme</label>
+                <label><input type="radio" name="q19" value="C"> C. Simbiosis komensalisme</label>
+                <label><input type="radio" name="q19" value="D"> D. Kompetisi</label>
+            </div>
+        </div>
+
+        <div class="soal">
+            <p><b>20.</b> Fungsi utama daun adalah ....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q20" value="A"> A. Menyerap air</label>
+                <label><input type="radio" name="q20" value="B"> B. Tempat fotosintesis</label>
+                <label><input type="radio" name="q20" value="C"> C. Menyimpan makanan</label>
+                <label><input type="radio" name="q20" value="D"> D. Menopang tumbuhan</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+// KUNCI JAWABAN
+const kunci = { 
+    q1:"C", q2:"D", q3:"C", q4:"A", q5:"B", 
+    q6:"C", q7:"C", q8:"A", q9:"C", q10:"A",
+    q11:"B", q12:"A", q13:"B", q14:"C", q15:"D", 
+    q16:"C", q17:"B", q18:"C", q19:"A", q20:"B" 
+};
+
+// TIMER 20 MENIT
+let waktu = 20 * 60; 
+const timerEl = document.getElementById('timer');
+const countdown = setInterval(() => {
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
+    if(waktu <= 0){
+        clearInterval(countdown);
+        alert('Waktu Habis! Jawaban dikumpulkan otomatis.');
+        cekJawaban();
+    }
+    waktu--;
+}, 1000);
+
+// CEK JAWABAN + TAMPILKAN PEMBAHASAN
+function cekJawaban(){
+    clearInterval(countdown);
+    let skor = 0;
+    for(let i=1; i<=20; i++){
+        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
+        if(jawaban && jawaban.value === kunci[`q${i}`]){
+            skor += 5; // 100/20 = 5
+        }
+        // Tampilkan pembahasan untuk soal 1-10
+        if(i <= 10) document.getElementById(`p${i}`).style.display = 'block';
+    }
+    let predikat = skor >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
+    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${skor >= 75 ? 'benar' : 'salah'}">${skor} / 100</span><br>${predikat}`;
+    document.querySelectorAll('input').forEach(el => el.disabled = true);
+    document.querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
