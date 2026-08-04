@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPS Kelas 7</title>
+<style>
+    body { font-family: 'Segoe UI', Arial; background: #efebe9; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #5d4037; }
+    h1 { text-align: center; color: #3e2723; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #5d4037; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #d7ccc8; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #d7ccc8; transition: 0.2s; background: #efebe9; }
+.opsi label:hover { background: #bcaaa4; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #5d4037; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #3e2723; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #efebe9; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #3e2723; display: none; }
+.benar { color: green; }
+.salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌍 Kuis IPS Kelas 7</h1>
+    <div id="timer">Waktu: 10:00</div>
+    <form id="formKuis">
+        <div id="wadahSoal">
+
+        <div class="soal" id="soal1">
+            <p><span class="nomor-soal">1.</span> Ilmu yang mempelajari hubungan manusia dengan lingkungan adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Ekonomi</label>
+                <label><input type="radio" name="q1" value="B"> B. Geografi</label>
+                <label><input type="radio" name="q1" value="C"> C. Sosiologi</label>
+                <label><input type="radio" name="q1" value="D"> D. Sejarah</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><span class="nomor-soal">2.</span> Interaksi sosial yang bersifat positif adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Persaingan</label>
+                <label><input type="radio" name="q2" value="B"> B. Pertentangan</label>
+                <label><input type="radio" name="q2" value="C"> C. Kerja sama</label>
+                <label><input type="radio" name="q2" value="D"> D. Pertikaian</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><span class="nomor-soal">3.</span> Contoh lembaga sosial di bidang pendidikan adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Bank</label>
+                <label><input type="radio" name="q3" value="B"> B. Sekolah</label>
+                <label><input type="radio" name="q3" value="C"> C. Rumah sakit</label>
+                <label><input type="radio" name="q3" value="D"> D. Pengadilan</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><span class="nomor-soal">4.</span> Proses masuknya unsur budaya asing ke dalam budaya sendiri disebut....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Akulturasi</label>
+                <label><input type="radio" name="q4" value="B"> B. Asimilasi</label>
+                <label><input type="radio" name="q4" value="C"> C. Akulturasi</label>
+                <label><input type="radio" name="q4" value="D"> D. Difusi</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><span class="nomor-soal">5.</span> Faktor yang menyebabkan interaksi sosial adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Imitasi dan sugesti</label>
+                <label><input type="radio" name="q5" value="B"> B. Identifikasi dan simpati</label>
+                <label><input type="radio" name="q5" value="C"> C. Empati dan motivasi</label>
+                <label><input type="radio" name="q5" value="D"> D. Semua jawaban benar</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><span class="nomor-soal">6.</span> Kelompok sosial yang anggotanya saling mengenal disebut kelompok....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Primer</label>
+                <label><input type="radio" name="q6" value="B"> B. Sekunder</label>
+                <label><input type="radio" name="q6" value="C"> C. Formal</label>
+                <label><input type="radio" name="q6" value="D"> D. Informal</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><span class="nomor-soal">7.</span> Dampak positif globalisasi di bidang ekonomi adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Meningkatnya pengangguran</label>
+                <label><input type="radio" name="q7" value="B"> B. Masuknya investasi asing</label>
+                <label><input type="radio" name="q7" value="C"> C. Hilangnya budaya lokal</label>
+                <label><input type="radio" name="q7" value="D"> D. Konsumtif</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><span class="nomor-soal">8.</span> Lembaga yang mengatur hubungan antara manusia dengan Tuhannya adalah lembaga....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Ekonomi</label>
+                <label><input type="radio" name="q8" value="B"> B. Politik</label>
+                <label><input type="radio" name="q8" value="C"> C. Agama</label>
+                <label><input type="radio" name="q8" value="D"> D. Pendidikan</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><span class="nomor-soal">9.</span> Contoh norma kesusilaan adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Membayar pajak</label>
+                <label><input type="radio" name="q9" value="B"> B. Menghormati orang tua</label>
+                <label><input type="radio" name="q9" value="C"> C. Menaati rambu lalu lintas</label>
+                <label><input type="radio" name="q9" value="D"> D. Upacara bendera</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><span class="nomor-soal">10.</span> Perpindahan penduduk dari desa ke kota disebut....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. Urbanisasi</label>
+                <label><input type="radio" name="q10" value="B"> B. Migrasi</label>
+                <label><input type="radio" name="q10" value="C"> C. Emigrasi</label>
+                <label><input type="radio" name="q10" value="D"> D. Imigrasi</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><span class="nomor-soal">11.</span> Bentuk interaksi sosial yang merugikan adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Kerja sama</label>
+                <label><input type="radio" name="q11" value="B"> B. Akomodasi</label>
+                <label><input type="radio" name="q11" value="C"> C. Konflik</label>
+                <label><input type="radio" name="q11" value="D"> D. Asimilasi</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><span class="nomor-soal">12.</span> Lembaga sosial yang mengatur hubungan dalam keluarga adalah lembaga....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Ekonomi</label>
+                <label><input type="radio" name="q12" value="B"> B. Keluarga</label>
+                <label><input type="radio" name="q12" value="C"> C. Pendidikan</label>
+                <label><input type="radio" name="q12" value="D"> D. Politik</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><span class="nomor-soal">13.</span> Sikap yang harus dimiliki dalam masyarakat majemuk adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Egois</label>
+                <label><input type="radio" name="q13" value="B"> B. Diskriminasi</label>
+                <label><input type="radio" name="q13" value="C"> C. Toleransi</label>
+                <label><input type="radio" name="q13" value="D"> D. Individualis</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><span class="nomor-soal">14.</span> Peta yang menggambarkan persebaran penduduk disebut peta....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Topografi</label>
+                <label><input type="radio" name="q14" value="B"> B. Administrasi</label>
+                <label><input type="radio" name="q14" value="C"> C. Kependudukan</label>
+                <label><input type="radio" name="q14" value="D"> D. Iklim</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><span class="nomor-soal">15.</span> Tujuan utama mempelajari IPS adalah untuk....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Menjadi ahli ekonomi</label>
+                <label><input type="radio" name="q15" value="B"> B. Memahami kehidupan sosial masyarakat</label>
+                <label><input type="radio" name="q15" value="C"> C. Menghafal nama negara</label>
+                <label><input type="radio" name="q15" value="D"> D. Menghitung keuntungan</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        </div>
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+const kunci = {
+    q1:"B", q2:"C", q3:"B", q4:"D", q5:"D",
+    q6:"A", q7:"B", q8:"C", q9:"B", q10:"A",
+    q11:"C", q12:"B", q13:"C", q14:"C", q15:"B"
+};
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
+</script>
+</body>
+</html>
