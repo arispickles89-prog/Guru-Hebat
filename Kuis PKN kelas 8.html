@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis PKN Kelas 8</title>
+<style>
+    body { font-family: 'Segoe UI', Arial; background: #ffebee; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #c62828; }
+    h1 { text-align: center; color: #b71c1c; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #c62828; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #ffcdd2; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #ffcdd2; transition: 0.2s; background: #ffebee; }
+.opsi label:hover { background: #ef9a9a; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #c62828; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #b71c1c; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #ffebee; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #b71c1c; display: none; }
+.benar { color: green; }
+.salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇮🇩 Kuis PKN Kelas 8</h1>
+    <div id="timer">Waktu: 10:00</div>
+    <form id="formKuis">
+        <div id="wadahSoal">
+
+        <div class="soal" id="soal1">
+            <p><span class="nomor-soal">1.</span> Kedudukan UUD 1945 dalam sistem hukum Indonesia adalah sebagai....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Peraturan Pemerintah</label>
+                <label><input type="radio" name="q1" value="B"> B. Hukum Tertinggi</label>
+                <label><input type="radio" name="q1" value="C"> C. Keputusan Presiden</label>
+                <label><input type="radio" name="q1" value="D"> D. Peraturan Daerah</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><span class="nomor-soal">2.</span> UUD 1945 pertama kali disahkan pada tanggal....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. 17 Agustus 1945</label>
+                <label><input type="radio" name="q2" value="B"> B. 18 Agustus 1945</label>
+                <label><input type="radio" name="q2" value="C"> C. 1 Juni 1945</label>
+                <label><input type="radio" name="q2" value="D"> D. 28 Oktober 1928</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><span class="nomor-soal">3.</span> Fungsi UUD 1945 sebagai sumber hukum berarti....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Semua peraturan tidak boleh bertentangan dengan UUD 1945</label>
+                <label><input type="radio" name="q3" value="B"> B. UUD 1945 dapat diubah kapan saja</label>
+                <label><input type="radio" name="q3" value="C"> C. UUD 1945 hanya untuk pejabat negara</label>
+                <label><input type="radio" name="q3" value="D"> D. UUD 1945 tidak wajib ditaati</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><span class="nomor-soal">4.</span> Isi Sumpah Pemuda ke-3 adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Bertanah air satu, tanah air Indonesia</label>
+                <label><input type="radio" name="q4" value="B"> B. Berbangsa satu, bangsa Indonesia</label>
+                <label><input type="radio" name="q4" value="C"> C. Menjunjung bahasa persatuan, bahasa Indonesia</label>
+                <label><input type="radio" name="q4" value="D"> D. Bhinneka Tunggal Ika</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><span class="nomor-soal">5.</span> Tujuan Sumpah Pemuda adalah untuk....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. Memisahkan diri dari penjajah</label>
+                <label><input type="radio" name="q5" value="B"> B. Menumbuhkan semangat persatuan pemuda</label>
+                <label><input type="radio" name="q5" value="C"> C. Membentuk partai politik</label>
+                <label><input type="radio" name="q5" value="D"> D. Menolak budaya asing</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><span class="nomor-soal">6.</span> Demokrasi Pancasila bersumber dari nilai....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Liberalisme</label>
+                <label><input type="radio" name="q6" value="B"> B. Pancasila</label>
+                <label><input type="radio" name="q6" value="C"> C. Komunisme</label>
+                <label><input type="radio" name="q6" value="D"> D. Kapitalisme</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><span class="nomor-soal">7.</span> Ciri demokrasi Pancasila adalah mengutamakan....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Kepentingan pribadi</label>
+                <label><input type="radio" name="q7" value="B"> B. Kepentingan golongan</label>
+                <label><input type="radio" name="q7" value="C"> C. Kepentingan bersama</label>
+                <label><input type="radio" name="q7" value="D"> D. Kepentingan asing</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><span class="nomor-soal">8.</span> Contoh pelaksanaan demokrasi di sekolah adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Menunjuk ketua kelas oleh guru</label>
+                <label><input type="radio" name="q8" value="B"> B. Pemilihan ketua OSIS secara langsung</label>
+                <label><input type="radio" name="q8" value="C"> C. Mengikuti aturan tanpa bertanya</label>
+                <label><input type="radio" name="q8" value="D"> D. Menyontek saat ujian</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><span class="nomor-soal">9.</span> Hak warga negara yang tercantum dalam UUD 1945 pasal 31 adalah hak untuk....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Bekerja</label>
+                <label><input type="radio" name="q9" value="B"> B. Pendidikan</label>
+                <label><input type="radio" name="q9" value="C"> C. Beragama</label>
+                <label><input type="radio" name="q9" value="D"> D. Berkumpul</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><span class="nomor-soal">10.</span> Kewajiban warga negara dalam membayar pajak tercantum dalam UUD 1945 pasal....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. 27</label>
+                <label><input type="radio" name="q10" value="B"> B. 28</label>
+                <label><input type="radio" name="q10" value="C"> C. 30</label>
+                <label><input type="radio" name="q10" value="D"> D. 23</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><span class="nomor-soal">11.</span> Sikap yang mencerminkan pelaksanaan hak dan kewajiban secara seimbang adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Menuntut hak tetapi tidak mau bekerja</label>
+                <label><input type="radio" name="q11" value="B"> B. Melaksanakan kewajiban sebelum menuntut hak</label>
+                <label><input type="radio" name="q11" value="C"> C. Hanya menuntut hak saja</label>
+                <label><input type="radio" name="q11" value="D"> D. Menolak melaksanakan kewajiban</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><span class="nomor-soal">12.</span> Lembaga yang berwenang mengubah UUD 1945 adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. DPR</label>
+                <label><input type="radio" name="q12" value="B"> B. MPR</label>
+                <label><input type="radio" name="q12" value="C"> C. Presiden</label>
+                <label><input type="radio" name="q12" value="D"> D. MA</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><span class="nomor-soal">13.</span> "Gotong royong membersihkan lingkungan" mencerminkan nilai Pancasila sila ke....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. 1</label>
+                <label><input type="radio" name="q13" value="B"> B. 2</label>
+                <label><input type="radio" name="q13" value="C"> C. 3</label>
+                <label><input type="radio" name="q13" value="D"> D. 5</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><span class="nomor-soal">14.</span> Dampak negatif jika warga tidak menjalankan kewajiban adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Negara menjadi maju</label>
+                <label><input type="radio" name="q14" value="B"> B. Terjadi kekacauan dan ketidakadilan</label>
+                <label><input type="radio" name="q14" value="C"> C. Hak warga bertambah</label>
+                <label><input type="radio" name="q14" value="D"> D. Tidak ada dampak</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><span class="nomor-soal">15.</span> Semangat Sumpah Pemuda harus kita terapkan dengan cara....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Berteman hanya dengan suku sendiri</label>
+                <label><input type="radio" name="q15" value="B"> B. Menghormati perbedaan dan menjaga persatuan</label>
+                <label><input type="radio" name="q15" value="C"> C. Menolak bekerja sama dengan teman</label>
+                <label><input type="radio" name="q15" value="D"> D. Bersikap individualis</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        </div>
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+const kunci = {
+    q1:"B", q2:"B", q3:"A", q4:"C", q5:"B",
+    q6:"B", q7:"C", q8:"B", q9:"B", q10:"D",
+    q11:"B", q12:"B", q13:"C", q14:"B", q15:"B"
+};
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block'; }} let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
+</script>
+</body>
+</html>

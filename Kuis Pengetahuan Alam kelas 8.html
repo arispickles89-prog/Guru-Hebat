@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis IPA Kelas 8</title>
+<style>
+    body { font-family: 'Segoe UI', Arial; background: #e0f7fa; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #00838f; }
+    h1 { text-align: center; color: #006064; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #00838f; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #b2ebf2; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #b2ebf2; transition: 0.2s; background: #e0f7fa; }
+.opsi label:hover { background: #80deea; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #00838f; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #006064; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e0f7fa; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #006064; display: none; }
+.benar { color: green; }
+.salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔬 Kuis IPA Kelas 8</h1>
+    <div id="timer">Waktu: 10:00</div>
+    <form id="formKuis">
+        <div id="wadahSoal">
+
+        <div class="soal" id="soal1">
+            <p><span class="nomor-soal">1.</span> Satuan SI untuk gaya adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Joule</label>
+                <label><input type="radio" name="q1" value="B"> B. Newton</label>
+                <label><input type="radio" name="q1" value="C"> C. Watt</label>
+                <label><input type="radio" name="q1" value="D"> D. Pascal</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><span class="nomor-soal">2.</span> Hukum Newton I berbunyi: "Benda akan tetap diam atau bergerak lurus beraturan jika...."</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Ada gaya yang bekerja</label>
+                <label><input type="radio" name="q2" value="B"> B. Tidak ada gaya yang bekerja</label>
+                <label><input type="radio" name="q2" value="C"> C. Gaya nya besar</label>
+                <label><input type="radio" name="q2" value="D"> D. Kecepatannya tinggi</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><span class="nomor-soal">3.</span> Rumus usaha adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. $W = F \times s$</label>
+                <label><input type="radio" name="q3" value="B"> B. $W = m \times a$</label>
+                <label><input type="radio" name="q3" value="C"> C. $W = P \times t$</label>
+                <label><input type="radio" name="q3" value="D"> D. $W = F / s$</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><span class="nomor-soal">4.</span> Daya adalah usaha dibagi....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Gaya</label>
+                <label><input type="radio" name="q4" value="B"> B. Waktu</label>
+                <label><input type="radio" name="q4" value="C"> C. Jarak</label>
+                <label><input type="radio" name="q4" value="D"> D. Massa</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><span class="nomor-soal">5.</span> Tekanan dirumuskan sebagai....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. $P = F \times A$</label>
+                <label><input type="radio" name="q5" value="B"> B. $P = F / A$</label>
+                <label><input type="radio" name="q5" value="C"> C. $P = A / F$</label>
+                <label><input type="radio" name="q5" value="D"> D. $P = m \times g$</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><span class="nomor-soal">6.</span> Alat untuk mengukur tekanan udara adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. Barometer</label>
+                <label><input type="radio" name="q6" value="B"> B. Termometer</label>
+                <label><input type="radio" name="q6" value="C"> C. Manometer</label>
+                <label><input type="radio" name="q6" value="D"> D. Higrometer</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><span class="nomor-soal">7.</span> Organ utama dalam sistem pernapasan manusia adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Jantung</label>
+                <label><input type="radio" name="q7" value="B"> B. Paru-paru</label>
+                <label><input type="radio" name="q7" value="C"> C. Trakea</label>
+                <label><input type="radio" name="q7" value="D"> D. Bronkus</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><span class="nomor-soal">8.</span> Pertukaran oksigen dan karbon dioksida terjadi di....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Hidung</label>
+                <label><input type="radio" name="q8" value="B"> B. Trakea</label>
+                <label><input type="radio" name="q8" value="C"> C. Alveolus</label>
+                <label><input type="radio" name="q8" value="D"> D. Bronkiolus</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><span class="nomor-soal">9.</span> Komponen darah yang berfungsi mengangkut oksigen adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Trombosit</label>
+                <label><input type="radio" name="q9" value="B"> B. Sel darah putih</label>
+                <label><input type="radio" name="q9" value="C"> C. Sel darah merah</label>
+                <label><input type="radio" name="q9" value="D"> D. Plasma darah</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><span class="nomor-soal">10.</span> Jantung manusia terdiri dari.... ruang.</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. 2</label>
+                <label><input type="radio" name="q10" value="B"> B. 3</label>
+                <label><input type="radio" name="q10" value="C"> C. 4</label>
+                <label><input type="radio" name="q10" value="D"> D. 5</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><span class="nomor-soal">11.</span> Peristiwa bernapas yang melibatkan otot diafragma disebut pernapasan....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. Dada</label>
+                <label><input type="radio" name="q11" value="B"> B. Perut</label>
+                <label><input type="radio" name="q11" value="C"> C. Hidung</label>
+                <label><input type="radio" name="q11" value="D"> D. Mulut</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><span class="nomor-soal">12.</span> Energi yang dimiliki benda karena geraknya disebut energi....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. Potensial</label>
+                <label><input type="radio" name="q12" value="B"> B. Kinetik</label>
+                <label><input type="radio" name="q12" value="C"> C. Kimia</label>
+                <label><input type="radio" name="q12" value="D"> D. Panas</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><span class="nomor-soal">13.</span> Tekanan hidrostatis dipengaruhi oleh....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. Massa jenis, kedalaman, dan gravitasi</label>
+                <label><input type="radio" name="q13" value="B"> B. Luas permukaan dan gaya</label>
+                <label><input type="radio" name="q13" value="C"> C. Suhu dan volume</label>
+                <label><input type="radio" name="q13" value="D"> D. Kecepatan dan waktu</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><span class="nomor-soal">14.</span> Hukum Newton III: "Aksi = Reaksi". Contohnya adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. Bola menggelinding</label>
+                <label><input type="radio" name="q14" value="B"> B. Roket meluncur ke atas</label>
+                <label><input type="radio" name="q14" value="C"> C. Benda jatuh bebas</label>
+                <label><input type="radio" name="q14" value="D"> D. Mobil direm</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><span class="nomor-soal">15.</span> Penyakit yang menyerang sistem pernapasan karena rokok adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Anemia</label>
+                <label><input type="radio" name="q15" value="B"> B. Asma</label>
+                <label><input type="radio" name="q15" value="C"> C. Diabetes</label>
+                <label><input type="radio" name="q15" value="D"> D. Hepatitis</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        </div>
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+const kunci = {
+    q1:"B", q2:"B", q3:"A", q4:"B", q5:"B",
+    q6:"A", q7:"B", q8:"C", q9:"C", q10:"C",
+    q11:"B", q12:"B", q13:"A", q14:"B", q15:"B"
+};
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block'; }} let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
+</script>
+</body>
+</html>
