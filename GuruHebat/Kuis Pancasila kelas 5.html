@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kuis Pendidikan Pancasila Kelas 5</title>
+<style>
+    body { font-family: 'Comic Sans MS', Arial; background: #f3e5f5; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #9c27b0; }
+    h1 { text-align: center; color: #6a1b9a; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #9c27b0; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #e1bee7; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #e1bee7; transition: 0.2s; background: #f3e5f5; }
+.opsi label:hover { background: #ce93d8; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #9c27b0; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #7b1fa2; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #f3e5f5; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #6a1b9a; display: none; }
+.benar { color: green; }
+.salah { color: red; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇮🇩 Kuis Pendidikan Pancasila Kelas 5</h1>
+    <div id="timer">Waktu: 10:00</div>
+    <form id="formKuis">
+        <div id="wadahSoal">
+
+        <div class="soal" id="soal1">
+            <p><span class="nomor-soal">1.</span> Sila pertama Pancasila berbunyi....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q1" value="A"> A. Kemanusiaan yang Adil dan Beradab</label>
+                <label><input type="radio" name="q1" value="B"> B. Persatuan Indonesia</label>
+                <label><input type="radio" name="q1" value="C"> C. Ketuhanan Yang Maha Esa</label>
+                <label><input type="radio" name="q1" value="D"> D. Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan</label>
+            </div>
+            <div class="kunci-info" id="kunci1"></div>
+        </div>
+
+        <div class="soal" id="soal2">
+            <p><span class="nomor-soal">2.</span> Lambang sila pertama Pancasila adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q2" value="A"> A. Rantai</label>
+                <label><input type="radio" name="q2" value="B"> B. Bintang</label>
+                <label><input type="radio" name="q2" value="C"> C. Pohon Beringin</label>
+                <label><input type="radio" name="q2" value="D"> D. Kepala Banteng</label>
+            </div>
+            <div class="kunci-info" id="kunci2"></div>
+        </div>
+
+        <div class="soal" id="soal3">
+            <p><span class="nomor-soal">3.</span> Contoh pengamalan sila pertama di sekolah adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q3" value="A"> A. Membantu teman yang kesulitan</label>
+                <label><input type="radio" name="q3" value="B"> B. Berdoa sebelum pelajaran dimulai</label>
+                <label><input type="radio" name="q3" value="C"> C. Menghormati teman yang berbeda suku</label>
+                <label><input type="radio" name="q3" value="D"> D. Piket kelas bersama</label>
+            </div>
+            <div class="kunci-info" id="kunci3"></div>
+        </div>
+
+        <div class="soal" id="soal4">
+            <p><span class="nomor-soal">4.</span> Sila kedua Pancasila dilambangkan dengan....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q4" value="A"> A. Bintang</label>
+                <label><input type="radio" name="q4" value="B"> B. Rantai</label>
+                <label><input type="radio" name="q4" value="C"> C. Pohon Beringin</label>
+                <label><input type="radio" name="q4" value="D"> D. Padi dan Kapas</label>
+            </div>
+            <div class="kunci-info" id="kunci4"></div>
+        </div>
+
+        <div class="soal" id="soal5">
+            <p><span class="nomor-soal">5.</span> "Tidak membeda-bedakan teman" merupakan pengamalan sila ke....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q5" value="A"> A. 1</label>
+                <label><input type="radio" name="q5" value="B"> B. 2</label>
+                <label><input type="radio" name="q5" value="C"> C. 3</label>
+                <label><input type="radio" name="q5" value="D"> D. 4</label>
+            </div>
+            <div class="kunci-info" id="kunci5"></div>
+        </div>
+
+        <div class="soal" id="soal6">
+            <p><span class="nomor-soal">6.</span> Sikap toleransi antar umat beragama termasuk pengamalan sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q6" value="A"> A. 1</label>
+                <label><input type="radio" name="q6" value="B"> B. 2</label>
+                <label><input type="radio" name="q6" value="C"> C. 3</label>
+                <label><input type="radio" name="q6" value="D"> D. 5</label>
+            </div>
+            <div class="kunci-info" id="kunci6"></div>
+        </div>
+
+        <div class="soal" id="soal7">
+            <p><span class="nomor-soal">7.</span> Menghormati teman yang sedang beribadah adalah contoh....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q7" value="A"> A. Sila 1</label>
+                <label><input type="radio" name="q7" value="B"> B. Sila 2</label>
+                <label><input type="radio" name="q7" value="C"> C. Sila 3</label>
+                <label><input type="radio" name="q7" value="D"> D. Sila 4</label>
+            </div>
+            <div class="kunci-info" id="kunci7"></div>
+        </div>
+
+        <div class="soal" id="soal8">
+            <p><span class="nomor-soal">8.</span> Menolong teman yang jatuh termasuk pengamalan....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q8" value="A"> A. Sila 1</label>
+                <label><input type="radio" name="q8" value="B"> B. Sila 2</label>
+                <label><input type="radio" name="q8" value="C"> C. Sila 3</label>
+                <label><input type="radio" name="q8" value="D"> D. Sila 5</label>
+            </div>
+            <div class="kunci-info" id="kunci8"></div>
+        </div>
+
+        <div class="soal" id="soal9">
+            <p><span class="nomor-soal">9.</span> Hak untuk memeluk agama sesuai kepercayaan termasuk....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q9" value="A"> A. Hak Asasi Manusia</label>
+                <label><input type="radio" name="q9" value="B"> B. Kewajiban warga negara</label>
+                <label><input type="radio" name="q9" value="C"> C. Peraturan sekolah</label>
+                <label><input type="radio" name="q9" value="D"> D. Norma kesopanan</label>
+            </div>
+            <div class="kunci-info" id="kunci9"></div>
+        </div>
+
+        <div class="soal" id="soal10">
+            <p><span class="nomor-soal">10.</span> Tidak memaksakan kehendak kepada orang lain termasuk pengamalan sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q10" value="A"> A. 1</label>
+                <label><input type="radio" name="q10" value="B"> B. 2</label>
+                <label><input type="radio" name="q10" value="C"> C. 3</label>
+                <label><input type="radio" name="q10" value="D"> D. 4</label>
+            </div>
+            <div class="kunci-info" id="kunci10"></div>
+        </div>
+
+        <div class="soal" id="soal11">
+            <p><span class="nomor-soal">11.</span> Gotong royong membersihkan lingkungan sekolah adalah pengamalan sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q11" value="A"> A. 1</label>
+                <label><input type="radio" name="q11" value="B"> B. 2</label>
+                <label><input type="radio" name="q11" value="C"> C. 3</label>
+                <label><input type="radio" name="q11" value="D"> D. 5</label>
+            </div>
+            <div class="kunci-info" id="kunci11"></div>
+        </div>
+
+        <div class="soal" id="soal12">
+            <p><span class="nomor-soal">12.</span> Sikap adil terhadap semua teman tanpa membeda-bedakan termasuk sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q12" value="A"> A. 1</label>
+                <label><input type="radio" name="q12" value="B"> B. 2</label>
+                <label><input type="radio" name="q12" value="C"> C. 3</label>
+                <label><input type="radio" name="q12" value="D"> D. 4</label>
+            </div>
+            <div class="kunci-info" id="kunci12"></div>
+        </div>
+
+        <div class="soal" id="soal13">
+            <p><span class="nomor-soal">13.</span> Beribadah sesuai agama dan kepercayaan masing-masing adalah pengamalan sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q13" value="A"> A. 1</label>
+                <label><input type="radio" name="q13" value="B"> B. 2</label>
+                <label><input type="radio" name="q13" value="C"> C. 3</label>
+                <label><input type="radio" name="q13" value="D"> D. 5</label>
+            </div>
+            <div class="kunci-info" id="kunci13"></div>
+        </div>
+
+        <div class="soal" id="soal14">
+            <p><span class="nomor-soal">14.</span> Mengakui persamaan derajat sesama manusia terdapat pada sila....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q14" value="A"> A. 1</label>
+                <label><input type="radio" name="q14" value="B"> B. 2</label>
+                <label><input type="radio" name="q14" value="C"> C. 3</label>
+                <label><input type="radio" name="q14" value="D"> D. 4</label>
+            </div>
+            <div class="kunci-info" id="kunci14"></div>
+        </div>
+
+        <div class="soal" id="soal15">
+            <p><span class="nomor-soal">15.</span> Contoh perilaku yang tidak sesuai sila kedua adalah....</p>
+            <div class="opsi">
+                <label><input type="radio" name="q15" value="A"> A. Menolong korban bencana</label>
+                <label><input type="radio" name="q15" value="B"> B. Menghormati hak orang lain</label>
+                <label><input type="radio" name="q15" value="C"> C. Mengejek teman karena kekurangan</label>
+                <label><input type="radio" name="q15" value="D"> D. Bersikap sopan kepada guru</label>
+            </div>
+            <div class="kunci-info" id="kunci15"></div>
+        </div>
+
+        </div>
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        <div id="hasil" class="hasil"></div>
+    </form>
+</div>
+
+<script>
+const kunci = {
+    q1:"C", q2:"B", q3:"B", q4:"B", q5:"B",
+    q6:"A", q7:"A", q8:"B", q9:"A", q10:"B",
+    q11:"C", q12:"B", q13:"A", q14:"B", q15:"C"
+};
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block'; }} let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
+</script>
+</body>
+</html>
