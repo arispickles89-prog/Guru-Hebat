@@ -1,268 +1,218 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kuis Bahasa Inggris Kelas 11</title>
+<title>English Quiz Grade 11</title>
 <style>
-    body { font-family: 'Arial'; background: #e0f7fa; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #00838f; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #b2ebf2; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #00838f; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #006064; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #00838f; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #e3f2fd; margin: 0; padding: 20px; }
+   .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #1565c0; }
+    h1 { text-align: center; color: #1565c0; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #1565c0; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+   .soal { margin-bottom: 25px; border-bottom: 2px dashed #90caf9; padding-bottom: 15px; }
+   .soal p { line-height: 1.6; font-size: 16px; }
+   .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #90caf9; transition: 0.2s; background: #e3f2fd; }
+   .opsi label:hover { background: #42a5f5; color: white; }
+   .benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+   .salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+   .btn-submit { width: 100%; padding: 15px; background: #1565c0; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+   .btn-submit:hover { background: #0d47a1; }
+   .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e3f2fd; border-radius: 10px; }
+   .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #1565c0; display: none; }
+   .benar { color: green; }
+   .salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🇬🇧 Kuis Bahasa Inggris Kelas 11</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <h1>📚 English Quiz Grade 11</h1>
+    <div id="timer">Time: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> "I had my hair cut yesterday." The sentence is an example of ....</p>
+            <p><span class="nomor-soal">1.</span> "Would you like to join my birthday party?" This is an example of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. Passive Voice</label>
-                <label><input type="radio" name="q1" value="B"> B. Causative Have</label>
-                <label><input type="radio" name="q1" value="C"> C. Reported Speech</label>
-                <label><input type="radio" name="q1" value="D"> D. Conditional</label>
+                <label><input type="radio" name="q1" value="A"> A. Expression of opinion</label>
+                <label><input type="radio" name="q1" value="B"> B. Expression of invitation</label>
+                <label><input type="radio" name="q1" value="C"> C. Expression of suggestion</label>
+                <label><input type="radio" name="q1" value="D"> D. Expression of compliment</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> "She will get someone to repair her car." The causative verb used is ....</p>
+            <p><span class="nomor-soal">2.</span> The generic structure of Explanation Text consists of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Make</label>
-                <label><input type="radio" name="q2" value="B"> B. Have</label>
-                <label><input type="radio" name="q2" value="C"> C. Get</label>
-                <label><input type="radio" name="q2" value="D"> D. Let</label>
+                <label><input type="radio" name="q2" value="A"> A. Orientation, Events, Re-orientation</label>
+                <label><input type="radio" name="q2" value="B"> B. General statement, Explanation, Closing</label>
+                <label><input type="radio" name="q2" value="C"> C. Thesis, Arguments, Reiteration</label>
+                <label><input type="radio" name="q2" value="D"> D. Title, Characters, Plot</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> "My mother made me do the homework." This means ....</p>
+            <p><span class="nomor-soal">3.</span> "In my opinion, online learning is more effective." The sentence shows....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. I did the homework by myself</label>
-                <label><input type="radio" name="q3" value="B"> B. My mother forced me to do the homework</label>
-                <label><input type="radio" name="q3" value="C"> C. My mother helped me with homework</label>
-                <label><input type="radio" name="q3" value="D"> D. I asked my mother to do homework</label>
+                <label><input type="radio" name="q3" value="A"> A. Fact</label>
+                <label><input type="radio" name="q3" value="B"> B. Opinion</label>
+                <label><input type="radio" name="q3" value="C"> C. Invitation</label>
+                <label><input type="radio" name="q3" value="D"> D. Suggestion</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> The main purpose of narrative text is to ....</p>
+            <p><span class="nomor-soal">4.</span> "You should study hard for the exam." This sentence expresses....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Persuade the reader</label>
-                <label><input type="radio" name="q4" value="B"> B. Entertain the reader with a story</label>
-                <label><input type="radio" name="q4" value="C"> C. Describe an object</label>
-                <label><input type="radio" name="q4" value="D"> D. Explain a process</label>
+                <label><input type="radio" name="q4" value="A"> A. Invitation</label>
+                <label><input type="radio" name="q4" value="B"> B. Suggestion</label>
+                <label><input type="radio" name="q4" value="C"> C. Opinion</label>
+                <label><input type="radio" name="q4" value="D"> D. Greeting</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Structure of narrative: Orientation, Complication, and ....</p>
+            <p><span class="nomor-soal">5.</span> The purpose of Narrative Text is to....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Thesis</label>
-                <label><input type="radio" name="q5" value="B"> B. Resolution</label>
-                <label><input type="radio" name="q5" value="C"> C. Argument</label>
-                <label><input type="radio" name="q5" value="D"> D. Recommendation</label>
+                <label><input type="radio" name="q5" value="A"> A. Explain a process</label>
+                <label><input type="radio" name="q5" value="B"> B. Entertain the reader with a story</label>
+                <label><input type="radio" name="q5" value="C"> C. Describe a place</label>
+                <label><input type="radio" name="q5" value="D"> D. Argue about an issue</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Analytical exposition text aims to ....</p>
+            <p><span class="nomor-soal">6.</span> "Let's go to the beach this weekend!" This is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Tell a story</label>
-                <label><input type="radio" name="q6" value="B"> B. Persuade the reader that something is the case</label>
-                <label><input type="radio" name="q6" value="C"> C. Describe a place</label>
-                <label><input type="radio" name="q6" value="D"> D. Report an event</label>
+                <label><input type="radio" name="q6" value="A"> A. Formal invitation</label>
+                <label><input type="radio" name="q6" value="B"> B. Informal invitation</label>
+                <label><input type="radio" name="q6" value="C"> C. Opinion</label>
+                <label><input type="radio" name="q6" value="D"> D. Explanation</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Structure of analytical exposition: Thesis, Arguments, and ....</p>
+            <p><span class="nomor-soal">7.</span> Which one is the orientation of Narrative Text?</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Orientation</label>
-                <label><input type="radio" name="q7" value="B"> B. Reiteration</label>
-                <label><input type="radio" name="q7" value="C"> C. Resolution</label>
-                <label><input type="radio" name="q7" value="D"> D. Coda</label>
+                <label><input type="radio" name="q7" value="A"> A. The problem of the story</label>
+                <label><input type="radio" name="q7" value="B"> B. The introduction of characters and setting</label>
+                <label><input type="radio" name="q7" value="C"> C. The solution of the problem</label>
+                <label><input type="radio" name="q7" value="D"> D. The moral value</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> "Smoking should be banned because it causes cancer." This sentence is probably from ....</p>
+            <p><span class="nomor-soal">8.</span> "I think that social media has both positive and negative effects." This is an example of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Narrative</label>
-                <label><input type="radio" name="q8" value="B"> B. Report</label>
-                <label><input type="radio" name="q8" value="C"> C. Analytical Exposition</label>
-                <label><input type="radio" name="q8" value="D"> D. Recount</label>
+                <label><input type="radio" name="q8" value="A"> A. Thesis</label>
+                <label><input type="radio" name="q8" value="B"> B. Argument</label>
+                <label><input type="radio" name="q8" value="C"> C. Opinion</label>
+                <label><input type="radio" name="q8" value="D"> D. Fact</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Report text describes something ....</p>
+            <p><span class="nomor-soal">9.</span> The resolution in Narrative Text tells about....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. In general</label>
-                <label><input type="radio" name="q9" value="B"> B. In particular</label>
-                <label><input type="radio" name="q9" value="C"> C. In the past</label>
-                <label><input type="radio" name="q9" value="D"> D. In the future</label>
+                <label><input type="radio" name="q9" value="A"> A. Beginning of the story</label>
+                <label><input type="radio" name="q9" value="B"> B. The conflict</label>
+                <label><input type="radio" name="q9" value="C"> C. How the problem is solved</label>
+                <label><input type="radio" name="q9" value="D"> D. Characters description</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Structure of report text: General Classification and ....</p>
+            <p><span class="nomor-soal">10.</span> "How about coming to my house tonight?" This sentence is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Complication</label>
-                <label><input type="radio" name="q10" value="B"> B. Description</label>
-                <label><input type="radio" name="q10" value="C"> C. Argument</label>
-                <label><input type="radio" name="q10" value="D"> D. Thesis</label>
+                <label><input type="radio" name="q10" value="A"> A. Expression of opinion</label>
+                <label><input type="radio" name="q10" value="B"> B. Expression of invitation</label>
+                <label><input type="radio" name="q10" value="C"> C. Expression of suggestion</label>
+                <label><input type="radio" name="q10" value="D"> D. Expression of agreement</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> "The house was being painted by the workers." The tense is ....</p>
+            <p><span class="nomor-soal">11.</span> Explanation Text is used to explain....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Simple Past Passive</label>
-                <label><input type="radio" name="q11" value="B"> B. Present Continuous Passive</label>
-                <label><input type="radio" name="q11" value="C"> C. Past Continuous Passive</label>
-                <label><input type="radio" name="q11" value="D"> D. Present Perfect Passive</label>
+                <label><input type="radio" name="q11" value="A"> A. A story</label>
+                <label><input type="radio" name="q11" value="B"> B. A process or phenomenon</label>
+                <label><input type="radio" name="q11" value="C"> C. A person</label>
+                <label><input type="radio" name="q11" value="D"> D. An opinion</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> "I will have my room cleaned tomorrow." The active form is ....</p>
+            <p><span class="nomor-soal">12.</span> "Don't forget to bring your book tomorrow." This expresses....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. I will clean my room tomorrow</label>
-                <label><input type="radio" name="q12" value="B"> B. Someone will clean my room tomorrow</label>
-                <label><input type="radio" name="q12" value="C"> C. My room will be cleaned by me tomorrow</label>
-                <label><input type="radio" name="q12" value="D"> D. I am cleaning my room tomorrow</label>
+                <label><input type="radio" name="q12" value="A"> A. Invitation</label>
+                <label><input type="radio" name="q12" value="B"> B. Suggestion</label>
+                <label><input type="radio" name="q12" value="C"> C. Reminder</label>
+                <label><input type="radio" name="q12" value="D"> D. Opinion</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Language feature of analytical exposition: using ....</p>
+            <p><span class="nomor-soal">13.</span> The climax of a story is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Past tense</label>
-                <label><input type="radio" name="q13" value="B"> B. Simple present tense</label>
-                <label><input type="radio" name="q13" value="C"> C. Future tense</label>
-                <label><input type="radio" name="q13" value="D"> D. Imperative</label>
+                <label><input type="radio" name="q13" value="A"> A. The beginning</label>
+                <label><input type="radio" name="q13" value="B"> B. The highest tension or conflict</label>
+                <label><input type="radio" name="q13" value="C"> C. The ending</label>
+                <label><input type="radio" name="q13" value="D"> D. The introduction</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> "The Komodo dragon is a large lizard found in Indonesia." This sentence is from a .... text.</p>
+            <p><span class="nomor-soal">14.</span> "It seems to me that the new curriculum is better." This is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Narrative</label>
-                <label><input type="radio" name="q14" value="B"> B. Report</label>
-                <label><input type="radio" name="q14" value="C"> C. Analytical Exposition</label>
-                <label><input type="radio" name="q14" value="D"> D. Recount</label>
+                <label><input type="radio" name="q14" value="A"> A. Fact</label>
+                <label><input type="radio" name="q14" value="B"> B. Opinion</label>
+                <label><input type="radio" name="q14" value="C"> C. Invitation</label>
+                <label><input type="radio" name="q14" value="D"> D. Suggestion</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> "She lets her brother borrow her laptop." The causative verb 'let' means ....</p>
+            <p><span class="nomor-soal">15.</span> Which tense is commonly used in Explanation Text?</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Force</label>
-                <label><input type="radio" name="q15" value="B"> B. Allow</label>
-                <label><input type="radio" name="q15" value="C"> C. Ask</label>
-                <label><input type="radio" name="q15" value="D"> D. Order</label>
+                <label><input type="radio" name="q15" value="A"> A. Past Tense</label>
+                <label><input type="radio" name="q15" value="B"> B. Present Tense</label>
+                <label><input type="radio" name="q15" value="C"> C. Future Tense</label>
+                <label><input type="radio" name="q15" value="D"> D. Present Continuous</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
-        <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
+        </div>
+        <button type="button" class="btn-submit" onclick="cekJawaban()">Submit & See Score</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"B", q2:"C", q3:"B", q4:"B", q5:"B", 
-    q6:"B", q7:"B", q8:"C", q9:"A", q10:"B",
-    q11:"C", q12:"B", q13:"B", q14:"B", q15:"B" 
+const kunci = {
+    q1:"B", q2:"B", q3:"B", q4:"B", q5:"B",
+    q6:"B", q7:"B", q8:"C", q9:"C", q10:"B",
+    q11:"B", q12:"C", q13:"B", q14:"B", q15:"B"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban');
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban');
-            }
-            input.disabled = true;
-        });
-        
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Time: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Time is up!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Correct answer: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "PASSED 🎉" : "TRY AGAIN 💪"; document.getElementById('hasil').innerHTML = `Your Score: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
