@@ -4,265 +4,215 @@
 <meta charset="UTF-8">
 <title>Kuis Ekonomi Kelas 11</title>
 <style>
-    body { font-family: 'Arial'; background: #e3f2fd; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #1565c0; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #bbdefb; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #1565c0; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #0d47a1; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #1565c0; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #fff8e1; margin: 0; padding: 20px; }
+ .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #f9a825; }
+    h1 { text-align: center; color: #f9a825; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #f9a825; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+ .soal { margin-bottom: 25px; border-bottom: 2px dashed #ffe082; padding-bottom: 15px; }
+ .soal p { line-height: 1.6; font-size: 16px; }
+ .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #ffe082; transition: 0.2s; background: #fff8e1; }
+ .opsi label:hover { background: #ffc107; color: white; }
+ .benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+ .salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+ .btn-submit { width: 100%; padding: 15px; background: #f9a825; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+ .btn-submit:hover { background: #f57f17; }
+ .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #fff8e1; border-radius: 10px; }
+ .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #f9a825; display: none; }
+ .benar { color: green; }
+ .salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>💰 Kuis Ekonomi Kelas 11</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Badan usaha yang modalnya dimiliki oleh negara dan swasta disebut ....</p>
+            <p><span class="nomor-soal">1.</span> Badan usaha yang modalnya dimiliki oleh negara dan swasta disebut....</p>
             <div class="opsi">
                 <label><input type="radio" name="q1" value="A"> A. BUMN</label>
                 <label><input type="radio" name="q1" value="B"> B. BUMS</label>
                 <label><input type="radio" name="q1" value="C"> C. BUMD</label>
-                <label><input type="radio" name="q1" value="D"> D. BUMD & BUMN</label>
+                <label><input type="radio" name="q1" value="D"> D. BUM campuran</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Tujuan utama didirikannya koperasi adalah ....</p>
+            <p><span class="nomor-soal">2.</span> Prinsip utama koperasi adalah....</p>
             <div class="opsi">
                 <label><input type="radio" name="q2" value="A"> A. Mencari keuntungan sebesar-besarnya</label>
-                <label><input type="radio" name="q2" value="B"> B. Menyejahterakan anggota</label>
-                <label><input type="radio" name="q2" value="C"> C. Menguasai pasar</label>
-                <label><input type="radio" name="q2" value="D"> D. Bersaing dengan BUMN</label>
+                <label><input type="radio" name="q2" value="B"> B. Dari anggota, oleh anggota, untuk anggota</label>
+                <label><input type="radio" name="q2" value="C"> C. Modal besar</label>
+                <label><input type="radio" name="q2" value="D"> D. Kepemilikan perorangan</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Prinsip utama koperasi adalah ....</p>
+            <p><span class="nomor-soal">3.</span> Fungsi manajemen yang berkaitan dengan pembagian tugas adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. Dari anggota, oleh anggota, untuk anggota</label>
-                <label><input type="radio" name="q3" value="B"> B. Dari pemerintah, untuk rakyat</label>
-                <label><input type="radio" name="q3" value="C"> C. Modal besar, untung besar</label>
-                <label><input type="radio" name="q3" value="D"> D. Satu orang satu suara</label>
+                <label><input type="radio" name="q3" value="A"> A. Planning</label>
+                <label><input type="radio" name="q3" value="B"> B. Organizing</label>
+                <label><input type="radio" name="q3" value="C"> C. Actuating</label>
+                <label><input type="radio" name="q3" value="D"> D. Controlling</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Fungsi manajemen "mengatur orang agar bekerja sesuai rencana" disebut ....</p>
+            <p><span class="nomor-soal">4.</span> Tempat bertemunya penjual dan pembeli saham disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Planning</label>
-                <label><input type="radio" name="q4" value="B"> B. Organizing</label>
-                <label><input type="radio" name="q4" value="C"> C. Actuating</label>
-                <label><input type="radio" name="q4" value="D"> D. Controlling</label>
+                <label><input type="radio" name="q4" value="A"> A. Pasar tradisional</label>
+                <label><input type="radio" name="q4" value="B"> B. Pasar modal</label>
+                <label><input type="radio" name="q4" value="C"> C. Pasar uang</label>
+                <label><input type="radio" name="q4" value="D"> D. Pasar persaingan</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Pasar tempat jual beli surat berharga jangka panjang disebut pasar ....</p>
+            <p><span class="nomor-soal">5.</span> Pajak yang dikenakan atas penghasilan disebut pajak....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Uang</label>
-                <label><input type="radio" name="q5" value="B"> B. Modal</label>
-                <label><input type="radio" name="q5" value="C"> C. Komoditi</label>
-                <label><input type="radio" name="q5" value="D"> D. Valuta Asing</label>
+                <label><input type="radio" name="q5" value="A"> A. PPN</label>
+                <label><input type="radio" name="q5" value="B"> B. PPh</label>
+                <label><input type="radio" name="q5" value="C"> C. PBB</label>
+                <label><input type="radio" name="q5" value="D"> D. Bea Materai</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Lembaga yang bertugas mengawasi pasar modal di Indonesia adalah ....</p>
+            <p><span class="nomor-soal">6.</span> Kebijakan pemerintah untuk mengatur jumlah uang beredar disebut kebijakan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. BI</label>
-                <label><input type="radio" name="q6" value="B"> B. OJK</label>
-                <label><input type="radio" name="q6" value="C"> C. BEI</label>
-                <label><input type="radio" name="q6" value="D"> D. Kementrian Keuangan</label>
+                <label><input type="radio" name="q6" value="A"> A. Fiskal</label>
+                <label><input type="radio" name="q6" value="B"> B. Moneter</label>
+                <label><input type="radio" name="q6" value="C"> C. Perdagangan</label>
+                <label><input type="radio" name="q6" value="D"> D. Industri</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Kebijakan pemerintah untuk mengatur jumlah uang beredar disebut kebijakan ....</p>
+            <p><span class="nomor-soal">7.</span> Kelebihan CV dibanding PT adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Fiskal</label>
-                <label><input type="radio" name="q7" value="B"> B. Moneter</label>
-                <label><input type="radio" name="q7" value="C"> C. Perdagangan</label>
-                <label><input type="radio" name="q7" value="D"> D. Industri</label>
+                <label><input type="radio" name="q7" value="A"> A. Tanggung jawab terbatas</label>
+                <label><input type="radio" name="q7" value="B"> B. Mudah didirikan</label>
+                <label><input type="radio" name="q7" value="C"> C. Modal besar</label>
+                <label><input type="radio" name="q7" value="D"> D. Saham mudah diperjualbelikan</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Contoh kebijakan fiskal adalah ....</p>
+            <p><span class="nomor-soal">8.</span> SHU pada koperasi dibagikan berdasarkan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Menurunkan suku bunga</label>
-                <label><input type="radio" name="q8" value="B"> B. Menaikkan pajak</label>
-                <label><input type="radio" name="q8" value="C"> C. Mencetak uang</label>
-                <label><input type="radio" name="q8" value="D"> D. Operasi pasar terbuka</label>
+                <label><input type="radio" name="q8" value="A"> A. Besarnya simpanan pokok</label>
+                <label><input type="radio" name="q8" value="B"> B. Jabatan anggota</label>
+                <label><input type="radio" name="q8" value="C"> C. Jasa usaha anggota</label>
+                <label><input type="radio" name="q8" value="D"> D. Lama menjadi anggota</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> APBN disusun oleh pemerintah dan disetujui oleh ....</p>
+            <p><span class="nomor-soal">9.</span> "Controlling" dalam manajemen berarti....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. Presiden</label>
-                <label><input type="radio" name="q9" value="B"> B. DPR</label>
-                <label><input type="radio" name="q9" value="C"> C. MPR</label>
-                <label><input type="radio" name="q9" value="D"> D. DPD</label>
+                <label><input type="radio" name="q9" value="A"> A. Perencanaan</label>
+                <label><input type="radio" name="q9" value="B"> B. Pengorganisasian</label>
+                <label><input type="radio" name="q9" value="C"> C. Pengawasan</label>
+                <label><input type="radio" name="q9" value="D"> D. Pelaksanaan</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Jika pengeluaran negara > pendapatan negara, maka APBN mengalami ....</p>
+            <p><span class="nomor-soal">10.</span> Instrumen pasar modal adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Surplus</label>
-                <label><input type="radio" name="q10" value="B"> B. Defisit</label>
-                <label><input type="radio" name="q10" value="C"> C. Impas</label>
-                <label><input type="radio" name="q10" value="D"> D. Stabil</label>
+                <label><input type="radio" name="q10" value="A"> A. Deposito</label>
+                <label><input type="radio" name="q10" value="B"> B. Saham</label>
+                <label><input type="radio" name="q10" value="C"> C. Giro</label>
+                <label><input type="radio" name="q10" value="D"> D. Tabungan</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> SHU koperasi dibagikan berdasarkan ....</p>
+            <p><span class="nomor-soal">11.</span> Pajak yang tidak dapat dilimpahkan kepada pihak lain disebut pajak....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Besarnya simpanan pokok</label>
-                <label><input type="radio" name="q11" value="B"> B. Jabatan anggota</label>
-                <label><input type="radio" name="q11" value="C"> C. Jasa usaha masing-masing anggota</label>
-                <label><input type="radio" name="q11" value="D"> D. Lama menjadi anggota</label>
+                <label><input type="radio" name="q11" value="A"> A. Langsung</label>
+                <label><input type="radio" name="q11" value="B"> B. Tidak langsung</label>
+                <label><input type="radio" name="q11" value="C"> C. Progresif</label>
+                <label><input type="radio" name="q11" value="D"> D. Proporsional</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> PT yang sahamnya diperjualbelikan di bursa disebut PT ....</p>
+            <p><span class="nomor-soal">12.</span> Kebijakan menaikkan pajak untuk mengurangi inflasi termasuk kebijakan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. Tertutup</label>
-                <label><input type="radio" name="q12" value="B"> B. Terbuka/Tbk</label>
-                <label><input type="radio" name="q12" value="C"> C. Persekutuan</label>
-                <label><input type="radio" name="q12" value="D"> D. Firma</label>
+                <label><input type="radio" name="q12" value="A"> A. Moneter kontraktif</label>
+                <label><input type="radio" name="q12" value="B"> B. Moneter ekspansif</label>
+                <label><input type="radio" name="q12" value="C"> C. Fiskal kontraktif</label>
+                <label><input type="radio" name="q12" value="D"> D. Fiskal ekspansif</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Salah satu fungsi Bank Indonesia adalah sebagai ....</p>
+            <p><span class="nomor-soal">13.</span> PT yang sahamnya dijual bebas di masyarakat disebut PT....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Bank Komersial</label>
-                <label><input type="radio" name="q13" value="B"> B. Bank Sentral</label>
-                <label><input type="radio" name="q13" value="C"> C. Bank Perkreditan</label>
-                <label><input type="radio" name="q13" value="D"> D. Bank Koperasi</label>
+                <label><input type="radio" name="q13" value="A"> A. Tertutup</label>
+                <label><input type="radio" name="q13" value="B"> B. Terbuka</label>
+                <label><input type="radio" name="q13" value="C"> C. Persero</label>
+                <label><input type="radio" name="q13" value="D"> D. Perjan</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Kegiatan ekonomi yang bertujuan memenuhi kebutuhan sendiri disebut ....</p>
+            <p><span class="nomor-soal">14.</span> Salah satu peran koperasi dalam perekonomian adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Ekonomi modern</label>
-                <label><input type="radio" name="q14" value="B"> B. Ekonomi rumah tangga</label>
-                <label><input type="radio" name="q14" value="C"> C. Ekonomi subsisten</label>
-                <label><input type="radio" name="q14" value="D"> D. Ekonomi pasar</label>
+                <label><input type="radio" name="q14" value="A"> A. Menyaingi perusahaan besar</label>
+                <label><input type="radio" name="q14" value="B"> B. Meningkatkan kesejahteraan anggota</label>
+                <label><input type="radio" name="q14" value="C"> C. Mencari keuntungan pribadi</label>
+                <label><input type="radio" name="q14" value="D"> D. Menguasai pasar</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Kebijakan moneter dengan cara menjual surat berharga oleh BI disebut ....</p>
+            <p><span class="nomor-soal">15.</span> Kebijakan Bank Indonesia menurunkan suku bunga termasuk....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Politik diskonto</label>
-                <label><input type="radio" name="q15" value="B"> B. Politik pasar terbuka</label>
-                <label><input type="radio" name="q15" value="C"> C. Politik cadangan kas</label>
-                <label><input type="radio" name="q15" value="D"> D. Politik kredit selektif</label>
+                <label><input type="radio" name="q15" value="A"> A. Kebijakan fiskal kontraktif</label>
+                <label><input type="radio" name="q15" value="B"> B. Kebijakan fiskal ekspansif</label>
+                <label><input type="radio" name="q15" value="C"> C. Kebijakan moneter kontraktif</label>
+                <label><input type="radio" name="q15" value="D"> D. Kebijakan moneter ekspansif</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"A", q2:"B", q3:"A", q4:"C", q5:"B", 
-    q6:"B", q7:"B", q8:"B", q9:"B", q10:"B",
-    q11:"C", q12:"B", q13:"B", q14:"C", q15:"B" 
+const kunci = {
+    q1:"D", q2:"B", q3:"B", q4:"B", q5:"B",
+    q6:"B", q7:"B", q8:"C", q9:"C", q10:"B",
+    q11:"A", q12:"C", q13:"B", q14:"B", q15:"D"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban');
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban');
-            }
-            input.disabled = true;
-        });
-        
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
