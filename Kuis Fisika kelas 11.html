@@ -2,273 +2,217 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kuis Kimia Kelas 11</title>
+<title>Kuis Fisika Kelas 11</title>
 <style>
-    body { font-family: 'Arial'; background: #fce4ec; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #ad1457; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #f8bbd0; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .rumus { font-style: italic; color: #555; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #ad1457; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #880e4f; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #ad1457; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #e1f5fe; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #0277bd; }
+    h1 { text-align: center; color: #0277bd; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #0277bd; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #81d4fa; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #81d4fa; transition: 0.2s; background: #e1f5fe; }
+.opsi label:hover { background: #29b6f6; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #0277bd; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #01579b; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e1f5fe; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #0277bd; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🧪 Kuis Kimia Kelas 11</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <h1>⚡ Kuis Fisika Kelas 11</h1>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Laju reaksi bertambah jika ....</p>
+            <p><span class="nomor-soal">1.</span> Gerak harmonik sederhana terjadi ketika gaya pemulih berbanding lurus dengan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. Suhu diturunkan</label>
-                <label><input type="radio" name="q1" value="B"> B. Konsentrasi diperkecil</label>
-                <label><input type="radio" name="q1" value="C"> C. Luas permukaan diperbesar</label>
-                <label><input type="radio" name="q1" value="D"> D. Katalis dihilangkan</label>
+                <label><input type="radio" name="q1" value="A"> A. Kecepatan</label>
+                <label><input type="radio" name="q1" value="B"> B. Simpangan</label>
+                <label><input type="radio" name="q1" value="C"> C. Percepatan</label>
+                <label><input type="radio" name="q1" value="D"> D. Energi</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Satuan laju reaksi adalah ....</p>
+            <p><span class="nomor-soal">2.</span> Satuan frekuensi dalam SI adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. mol/L</label>
-                <label><input type="radio" name="q2" value="B"> B. mol/L.s</label>
-                <label><input type="radio" name="q2" value="C"> C. L/mol.s</label>
-                <label><input type="radio" name="q2" value="D"> D. s⁻¹</label>
+                <label><input type="radio" name="q2" value="A"> A. m/s</label>
+                <label><input type="radio" name="q2" value="B"> B. Hz</label>
+                <label><input type="radio" name="q2" value="C"> C. Joule</label>
+                <label><input type="radio" name="q2" value="D"> D. Newton</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Reaksi: <span class="rumus">N₂ + 3H₂ ⇌ 2NH₃</span>. Tetapan kesetimbangan Kc dirumuskan ....</p>
+            <p><span class="nomor-soal">3.</span> Gelombang yang arah getarnya sejajar dengan arah rambat disebut gelombang....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. <span class="rumus">[N₂][H₂]³ / [NH₃]²</span></label>
-                <label><input type="radio" name="q3" value="B"> B. <span class="rumus">[NH₃]² / [N₂][H₂]³</span></label>
-                <label><input type="radio" name="q3" value="C"> C. <span class="rumus">[NH₃] / [N₂][H₂]</span></label>
-                <label><input type="radio" name="q3" value="D"> D. <span class="rumus">[N₂][H₂] / [NH₃]</span></label>
+                <label><input type="radio" name="q3" value="A"> A. Transversal</label>
+                <label><input type="radio" name="q3" value="B"> B. Longitudinal</label>
+                <label><input type="radio" name="q3" value="C"> C. Mekanik</label>
+                <label><input type="radio" name="q3" value="D"> D. Elektromagnetik</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Jika suhu dinaikkan pada reaksi eksoterm, maka kesetimbangan akan bergeser ke ....</p>
+            <p><span class="nomor-soal">4.</span> Cepat rambat bunyi paling cepat merambat pada medium....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Kanan</label>
-                <label><input type="radio" name="q4" value="B"> B. Kiri</label>
-                <label><input type="radio" name="q4" value="C"> C. Tetap</label>
-                <label><input type="radio" name="q4" value="D"> D. Tidak tentu</label>
+                <label><input type="radio" name="q4" value="A"> A. Gas</label>
+                <label><input type="radio" name="q4" value="B"> B. Cair</label>
+                <label><input type="radio" name="q4" value="C"> C. Padat</label>
+                <label><input type="radio" name="q4" value="D"> D. Vakum</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Asam menurut Arrhenius adalah zat yang dalam air menghasilkan ion ....</p>
+            <p><span class="nomor-soal">5.</span> Hukum Pascal menyatakan bahwa tekanan yang diberikan pada zat cair akan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. OH⁻</label>
-                <label><input type="radio" name="q5" value="B"> B. H⁺</label>
-                <label><input type="radio" name="q5" value="C"> C. Na⁺</label>
-                <label><input type="radio" name="q5" value="D"> D. Cl⁻</label>
+                <label><input type="radio" name="q5" value="A"> A. Diteruskan ke segala arah sama besar</label>
+                <label><input type="radio" name="q5" value="B"> B. Diteruskan ke bawah saja</label>
+                <label><input type="radio" name="q5" value="C"> C. Diteruskan ke atas saja</label>
+                <label><input type="radio" name="q5" value="D"> D. Menghilang</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> pH larutan dengan [H⁺] = 10⁻⁴ M adalah ....</p>
+            <p><span class="nomor-soal">6.</span> Prinsip kerja pesawat terbang berdasarkan hukum....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. 2</label>
-                <label><input type="radio" name="q6" value="B"> B. 4</label>
-                <label><input type="radio" name="q6" value="C"> C. 6</label>
-                <label><input type="radio" name="q6" value="D"> D. 10</label>
+                <label><input type="radio" name="q6" value="A"> A. Archimedes</label>
+                <label><input type="radio" name="q6" value="B"> B. Pascal</label>
+                <label><input type="radio" name="q6" value="C"> C. Bernoulli</label>
+                <label><input type="radio" name="q6" value="D"> D. Newton</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Larutan yang pH nya > 7 bersifat ....</p>
+            <p><span class="nomor-soal">7.</span> Kalor yang diperlukan untuk mengubah wujud zat disebut kalor....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Asam</label>
-                <label><input type="radio" name="q7" value="B"> B. Basa</label>
-                <label><input type="radio" name="q7" value="C"> C. Netral</label>
-                <label><input type="radio" name="q7" value="D"> D. Garam</label>
+                <label><input type="radio" name="q7" value="A"> A. Jenis</label>
+                <label><input type="radio" name="q7" value="B"> B. Laten</label>
+                <label><input type="radio" name="q7" value="C"> C. Sensibel</label>
+                <label><input type="radio" name="q7" value="D"> D. Spesifik</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Hidrolisis garam dari asam kuat dan basa kuat menghasilkan larutan yang bersifat ....</p>
+            <p><span class="nomor-soal">8.</span> Rumus periode pada pegas adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Asam</label>
-                <label><input type="radio" name="q8" value="B"> B. Basa</label>
-                <label><input type="radio" name="q8" value="C"> C. Netral</label>
-                <label><input type="radio" name="q8" value="D"> D. Buffer</label>
+                <label><input type="radio" name="q8" value="A"> A. T = 2π√(m/k)</label>
+                <label><input type="radio" name="q8" value="B"> B. T = 2π√(k/m)</label>
+                <label><input type="radio" name="q8" value="C"> C. T = 2π√(L/g)</label>
+                <label><input type="radio" name="q8" value="D"> D. T = 1/f</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Contoh garam yang mengalami hidrolisis sebagian adalah ....</p>
+            <p><span class="nomor-soal">9.</span> Efek Doppler terjadi karena adanya....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. NaCl</label>
-                <label><input type="radio" name="q9" value="B"> B. CH₃COONa</label>
-                <label><input type="radio" name="q9" value="C"> C. K₂SO₄</label>
-                <label><input type="radio" name="q9" value="D"> D. NaNO₃</label>
+                <label><input type="radio" name="q9" value="A"> A. Perubahan amplitudo</label>
+                <label><input type="radio" name="q9" value="B"> B. Perubahan frekuensi relatif</label>
+                <label><input type="radio" name="q9" value="C"> C. Perubahan panjang gelombang</label>
+                <label><input type="radio" name="q9" value="D"> D. Interferensi</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Hasil kali kelarutan dari <span class="rumus">Ag₂CrO₄</span> dirumuskan ....</p>
+            <p><span class="nomor-soal">10.</span> Tekanan hidrostatis dirumuskan sebagai....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. <span class="rumus">[Ag⁺][CrO₄²⁻]</span></label>
-                <label><input type="radio" name="q10" value="B"> B. <span class="rumus">[Ag⁺]²[CrO₄²⁻]</span></label>
-                <label><input type="radio" name="q10" value="C"> C. <span class="rumus">[Ag⁺][CrO₄²⁻]²</span></label>
-                <label><input type="radio" name="q10" value="D"> D. <span class="rumus">[Ag₂⁺][CrO₄²⁻]</span></label>
+                <label><input type="radio" name="q10" value="A"> A. P = F/A</label>
+                <label><input type="radio" name="q10" value="B"> B. P = ρgh</label>
+                <label><input type="radio" name="q10" value="C"> C. P = W/t</label>
+                <label><input type="radio" name="q10" value="D"> D. P = m.v</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Faktor yang tidak mempengaruhi pergeseran kesetimbangan adalah ....</p>
+            <p><span class="nomor-soal">11.</span> Debit air dirumuskan sebagai....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Suhu</label>
-                <label><input type="radio" name="q11" value="B"> B. Tekanan</label>
-                <label><input type="radio" name="q11" value="C"> C. Katalis</label>
-                <label><input type="radio" name="q11" value="D"> D. Konsentrasi</label>
+                <label><input type="radio" name="q11" value="A"> A. Q = A.v</label>
+                <label><input type="radio" name="q11" value="B"> B. Q = m/t</label>
+                <label><input type="radio" name="q11" value="C"> C. Q = F/A</label>
+                <label><input type="radio" name="q11" value="D"> D. Q = P.V</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Indikator yang berwarna merah dalam suasana asam adalah ....</p>
+            <p><span class="nomor-soal">12.</span> Pemuaian luas dirumuskan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. Fenolftalein</label>
-                <label><input type="radio" name="q12" value="B"> B. Lakmus biru</label>
-                <label><input type="radio" name="q12" value="C"> C. Metil jingga</label>
-                <label><input type="radio" name="q12" value="D"> D. Lakmus merah</label>
+                <label><input type="radio" name="q12" value="A"> A. ΔL = L0.α.ΔT</label>
+                <label><input type="radio" name="q12" value="B"> B. ΔA = A0.β.ΔT</label>
+                <label><input type="radio" name="q12" value="C"> C. ΔV = V0.γ.ΔT</label>
+                <label><input type="radio" name="q12" value="D"> D. Q = mcΔT</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Reaksi yang berlangsung dua arah disebut reaksi ....</p>
+            <p><span class="nomor-soal">13.</span> Intensitas bunyi berbanding terbalik dengan kuadrat....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Irreversibel</label>
-                <label><input type="radio" name="q13" value="B"> B. Reversibel</label>
-                <label><input type="radio" name="q13" value="C"> C. Eksoterm</label>
-                <label><input type="radio" name="q13" value="D"> D. Endoterm</label>
+                <label><input type="radio" name="q13" value="A"> A. Frekuensi</label>
+                <label><input type="radio" name="q13" value="B"> B. Jarak</label>
+                <label><input type="radio" name="q13" value="C"> C. Amplitudo</label>
+                <label><input type="radio" name="q13" value="D"> D. Periode</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Larutan buffer dapat dibuat dari campuran ....</p>
+            <p><span class="nomor-soal">14.</span> Asas Black menyatakan bahwa....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Asam kuat dan basa kuat</label>
-                <label><input type="radio" name="q14" value="B"> B. Asam lemah dan garamnya</label>
-                <label><input type="radio" name="q14" value="C"> C. Basa kuat dan garamnya</label>
-                <label><input type="radio" name="q14" value="D"> D. Garam netral</label>
+                <label><input type="radio" name="q14" value="A"> A. Q lepas = Q terima</label>
+                <label><input type="radio" name="q14" value="B"> B. E masuk = E keluar</label>
+                <label><input type="radio" name="q14" value="C"> C. W = F.s</label>
+                <label><input type="radio" name="q14" value="D"> D. P = W/t</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Jika Ksp <span class="rumus">BaSO₄ = 1×10⁻¹⁰</span>, maka kelarutannya adalah ....</p>
+            <p><span class="nomor-soal">15.</span> Gelombang elektromagnetik tidak memerlukan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. 1×10⁻⁵ M</label>
-                <label><input type="radio" name="q15" value="B"> B. 1×10⁻¹⁰ M</label>
-                <label><input type="radio" name="q15" value="C"> C. 2×10⁻⁵ M</label>
-                <label><input type="radio" name="q15" value="D"> D. 1×10⁻²⁰ M</label>
+                <label><input type="radio" name="q15" value="A"> A. Sumber</label>
+                <label><input type="radio" name="q15" value="B"> B. Medium</label>
+                <label><input type="radio" name="q15" value="C"> C. Energi</label>
+                <label><input type="radio" name="q15" value="D"> D. Frekuensi</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"C", q2:"B", q3:"B", q4:"B", q5:"B", 
-    q6:"B", q7:"B", q8:"C", q9:"B", q10:"B",
-    q11:"C", q12:"C", q13:"B", q14:"B", q15:"A" 
+const kunci = {
+    q1:"B", q2:"B", q3:"B", q4:"C", q5:"A",
+    q6:"C", q7:"B", q8:"A", q9:"B", q10:"B",
+    q11:"A", q12:"B", q13:"B", q14:"A", q15:"B"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban');
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban');
-            }
-            input.disabled = true;
-        });
-        
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
-// JALANKAN PAS HALAMAN LOAD
-window.onload = function() {
-    acakSoal();
-    renomorSoal();
-};
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
