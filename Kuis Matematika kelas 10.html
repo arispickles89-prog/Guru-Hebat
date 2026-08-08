@@ -4,268 +4,215 @@
 <meta charset="UTF-8">
 <title>Kuis Matematika Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #e3f2fd; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    body { font-family: 'Segoe UI', Arial; background: #e3f2fd; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #0d47a1; }
     h1 { text-align: center; color: #0d47a1; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #bbdefb; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #0d47a1; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #082f73; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #0d47a1; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #0d47a1; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #90caf9; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #90caf9; transition: 0.2s; background: #e3f2fd; }
+.opsi label:hover { background: #1e88e5; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #0d47a1; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #082f6b; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e3f2fd; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #0d47a1; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>📐 Kuis Matematika Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Negasi dari pernyataan "Semua siswa rajin belajar" adalah ....</p>
+            <p><span class="nomor-soal">1.</span> Bentuk sederhana dari $2^3 \times 2^4$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. Semua siswa tidak rajin belajar</label>
-                <label><input type="radio" name="q1" value="B"> B. Ada siswa yang tidak rajin belajar</label>
-                <label><input type="radio" name="q1" value="C"> C. Semua siswa malas belajar</label>
-                <label><input type="radio" name="q1" value="D"> D. Tidak ada siswa yang rajin belajar</label>
+                <label><input type="radio" name="q1" value="A"> A. $2^7$</label>
+                <label><input type="radio" name="q1" value="B"> B. $2^{12}$</label>
+                <label><input type="radio" name="q1" value="C"> C. $4^7$</label>
+                <label><input type="radio" name="q1" value="D"> D. $8^7$</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Invers dari pernyataan "Jika hujan maka jalanan basah" adalah ....</p>
+            <p><span class="nomor-soal">2.</span> Nilai dari $^2\log 16$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Jika jalanan basah maka hujan</label>
-                <label><input type="radio" name="q2" value="B"> B. Jika tidak hujan maka jalanan tidak basah</label>
-                <label><input type="radio" name="q2" value="C"> C. Jika jalanan tidak basah maka tidak hujan</label>
-                <label><input type="radio" name="q2" value="D"> D. Hujan dan jalanan tidak basah</label>
+                <label><input type="radio" name="q2" value="A"> A. 2</label>
+                <label><input type="radio" name="q2" value="B"> B. 4</label>
+                <label><input type="radio" name="q2" value="C"> C. 8</label>
+                <label><input type="radio" name="q2" value="D"> D. 16</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Nilai kebenaran dari $(p \land q) \lor \neg p$ adalah ekuivalen dengan ....</p>
+            <p><span class="nomor-soal">3.</span> Himpunan penyelesaian dari $2x - 5 < 7$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. $p \lor q$</label>
-                <label><input type="radio" name="q3" value="B"> B. $q \lor \neg p$</label>
-                <label><input type="radio" name="q3" value="C"> C. $p \land q$</label>
-                <label><input type="radio" name="q3" value="D"> D. $\neg p \land q$</label>
+                <label><input type="radio" name="q3" value="A"> A. x < 6</label>
+                <label><input type="radio" name="q3" value="B"> B. x < 1</label>
+                <label><input type="radio" name="q3" value="C"> C. x > 6</label>
+                <label><input type="radio" name="q3" value="D"> D. x > 1</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Himpunan penyelesaian dari $2x - 3 < 7$ adalah ....</p>
+            <p><span class="nomor-soal">4.</span> Jika $f(x) = 3x + 2$, maka $f(4)$ =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. $x < 2$</label>
-                <label><input type="radio" name="q4" value="B"> B. $x < 5$</label>
-                <label><input type="radio" name="q4" value="C"> C. $x > 5$</label>
-                <label><input type="radio" name="q4" value="D"> D. $x > 2$</label>
+                <label><input type="radio" name="q4" value="A"> A. 10</label>
+                <label><input type="radio" name="q4" value="B"> B. 12</label>
+                <label><input type="radio" name="q4" value="C"> C. 14</label>
+                <label><input type="radio" name="q4" value="D"> D. 16</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Nilai $x$ yang memenuhi $|x - 2| = 5$ adalah ....</p>
+            <p><span class="nomor-soal">5.</span> Nilai $sin 30°$ =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. $x = 3$ atau $x = -3$</label>
-                <label><input type="radio" name="q5" value="B"> B. $x = 7$ atau $x = -3$</label>
-                <label><input type="radio" name="q5" value="C"> C. $x = 5$ atau $x = -5$</label>
-                <label><input type="radio" name="q5" value="D"> D. $x = 2$ atau $x = -2$</label>
+                <label><input type="radio" name="q5" value="A"> A. $\frac{1}{2}$</label>
+                <label><input type="radio" name="q5" value="B"> B. $\frac{1}{2}\sqrt{2}$</label>
+                <label><input type="radio" name="q5" value="C"> C. $\frac{1}{2}\sqrt{3}$</label>
+                <label><input type="radio" name="q5" value="D"> D. 1</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Jika $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ dan $B = \begin{pmatrix} 0 & 1 \\ 2 & 3 \end{pmatrix}$, maka $A + B$ = ....</p>
+            <p><span class="nomor-soal">6.</span> Bentuk $5^{-2}$ sama dengan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. $\begin{pmatrix} 1 & 3 \\ 5 & 7 \end{pmatrix}$</label>
-                <label><input type="radio" name="q6" value="B"> B. $\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$</label>
-                <label><input type="radio" name="q6" value="C"> C. $\begin{pmatrix} 2 & 4 \\ 6 & 8 \end{pmatrix}$</label>
-                <label><input type="radio" name="q6" value="D"> D. $\begin{pmatrix} 3 & 5 \\ 5 & 7 \end{pmatrix}$</label>
+                <label><input type="radio" name="q6" value="A"> A. -25</label>
+                <label><input type="radio" name="q6" value="B"> B. -10</label>
+                <label><input type="radio" name="q6" value="C"> C. $\frac{1}{25}$</label>
+                <label><input type="radio" name="q6" value="D"> D. $\frac{1}{10}$</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Transpos dari matriks $A = \begin{pmatrix} 2 & 5 \\ 3 & 7 \\ 4 & 8 \end{pmatrix}$ adalah ....</p>
+            <p><span class="nomor-soal">7.</span> Penyelesaian SPLTV: x + y = 5, x - y = 1. Nilai x =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. $\begin{pmatrix} 2 & 3 & 4 \\ 5 & 7 & 8 \end{pmatrix}$</label>
-                <label><input type="radio" name="q7" value="B"> B. $\begin{pmatrix} 2 & 5 \\ 3 & 7 \\ 4 & 8 \end{pmatrix}$</label>
-                <label><input type="radio" name="q7" value="C"> C. $\begin{pmatrix} 8 & 7 & 5 \\ 4 & 3 & 2 \end{pmatrix}$</label>
-                <label><input type="radio" name="q7" value="D"> D. $\begin{pmatrix} 2 & 3 \\ 5 & 7 \\ 4 & 8 \end{pmatrix}$</label>
+                <label><input type="radio" name="q7" value="A"> A. 2</label>
+                <label><input type="radio" name="q7" value="B"> B. 3</label>
+                <label><input type="radio" name="q7" value="C"> C. 4</label>
+                <label><input type="radio" name="q7" value="D"> D. 5</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Determinan dari matriks $\begin{pmatrix} 3 & 2 \\ 4 & 5 \end{pmatrix}$ adalah ....</p>
+            <p><span class="nomor-soal">8.</span> Domain dari fungsi $f(x) = \sqrt{x-3}$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. 7</label>
-                <label><input type="radio" name="q8" value="B"> B. 23</label>
-                <label><input type="radio" name="q8" value="C"> C. 15</label>
-                <label><input type="radio" name="q8" value="D"> D. 14</label>
+                <label><input type="radio" name="q8" value="A"> A. x < 3</label>
+                <label><input type="radio" name="q8" value="B"> B. x ≤ 3</label>
+                <label><input type="radio" name="q8" value="C"> C. x > 3</label>
+                <label><input type="radio" name="q8" value="D"> D. x ≥ 3</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Diketahui vektor $\vec{a} = (3, 4)$. Panjang vektor $\vec{a}$ adalah ....</p>
+            <p><span class="nomor-soal">9.</span> Nilai $cos 60°$ =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. 3</label>
-                <label><input type="radio" name="q9" value="B"> B. 4</label>
-                <label><input type="radio" name="q9" value="C"> C. 5</label>
-                <label><input type="radio" name="q9" value="D"> D. 7</label>
+                <label><input type="radio" name="q9" value="A"> A. 0</label>
+                <label><input type="radio" name="q9" value="B"> B. $\frac{1}{2}$</label>
+                <label><input type="radio" name="q9" value="C"> C. $\frac{1}{2}\sqrt{3}$</label>
+                <label><input type="radio" name="q9" value="D"> D. 1</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Jika $\vec{a} = (2, -1)$ dan $\vec{b} = (4, 3)$, maka $\vec{a} + \vec{b}$ = ....</p>
+            <p><span class="nomor-soal">10.</span> Mean dari data: 4, 5, 6, 6, 7 adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. (6, 2)</label>
-                <label><input type="radio" name="q10" value="B"> B. (-2, -4)</label>
-                <label><input type="radio" name="q10" value="C"> C. (8, -3)</label>
-                <label><input type="radio" name="q10" value="D"> D. (2, 4)</label>
+                <label><input type="radio" name="q10" value="A"> A. 5</label>
+                <label><input type="radio" name="q10" value="B"> B. 5,6</label>
+                <label><input type="radio" name="q10" value="C"> C. 6</label>
+                <label><input type="radio" name="q10" value="D"> D. 6,5</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Dot product dari $\vec{a} = (1, 2)$ dan $\vec{b} = (3, 4)$ adalah ....</p>
+            <p><span class="nomor-soal">11.</span> Bentuk logaritma dari $3^4 = 81$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. 7</label>
-                <label><input type="radio" name="q11" value="B"> B. 11</label>
-                <label><input type="radio" name="q11" value="C"> C. 9</label>
-                <label><input type="radio" name="q11" value="D"> D. 10</label>
+                <label><input type="radio" name="q11" value="A"> A. $^3\log 4 = 81$</label>
+                <label><input type="radio" name="q11" value="B"> B. $^4\log 81 = 3$</label>
+                <label><input type="radio" name="q11" value="C"> C. $^3\log 81 = 4$</label>
+                <label><input type="radio" name="q11" value="D"> D. $^81\log 3 = 4$</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Himpunan penyelesaian dari $x^2 - 5x + 6 \leq 0$ adalah ....</p>
+            <p><span class="nomor-soal">12.</span> Jika $g(x) = x^2 - 1$, maka $g(-2)$ =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. $x \leq 2$ atau $x \geq 3$</label>
-                <label><input type="radio" name="q12" value="B"> B. $2 \leq x \leq 3$</label>
-                <label><input type="radio" name="q12" value="C"> C. $x < 2$ atau $x > 3$</label>
-                <label><input type="radio" name="q12" value="D"> D. $2 < x < 3$</label>
+                <label><input type="radio" name="q12" value="A"> A. 1</label>
+                <label><input type="radio" name="q12" value="B"> B. 3</label>
+                <label><input type="radio" name="q12" value="C"> C. 4</label>
+                <label><input type="radio" name="q12" value="D"> D. 5</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Jika $A = \begin{pmatrix} 2 & 0 \\ 1 & 3 \end{pmatrix}$, maka $2A$ = ....</p>
+            <p><span class="nomor-soal">13.</span> Nilai $tan 45°$ =....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. $\begin{pmatrix} 4 & 0 \\ 2 & 6 \end{pmatrix}$</label>
-                <label><input type="radio" name="q13" value="B"> B. $\begin{pmatrix} 2 & 0 \\ 2 & 3 \end{pmatrix}$</label>
-                <label><input type="radio" name="q13" value="C"> C. $\begin{pmatrix} 4 & 2 \\ 2 & 6 \end{pmatrix}$</label>
-                <label><input type="radio" name="q13" value="D"> D. $\begin{pmatrix} 2 & 2 \\ 1 & 6 \end{pmatrix}$</label>
+                <label><input type="radio" name="q13" value="A"> A. 0</label>
+                <label><input type="radio" name="q13" value="B"> B. $\frac{1}{2}\sqrt{2}$</label>
+                <label><input type="radio" name="q13" value="C"> C. 1</label>
+                <label><input type="radio" name="q13" value="D"> D. $\sqrt{3}$</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Konvers dari "Jika nilai bagus maka lulus ujian" adalah ....</p>
+            <p><span class="nomor-soal">14.</span> Modus dari data: 2, 3, 3, 4, 5, 3, 6 adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Jika lulus ujian maka nilai bagus</label>
-                <label><input type="radio" name="q14" value="B"> B. Jika nilai tidak bagus maka tidak lulus ujian</label>
-                <label><input type="radio" name="q14" value="C"> C. Jika tidak lulus ujian maka nilai tidak bagus</label>
-                <label><input type="radio" name="q14" value="D"> D. Nilai bagus dan lulus ujian</label>
+                <label><input type="radio" name="q14" value="A"> A. 2</label>
+                <label><input type="radio" name="q14" value="B"> B. 3</label>
+                <label><input type="radio" name="q14" value="C"> C. 4</label>
+                <label><input type="radio" name="q14" value="D"> D. 6</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Vektor satuan dari $\vec{v} = (6, 8)$ adalah ....</p>
+            <p><span class="nomor-soal">15.</span> Bentuk sederhana dari $\frac{a^5}{a^2}$ adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. $(0.6, 0.8)$</label>
-                <label><input type="radio" name="q15" value="B"> B. $(3, 4)$</label>
-                <label><input type="radio" name="q15" value="C"> C. $(6, 8)$</label>
-                <label><input type="radio" name="q15" value="D"> D. $(1, 1)$</label>
+                <label><input type="radio" name="q15" value="A"> A. $a^3$</label>
+                <label><input type="radio" name="q15" value="B"> B. $a^7$</label>
+                <label><input type="radio" name="q15" value="C"> C. $a^{10}$</label>
+                <label><input type="radio" name="q15" value="D"> D. $a^2$</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"B", q2:"B", q3:"B", q4:"B", q5:"B", 
-    q6:"A", q7:"A", q8:"A", q9:"C", q10:"A",
-    q11:"B", q12:"B", q13:"A", q14:"A", q15:"A" 
+const kunci = {
+    q1:"A", q2:"B", q3:"A", q4:"C", q5:"A",
+    q6:"C", q7:"B", q8:"D", q9:"B", q10:"B",
+    q11:"C", q12:"B", q13:"C", q14:"B", q15:"A"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        // Hitung skor
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        // Tandai jawaban benar dan salah
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban'); // Hijau
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban'); // Merah
-            }
-            input.disabled = true;
-        });
-        
-        // Tampilkan kunci jawaban jika salah/kosong
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
