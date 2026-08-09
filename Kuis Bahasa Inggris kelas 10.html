@@ -4,268 +4,215 @@
 <meta charset="UTF-8">
 <title>Kuis Bahasa Inggris Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #fff8e1; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #f57f17; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffecb3; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #f57f17; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #e65100; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #f57f17; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #e8f0fe; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #1565c0; }
+    h1 { text-align: center; color: #1565c0; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #1565c0; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #90caf9; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #90caf9; transition: 0.2s; background: #e8f0fe; }
+.opsi label:hover { background: #1e88e5; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #1565c0; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #0d47a1; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e8f0fe; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #1565c0; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>📖 Kuis Bahasa Inggris Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <h1>🇬🇧 Kuis Bahasa Inggris Kelas 10</h1>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> "Good morning, how are you?" The appropriate response is ....</p>
+            <p><span class="nomor-soal">1.</span> "Hi, I'm Sarah. Nice to meet you." The expression is used for....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. Good bye</label>
-                <label><input type="radio" name="q1" value="B"> B. I'm fine, thank you. And you?</label>
-                <label><input type="radio" name="q1" value="C"> C. See you later</label>
-                <label><input type="radio" name="q1" value="D"> D. What's your name?</label>
+                <label><input type="radio" name="q1" value="A"> A. Greeting</label>
+                <label><input type="radio" name="q1" value="B"> B. Self Introduction</label>
+                <label><input type="radio" name="q1" value="C"> C. Apologizing</label>
+                <label><input type="radio" name="q1" value="D"> D. Thanking</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> "Nice to meet you." The best reply is ....</p>
+            <p><span class="nomor-soal">2.</span> Choose the correct expression of compliment: "Your painting is amazing!"</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Nice to meet you too</label>
+                <label><input type="radio" name="q2" value="A"> A. I'm sorry</label>
                 <label><input type="radio" name="q2" value="B"> B. Thank you</label>
-                <label><input type="radio" name="q2" value="C"> C. You're welcome</label>
-                <label><input type="radio" name="q2" value="D"> D. Excuse me</label>
+                <label><input type="radio" name="q2" value="C"> C. That's so beautiful</label>
+                <label><input type="radio" name="q2" value="D"> D. See you later</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> "Let me introduce myself. My name is Rina." This sentence is an example of ....</p>
+            <p><span class="nomor-soal">3.</span> Descriptive text aims to....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. Greeting</label>
-                <label><input type="radio" name="q3" value="B"> B. Self Introduction</label>
-                <label><input type="radio" name="q3" value="C"> C. Leave taking</label>
-                <label><input type="radio" name="q3" value="D"> D. Congratulation</label>
+                <label><input type="radio" name="q3" value="A"> A. Tell a story</label>
+                <label><input type="radio" name="q3" value="B"> B. Describe a person, place, or thing</label>
+                <label><input type="radio" name="q3" value="C"> C. Give instruction</label>
+                <label><input type="radio" name="q3" value="D"> D. Announce something</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> The purpose of descriptive text is to ....</p>
+            <p><span class="nomor-soal">4.</span> "Don't forget the meeting at 3 PM" is an example of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Describe a person, place, or thing</label>
-                <label><input type="radio" name="q4" value="B"> B. Tell a story</label>
-                <label><input type="radio" name="q4" value="C"> C. Explain a process</label>
-                <label><input type="radio" name="q4" value="D"> D. Persuade the reader</label>
+                <label><input type="radio" name="q4" value="A"> A. Narrative</label>
+                <label><input type="radio" name="q4" value="B"> B. Recount</label>
+                <label><input type="radio" name="q4" value="C"> C. Announcement</label>
+                <label><input type="radio" name="q4" value="D"> D. Descriptive</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Structure of descriptive text: ....</p>
+            <p><span class="nomor-soal">5.</span> Recount text uses past tense because it tells about....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Orientation - Events - Reorientation</label>
-                <label><input type="radio" name="q5" value="B"> B. Identification - Description</label>
-                <label><input type="radio" name="q5" value="C"> C. General Statement - Explanation</label>
-                <label><input type="radio" name="q5" value="D"> D. Thesis - Arguments - Recommendation</label>
+                <label><input type="radio" name="q5" value="A"> A. Future events</label>
+                <label><input type="radio" name="q5" value="B"> B. Habit</label>
+                <label><input type="radio" name="q5" value="C"> C. Past events</label>
+                <label><input type="radio" name="q5" value="D"> D. General fact</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> "Borobudur Temple is the biggest Buddhist temple in the world. It has nine stacked platforms." This sentence is part of ....</p>
+            <p><span class="nomor-soal">6.</span> The generic structure of narrative text: Orientation,...., Resolution</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Identification</label>
-                <label><input type="radio" name="q6" value="B"> B. Description</label>
-                <label><input type="radio" name="q6" value="C"> C. Orientation</label>
-                <label><input type="radio" name="q6" value="D"> D. Thesis</label>
+                <label><input type="radio" name="q6" value="A"> A. Reorientation</label>
+                <label><input type="radio" name="q6" value="B"> B. Complication</label>
+                <label><input type="radio" name="q6" value="C"> C. Argument</label>
+                <label><input type="radio" name="q6" value="D"> D. Description</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Synonym of "beautiful" is ....</p>
+            <p><span class="nomor-soal">7.</span> Correct form: "She ___ to school every day."</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Ugly</label>
-                <label><input type="radio" name="q7" value="B"> B. Gorgeous</label>
-                <label><input type="radio" name="q7" value="C"> C. Small</label>
-                <label><input type="radio" name="q7" value="D"> D. Big</label>
+                <label><input type="radio" name="q7" value="A"> A. go</label>
+                <label><input type="radio" name="q7" value="B"> B. goes</label>
+                <label><input type="radio" name="q7" value="C"> C. going</label>
+                <label><input type="radio" name="q7" value="D"> D. went</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> "The library will be closed on Monday, August 17th 2026." This sentence is an example of ....</p>
+            <p><span class="nomor-soal">8.</span> "I was watching TV when my mom came." This is an example of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Invitation</label>
-                <label><input type="radio" name="q8" value="B"> B. Announcement</label>
-                <label><input type="radio" name="q8" value="C"> C. Advertisement</label>
-                <label><input type="radio" name="q8" value="D"> D. Notice</label>
+                <label><input type="radio" name="q8" value="A"> A. Simple Present</label>
+                <label><input type="radio" name="q8" value="B"> B. Simple Past</label>
+                <label><input type="radio" name="q8" value="C"> C. Past Continuous</label>
+                <label><input type="radio" name="q8" value="D"> D. Present Continuous</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> "Don't forget to bring your book tomorrow!" The sentence expresses ....</p>
+            <p><span class="nomor-soal">9.</span> Synonym of "beautiful" is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. Command</label>
-                <label><input type="radio" name="q9" value="B"> B. Request</label>
-                <label><input type="radio" name="q9" value="C"> C. Reminder</label>
-                <label><input type="radio" name="q9" value="D"> D. Suggestion</label>
+                <label><input type="radio" name="q9" value="A"> A. Ugly</label>
+                <label><input type="radio" name="q9" value="B"> B. Pretty</label>
+                <label><input type="radio" name="q9" value="C"> C. Bad</label>
+                <label><input type="radio" name="q9" value="D"> D. Big</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> "She is very diligent and smart." The word "diligent" means ....</p>
+            <p><span class="nomor-soal">10.</span> "Would you like to join us?" The best response is....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Lazy</label>
-                <label><input type="radio" name="q10" value="B"> B. Hardworking</label>
-                <label><input type="radio" name="q10" value="C"> C. Stupid</label>
-                <label><input type="radio" name="q10" value="D"> D. Rich</label>
+                <label><input type="radio" name="q10" value="A"> A. I'm sorry</label>
+                <label><input type="radio" name="q10" value="B"> B. Yes, I'd love to</label>
+                <label><input type="radio" name="q10" value="C"> C. Thank you</label>
+                <label><input type="radio" name="q10" value="D"> D. Good bye</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> "What does your father do?" "He is a teacher." The question asks about ....</p>
+            <p><span class="nomor-soal">11.</span> Descriptive text usually uses.... tense.</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Age</label>
-                <label><input type="radio" name="q11" value="B"> B. Occupation</label>
-                <label><input type="radio" name="q11" value="C"> C. Address</label>
-                <label><input type="radio" name="q11" value="D"> D. Hobby</label>
+                <label><input type="radio" name="q11" value="A"> A. Simple Past</label>
+                <label><input type="radio" name="q11" value="B"> B. Simple Present</label>
+                <label><input type="radio" name="q11" value="C"> C. Future</label>
+                <label><input type="radio" name="q11" value="D"> D. Present Perfect</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> "The ceremony will start at 07.00 a.m in the school yard." The underlined word is a ....</p>
+            <p><span class="nomor-soal">12.</span> Choose the correct plural: "One child, two...."</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. Verb</label>
-                <label><input type="radio" name="q12" value="B"> B. Adjective</label>
-                <label><input type="radio" name="q12" value="C"> C. Noun</label>
-                <label><input type="radio" name="q12" value="D"> D. Adverb</label>
+                <label><input type="radio" name="q12" value="A"> A. childs</label>
+                <label><input type="radio" name="q12" value="B"> B. children</label>
+                <label><input type="radio" name="q12" value="C"> C. childes</label>
+                <label><input type="radio" name="q12" value="D"> D. child</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> "Can you help me?" "...." The best response is ....</p>
+            <p><span class="nomor-soal">13.</span> "The book is on the table." The word "on" shows....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. No, thanks</label>
-                <label><input type="radio" name="q13" value="B"> B. Sure, I'd be happy to</label>
-                <label><input type="radio" name="q13" value="C"> C. I'm sorry</label>
-                <label><input type="radio" name="q13" value="D"> D. See you</label>
+                <label><input type="radio" name="q13" value="A"> A. Time</label>
+                <label><input type="radio" name="q13" value="B"> B. Place</label>
+                <label><input type="radio" name="q13" value="C"> C. Cause</label>
+                <label><input type="radio" name="q13" value="D"> D. Purpose</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> "Happy birthday to you! Wish you all the best." This expression is used to ....</p>
+            <p><span class="nomor-soal">14.</span> Narrative text purpose is to....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Greet someone</label>
-                <label><input type="radio" name="q14" value="B"> B. Congratulate someone</label>
-                <label><input type="radio" name="q14" value="C"> C. Apologize</label>
-                <label><input type="radio" name="q14" value="D"> D. Introduce someone</label>
+                <label><input type="radio" name="q14" value="A"> A. Entertain</label>
+                <label><input type="radio" name="q14" value="B"> B. Inform</label>
+                <label><input type="radio" name="q14" value="C"> C. Describe</label>
+                <label><input type="radio" name="q14" value="D"> D. Persuade</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Antonym of "difficult" is ....</p>
+            <p><span class="nomor-soal">15.</span> "She is taller than me." This is an example of....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Hard</label>
-                <label><input type="radio" name="q15" value="B"> B. Easy</label>
-                <label><input type="radio" name="q15" value="C"> C. Complex</label>
-                <label><input type="radio" name="q15" value="D"> D. Complicated</label>
+                <label><input type="radio" name="q15" value="A"> A. Positive degree</label>
+                <label><input type="radio" name="q15" value="B"> B. Comparative degree</label>
+                <label><input type="radio" name="q15" value="C"> C. Superlative degree</label>
+                <label><input type="radio" name="q15" value="D"> D. Adverb</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"B", q2:"A", q3:"B", q4:"A", q5:"B", 
-    q6:"B", q7:"B", q8:"B", q9:"C", q10:"B",
-    q11:"B", q12:"C", q13:"B", q14:"B", q15:"B" 
+const kunci = {
+    q1:"B", q2:"C", q3:"B", q4:"C", q5:"C",
+    q6:"B", q7:"B", q8:"C", q9:"B", q10:"B",
+    q11:"B", q12:"B", q13:"B", q14:"A", q15:"B"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        // Hitung skor
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        // Tandai jawaban benar dan salah
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban'); // Hijau
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban'); // Merah
-            }
-            input.disabled = true;
-        });
-        
-        // Tampilkan kunci jawaban jika salah/kosong
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
