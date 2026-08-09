@@ -2,267 +2,232 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kuis Pendidikan Pancasila Kelas 10</title>
+<title>Kuis Pancasila Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #ffebee; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    body { font-family: 'Segoe UI', Arial; background: #ffebee; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #c62828; }
     h1 { text-align: center; color: #c62828; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffcdd2; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #c62828; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #b71c1c; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #c62828; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #c62828; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #ef9a9a; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #ef9a9a; transition: 0.2s; background: #ffebee; }
+.opsi label:hover { background: #d32f2f; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #c62828; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #8e0000; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #ffebee; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #c62828; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🇮🇩 Kuis Pendidikan Pancasila Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <h1>🇮🇩 Kuis Pancasila Kelas 10</h1>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Pancasila sebagai dasar negara tercantum dalam pembukaan UUD 1945 alinea ke ....</p>
+            <p><span class="nomor-soal">1.</span> Pancasila sebagai dasar negara Indonesia disahkan pada tanggal....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. 1</label>
-                <label><input type="radio" name="q1" value="B"> B. 2</label>
-                <label><input type="radio" name="q1" value="C"> C. 3</label>
-                <label><input type="radio" name="q1" value="D"> D. 4</label>
+                <label><input type="radio" name="q1" value="A"> A. 17 Agustus 1945</label>
+                <label><input type="radio" name="q1" value="B"> B. 18 Agustus 1945</label>
+                <label><input type="radio" name="q1" value="C"> C. 1 Juni 1945</label>
+                <label><input type="radio" name="q1" value="D"> D. 22 Juni 1945</label>
+                <label><input type="radio" name="q1" value="E"> E. 29 Mei 1945</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Nilai yang terkandung dalam sila ke-2 Pancasila adalah ....</p>
+            <p><span class="nomor-soal">2.</span> Tokoh yang mengusulkan nama "Pancasila" adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Religius</label>
-                <label><input type="radio" name="q2" value="B"> B. Kemanusiaan</label>
-                <label><input type="radio" name="q2" value="C"> C. Persatuan</label>
-                <label><input type="radio" name="q2" value="D"> D. Keadilan</label>
+                <label><input type="radio" name="q2" value="A"> A. Soekarno</label>
+                <label><input type="radio" name="q2" value="B"> B. Moh. Hatta</label>
+                <label><input type="radio" name="q2" value="C"> C. Moh. Yamin</label>
+                <label><input type="radio" name="q2" value="D"> D. Soepomo</label>
+                <label><input type="radio" name="q2" value="E"> E. Ki Hajar Dewantara</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Bentuk negara Indonesia adalah ....</p>
+            <p><span class="nomor-soal">3.</span> Sila pertama Pancasila berbunyi....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. Kerajaan</label>
-                <label><input type="radio" name="q3" value="B"> B. Republik</label>
-                <label><input type="radio" name="q3" value="C"> C. Federasi</label>
-                <label><input type="radio" name="q3" value="D"> D. Konfederasi</label>
+                <label><input type="radio" name="q3" value="A"> A. Kemanusiaan yang Adil dan Beradab</label>
+                <label><input type="radio" name="q3" value="B"> B. Persatuan Indonesia</label>
+                <label><input type="radio" name="q3" value="C"> C. Ketuhanan Yang Maha Esa</label>
+                <label><input type="radio" name="q3" value="D"> D. Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan</label>
+                <label><input type="radio" name="q3" value="E"> E. Keadilan Sosial bagi Seluruh Rakyat Indonesia</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Sistem pemerintahan Indonesia adalah ....</p>
+            <p><span class="nomor-soal">4.</span> Sila kedua Pancasila dilambangkan dengan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Presidensial</label>
-                <label><input type="radio" name="q4" value="B"> B. Parlementer</label>
-                <label><input type="radio" name="q4" value="C"> C. Monarki</label>
-                <label><input type="radio" name="q4" value="D"> D. Aristokrasi</label>
+                <label><input type="radio" name="q4" value="A"> A. Bintang</label>
+                <label><input type="radio" name="q4" value="B"> B. Rantai</label>
+                <label><input type="radio" name="q4" value="C"> C. Pohon Beringin</label>
+                <label><input type="radio" name="q4" value="D"> D. Kepala Banteng</label>
+                <label><input type="radio" name="q4" value="E"> E. Padi dan Kapas</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> UUD 1945 disahkan pada tanggal ....</p>
+            <p><span class="nomor-soal">5.</span> Gotong royong merupakan cerminan dari sila ke....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. 17 Agustus 1945</label>
-                <label><input type="radio" name="q5" value="B"> B. 18 Agustus 1945</label>
-                <label><input type="radio" name="q5" value="C"> C. 1 Juni 1945</label>
-                <label><input type="radio" name="q5" value="D"> D. 22 Juni 1945</label>
+                <label><input type="radio" name="q5" value="A"> A. 1</label>
+                <label><input type="radio" name="q5" value="B"> B. 2</label>
+                <label><input type="radio" name="q5" value="C"> C. 3</label>
+                <label><input type="radio" name="q5" value="D"> D. 4</label>
+                <label><input type="radio" name="q5" value="E"> E. 5</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> "Bhinneka Tunggal Ika" artinya ....</p>
+            <p><span class="nomor-soal">6.</span> Sikap menghargai perbedaan agama mencerminkan pengamalan sila ke....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Berbeda-beda tetapi tetap satu</label>
-                <label><input type="radio" name="q6" value="B"> B. Satu nusa satu bangsa</label>
-                <label><input type="radio" name="q6" value="C"> C. Tanah airku Indonesia</label>
-                <label><input type="radio" name="q6" value="D"> D. Merdeka atau mati</label>
+                <label><input type="radio" name="q6" value="A"> A. 1</label>
+                <label><input type="radio" name="q6" value="B"> B. 2</label>
+                <label><input type="radio" name="q6" value="C"> C. 3</label>
+                <label><input type="radio" name="q6" value="D"> D. 4</label>
+                <label><input type="radio" name="q6" value="E"> E. 5</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Hak warga negara untuk memeluk agama diatur dalam UUD 1945 pasal ....</p>
+            <p><span class="nomor-soal">7.</span> Musyawarah untuk mencapai mufakat merupakan pengamalan sila ke....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Pasal 27</label>
-                <label><input type="radio" name="q7" value="B"> B. Pasal 28</label>
-                <label><input type="radio" name="q7" value="C"> C. Pasal 29</label>
-                <label><input type="radio" name="q7" value="D"> D. Pasal 30</label>
+                <label><input type="radio" name="q7" value="A"> A. 1</label>
+                <label><input type="radio" name="q7" value="B"> B. 2</label>
+                <label><input type="radio" name="q7" value="C"> C. 3</label>
+                <label><input type="radio" name="q7" value="D"> D. 4</label>
+                <label><input type="radio" name="q7" value="E"> E. 5</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Kewajiban warga negara dalam upaya pembelaan negara tercantum dalam pasal ....</p>
+            <p><span class="nomor-soal">8.</span> Fungsi utama Pancasila sebagai dasar negara adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Pasal 27 ayat 3</label>
-                <label><input type="radio" name="q8" value="B"> B. Pasal 28</label>
-                <label><input type="radio" name="q8" value="C"> C. Pasal 29</label>
-                <label><input type="radio" name="q8" value="D"> D. Pasal 30 ayat 1</label>
+                <label><input type="radio" name="q8" value="A"> A. Sumber hukum</label>
+                <label><input type="radio" name="q8" value="B"> B. Sumber cita-cita dan tujuan bangsa</label>
+                <label><input type="radio" name="q8" value="C"> C. Sumber moral</label>
+                <label><input type="radio" name="q8" value="D"> D. Sumber identitas bangsa</label>
+                <label><input type="radio" name="q8" value="E"> E. Semua jawaban benar</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Sikap menghargai perbedaan suku, agama, dan budaya merupakan pengamalan Pancasila sila ke ....</p>
+            <p><span class="nomor-soal">9.</span> Sikap tidak membeda-bedakan teman karena suku mencerminkan sila ke....</p>
             <div class="opsi">
                 <label><input type="radio" name="q9" value="A"> A. 1</label>
                 <label><input type="radio" name="q9" value="B"> B. 2</label>
                 <label><input type="radio" name="q9" value="C"> C. 3</label>
-                <label><input type="radio" name="q9" value="D"> D. 5</label>
+                <label><input type="radio" name="q9" value="D"> D. 4</label>
+                <label><input type="radio" name="q9" value="E"> E. 5</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Lembaga negara yang memiliki fungsi legislatif adalah ....</p>
+            <p><span class="nomor-soal">10.</span> Memberikan bantuan kepada korban bencana alam merupakan pengamalan sila ke....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Presiden</label>
-                <label><input type="radio" name="q10" value="B"> B. DPR</label>
-                <label><input type="radio" name="q10" value="C"> C. MA</label>
-                <label><input type="radio" name="q10" value="D"> D. BPK</label>
+                <label><input type="radio" name="q10" value="A"> A. 1</label>
+                <label><input type="radio" name="q10" value="B"> B. 2</label>
+                <label><input type="radio" name="q10" value="C"> C. 3</label>
+                <label><input type="radio" name="q10" value="D"> D. 4</label>
+                <label><input type="radio" name="q10" value="E"> E. 5</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Gotong royong mencerminkan nilai Pancasila sila ke ....</p>
+            <p><span class="nomor-soal">11.</span> Pancasila sebagai pandangan hidup bangsa artinya....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. 2</label>
-                <label><input type="radio" name="q11" value="B"> B. 3</label>
-                <label><input type="radio" name="q11" value="C"> C. 4</label>
-                <label><input type="radio" name="q11" value="D"> D. 5</label>
+                <label><input type="radio" name="q11" value="A"> A. Pedoman hidup bangsa Indonesia</label>
+                <label><input type="radio" name="q11" value="B"> B. Dasar untuk membentuk UUD 1945</label>
+                <label><input type="radio" name="q11" value="C"> C. Alat pemersatu bangsa</label>
+                <label><input type="radio" name="q11" value="D"> D. Ideologi negara lain</label>
+                <label><input type="radio" name="q11" value="E"> E. Sumber dari segala sumber hukum</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Musyawarah untuk mencapai mufakat adalah ciri demokrasi Pancasila sila ke ....</p>
+            <p><span class="nomor-soal">12.</span> Sila keempat Pancasila dilambangkan dengan....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. 2</label>
-                <label><input type="radio" name="q12" value="B"> B. 3</label>
-                <label><input type="radio" name="q12" value="C"> C. 4</label>
-                <label><input type="radio" name="q12" value="D"> D. 5</label>
+                <label><input type="radio" name="q12" value="A"> A. Bintang</label>
+                <label><input type="radio" name="q12" value="B"> B. Rantai</label>
+                <label><input type="radio" name="q12" value="C"> C. Pohon Beringin</label>
+                <label><input type="radio" name="q12" value="D"> D. Kepala Banteng</label>
+                <label><input type="radio" name="q12" value="E"> E. Padi dan Kapas</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Ancaman terhadap NKRI yang berasal dari dalam negeri disebut ancaman ....</p>
+            <p><span class="nomor-soal">13.</span> Contoh pengamalan sila kelima di sekolah adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Eksternal</label>
-                <label><input type="radio" name="q13" value="B"> B. Internal</label>
-                <label><input type="radio" name="q13" value="C"> C. Militer</label>
-                <label><input type="radio" name="q13" value="D"> D. Non militer</label>
+                <label><input type="radio" name="q13" value="A"> A. Upacara bendera setiap Senin</label>
+                <label><input type="radio" name="q13" value="B"> B. Piknik bersama</label>
+                <label><input type="radio" name="q13" value="C"> C. Membagi makanan secara adil saat kegiatan</label>
+                <label><input type="radio" name="q13" value="D"> D. Belajar kelompok</label>
+                <label><input type="radio" name="q13" value="E"> E. Menghormati guru</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Integrasi nasional dapat terwujud jika ada ....</p>
+            <p><span class="nomor-soal">14.</span> Nilai yang terkandung dalam sila "Persatuan Indonesia" adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Perbedaan</label>
-                <label><input type="radio" name="q14" value="B"> B. Persamaan</label>
-                <label><input type="radio" name="q14" value="C"> C. Toleransi</label>
-                <label><input type="radio" name="q14" value="D"> D. Persaingan</label>
+                <label><input type="radio" name="q14" value="A"> A. Religius</label>
+                <label><input type="radio" name="q14" value="B"> B. Humanis</label>
+                <label><input type="radio" name="q14" value="C"> C. Nasionalis</label>
+                <label><input type="radio" name="q14" value="D"> D. Demokratis</label>
+                <label><input type="radio" name="q14" value="E"> E. Adil</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Contoh perilaku yang mencerminkan nilai keadilan sosial adalah ....</p>
+            <p><span class="nomor-soal">15.</span> Kedudukan Pancasila dalam sistem hukum Indonesia adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Diskriminasi</label>
-                <label><input type="radio" name="q15" value="B"> B. Membantu fakir miskin</label>
-                <label><input type="radio" name="q15" value="C"> C. Mementingkan diri sendiri</label>
-                <label><input type="radio" name="q15" value="D"> D. Egois</label>
+                <label><input type="radio" name="q15" value="A"> A. Sumber dari segala sumber hukum</label>
+                <label><input type="radio" name="q15" value="B"> B. Peraturan perundang-undangan</label>
+                <label><input type="radio" name="q15" value="C"> C. Kebiasaan masyarakat</label>
+                <label><input type="radio" name="q15" value="D"> D. Putusan pengadilan</label>
+                <label><input type="radio" name="q15" value="E"> E. Traktat internasional</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"D", q2:"B", q3:"B", q4:"A", q5:"B", 
-    q6:"A", q7:"C", q8:"D", q9:"C", q10:"B",
-    q11:"D", q12:"C", q13:"B", q14:"C", q15:"B" 
+const kunci = {
+    q1:"B", q2:"A", q3:"C", q4:"B", q5:"D",
+    q6:"A", q7:"D", q8:"E", q9:"C", q10:"E",
+    q11:"A", q12:"D", q13:"C", q14:"C", q15:"A"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban');
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban');
-            }
-            input.disabled = true;
-        });
-        
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
