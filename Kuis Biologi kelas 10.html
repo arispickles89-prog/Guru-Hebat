@@ -4,56 +4,56 @@
 <meta charset="UTF-8">
 <title>Kuis Biologi Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #e8f5e9; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #2e7d32; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #c8e6c9; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #2e7d32; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #1b5e20; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #2e7d32; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #e0f2f1; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #00796b; }
+    h1 { text-align: center; color: #00796b; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #00796b; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #80cbc4; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #80cbc4; transition: 0.2s; background: #e0f2f1; }
+.opsi label:hover { background: #26a69a; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #00796b; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #004d40; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e0f2f1; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #00796b; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>🧬 Kuis Biologi Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Cabang biologi yang mempelajari tentang jamur disebut ....</p>
+            <p><span class="nomor-soal">1.</span> Cabang biologi yang mempelajari tentang virus disebut....</p>
             <div class="opsi">
                 <label><input type="radio" name="q1" value="A"> A. Bakteriologi</label>
-                <label><input type="radio" name="q1" value="B"> B. Mikologi</label>
-                <label><input type="radio" name="q1" value="C"> C. Virologi</label>
-                <label><input type="radio" name="q1" value="D"> D. Botani</label>
+                <label><input type="radio" name="q1" value="B"> B. Virologi</label>
+                <label><input type="radio" name="q1" value="C"> C. Mikologi</label>
+                <label><input type="radio" name="q1" value="D"> D. Ekologi</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Virus hanya dapat berkembang biak di dalam ....</p>
+            <p><span class="nomor-soal">2.</span> Virus dikatakan parasit obligat karena....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Air</label>
-                <label><input type="radio" name="q2" value="B"> B. Tanah</label>
-                <label><input type="radio" name="q2" value="C"> C. Sel hidup</label>
-                <label><input type="radio" name="q2" value="D"> D. Udara</label>
+                <label><input type="radio" name="q2" value="A"> A. Dapat hidup bebas</label>
+                <label><input type="radio" name="q2" value="B"> B. Hanya dapat hidup di dalam sel hidup</label>
+                <label><input type="radio" name="q2" value="C"> C. Memiliki dinding sel</label>
+                <label><input type="radio" name="q2" value="D"> D. Dapat melakukan fotosintesis</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Bakteri yang berbentuk batang disebut ....</p>
+            <p><span class="nomor-soal">3.</span> Bakteri yang berbentuk batang disebut....</p>
             <div class="opsi">
                 <label><input type="radio" name="q3" value="A"> A. Kokus</label>
                 <label><input type="radio" name="q3" value="B"> B. Basil</label>
@@ -64,205 +64,155 @@
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Protista mirip hewan disebut juga ....</p>
+            <p><span class="nomor-soal">4.</span> Protista mirip hewan yang bergerak dengan flagel adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Alga</label>
-                <label><input type="radio" name="q4" value="B"> B. Protozoa</label>
-                <label><input type="radio" name="q4" value="C"> C. Jamur</label>
-                <label><input type="radio" name="q4" value="D"> D. Ganggang</label>
+                <label><input type="radio" name="q4" value="A"> A. Amoeba</label>
+                <label><input type="radio" name="q4" value="B"> B. Paramecium</label>
+                <label><input type="radio" name="q4" value="C"> C. Euglena</label>
+                <label><input type="radio" name="q4" value="D"> D. Diatom</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Ciri jamur yang membedakannya dengan tumbuhan adalah ....</p>
+            <p><span class="nomor-soal">5.</span> Jamur yang bersifat parasit dan merugikan manusia adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Memiliki dinding sel</label>
-                <label><input type="radio" name="q5" value="B"> B. Tidak memiliki klorofil</label>
-                <label><input type="radio" name="q5" value="C"> C. Bersifat uniseluler</label>
-                <label><input type="radio" name="q5" value="D"> D. Bereproduksi dengan spora</label>
+                <label><input type="radio" name="q5" value="A"> A. Jamur tiram</label>
+                <label><input type="radio" name="q5" value="B"> B. Jamur merang</label>
+                <label><input type="radio" name="q5" value="C"> C. Jamur penyebab panu</label>
+                <label><input type="radio" name="q5" value="D"> D. Ragi roti</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Lumut termasuk ke dalam divisi ....</p>
+            <p><span class="nomor-soal">6.</span> Tumbuhan yang tidak memiliki biji dan berkembang biak dengan spora adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Bryophyta</label>
-                <label><input type="radio" name="q6" value="B"> B. Pteridophyta</label>
-                <label><input type="radio" name="q6" value="C"> C. Spermatophyta</label>
-                <label><input type="radio" name="q6" value="D"> D. Thallophyta</label>
+                <label><input type="radio" name="q6" value="A"> A. Gymnospermae</label>
+                <label><input type="radio" name="q6" value="B"> B. Angiospermae</label>
+                <label><input type="radio" name="q6" value="C"> C. Pteridophyta</label>
+                <label><input type="radio" name="q6" value="D"> D. Bryophyta</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Tumbuhan paku berkembang biak dengan ....</p>
+            <p><span class="nomor-soal">7.</span> Hewan yang memiliki pori-pori di tubuhnya termasuk filum....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Biji</label>
-                <label><input type="radio" name="q7" value="B"> B. Spora</label>
-                <label><input type="radio" name="q7" value="C"> C. Tunas</label>
-                <label><input type="radio" name="q7" value="D"> D. Stek</label>
+                <label><input type="radio" name="q7" value="A"> A. Coelenterata</label>
+                <label><input type="radio" name="q7" value="B"> B. Porifera</label>
+                <label><input type="radio" name="q7" value="C"> C. Mollusca</label>
+                <label><input type="radio" name="q7" value="D"> D. Arthropoda</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Hewan yang memiliki simetri tubuh bilateral adalah ....</p>
+            <p><span class="nomor-soal">8.</span> Interaksi antara makhluk hidup dengan lingkungan disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Ubur-ubur</label>
-                <label><input type="radio" name="q8" value="B"> B. Bintang laut</label>
-                <label><input type="radio" name="q8" value="C"> C. Cacing</label>
-                <label><input type="radio" name="q8" value="D"> D. Spons</label>
+                <label><input type="radio" name="q8" value="A"> A. Populasi</label>
+                <label><input type="radio" name="q8" value="B"> B. Komunitas</label>
+                <label><input type="radio" name="q8" value="C"> C. Ekosistem</label>
+                <label><input type="radio" name="q8" value="D"> D. Bioma</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Hewan invertebrata yang memiliki rongga tubuh sejati disebut ....</p>
+            <p><span class="nomor-soal">9.</span> Peran produsen dalam ekosistem ditempati oleh....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. Acoelomata</label>
-                <label><input type="radio" name="q9" value="B"> B. Pseudocoelomata</label>
-                <label><input type="radio" name="q9" value="C"> C. Coelomata</label>
-                <label><input type="radio" name="q9" value="D"> D. Porifera</label>
+                <label><input type="radio" name="q9" value="A"> A. Hewan herbivora</label>
+                <label><input type="radio" name="q9" value="B"> B. Tumbuhan hijau</label>
+                <label><input type="radio" name="q9" value="C"> C. Bakteri pengurai</label>
+                <label><input type="radio" name="q9" value="D"> D. Hewan karnivora</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Virus HIV menyerang sel ....</p>
+            <p><span class="nomor-soal">10.</span> Urutan rantai makanan yang benar adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Sel darah merah</label>
-                <label><input type="radio" name="q10" value="B"> B. Sel darah putih</label>
-                <label><input type="radio" name="q10" value="C"> C. Sel saraf</label>
-                <label><input type="radio" name="q10" value="D"> D. Sel otot</label>
+                <label><input type="radio" name="q10" value="A"> A. Rumput → Ular → Tikus → Elang</label>
+                <label><input type="radio" name="q10" value="B"> B. Rumput → Tikus → Ular → Elang</label>
+                <label><input type="radio" name="q10" value="C"> C. Elang → Ular → Tikus → Rumput</label>
+                <label><input type="radio" name="q10" value="D"> D. Tikus → Rumput → Ular → Elang</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Bakteri yang menguntungkan dalam pembuatan yogurt adalah ....</p>
+            <p><span class="nomor-soal">11.</span> Alat pernapasan pada ikan adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Escherichia coli</label>
-                <label><input type="radio" name="q11" value="B"> B. Lactobacillus bulgaricus</label>
-                <label><input type="radio" name="q11" value="C"> C. Salmonella typhi</label>
-                <label><input type="radio" name="q11" value="D"> D. Vibrio cholerae</label>
+                <label><input type="radio" name="q11" value="A"> A. Paru-paru</label>
+                <label><input type="radio" name="q11" value="B"> B. Insang</label>
+                <label><input type="radio" name="q11" value="C"> C. Trakea</label>
+                <label><input type="radio" name="q11" value="D"> D. Kulit</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Ganggang hijau termasuk dalam divisi ....</p>
+            <p><span class="nomor-soal">12.</span> Reproduksi pada bakteri secara....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. Chlorophyta</label>
-                <label><input type="radio" name="q12" value="B"> B. Phaeophyta</label>
-                <label><input type="radio" name="q12" value="C"> C. Rhodophyta</label>
-                <label><input type="radio" name="q12" value="D"> D. Chrysophyta</label>
+                <label><input type="radio" name="q12" value="A"> A. Fragmentasi</label>
+                <label><input type="radio" name="q12" value="B"> B. Pembelahan biner</label>
+                <label><input type="radio" name="q12" value="C"> C. Tunas</label>
+                <label><input type="radio" name="q12" value="D"> D. Spora</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Jamur yang digunakan dalam pembuatan tempe adalah ....</p>
+            <p><span class="nomor-soal">13.</span> Tumbuhan biji tertutup disebut juga....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Rhizopus oligosporus</label>
-                <label><input type="radio" name="q13" value="B"> B. Aspergillus niger</label>
-                <label><input type="radio" name="q13" value="C"> C. Penicillium notatum</label>
-                <label><input type="radio" name="q13" value="D"> D. Saccharomyces cerevisiae</label>
+                <label><input type="radio" name="q13" value="A"> A. Gymnospermae</label>
+                <label><input type="radio" name="q13" value="B"> B. Angiospermae</label>
+                <label><input type="radio" name="q13" value="C"> C. Bryophyta</label>
+                <label><input type="radio" name="q13" value="D"> D. Pteridophyta</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Hewan yang memiliki rangka luar disebut ....</p>
+            <p><span class="nomor-soal">14.</span> Hewan yang memiliki rangka luar disebut....</p>
             <div class="opsi">
                 <label><input type="radio" name="q14" value="A"> A. Vertebrata</label>
-                <label><input type="radio" name="q14" value="B"> B. Arthropoda</label>
-                <label><input type="radio" name="q14" value="C"> C. Mollusca</label>
-                <label><input type="radio" name="q14" value="D"> D. Echinodermata</label>
+                <label><input type="radio" name="q14" value="B"> B. Invertebrata</label>
+                <label><input type="radio" name="q14" value="C"> C. Avertebrata</label>
+                <label><input type="radio" name="q14" value="D"> D. Arthropoda</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Tingkat organisasi kehidupan yang paling sederhana adalah ....</p>
+            <p><span class="nomor-soal">15.</span> Hubungan antara anggrek dengan pohon inangnya disebut simbiosis....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Sel</label>
-                <label><input type="radio" name="q15" value="B"> B. Jaringan</label>
-                <label><input type="radio" name="q15" value="C"> C. Organ</label>
-                <label><input type="radio" name="q15" value="D"> D. Sistem organ</label>
+                <label><input type="radio" name="q15" value="A"> A. Mutualisme</label>
+                <label><input type="radio" name="q15" value="B"> B. Parasitisme</label>
+                <label><input type="radio" name="q15" value="C"> C. Komensalisme</label>
+                <label><input type="radio" name="q15" value="D"> D. Amensalisme</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
-        
-        </div> <!-- AKHIR WADAH SOAL -->
 
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"B", q2:"C", q3:"B", q4:"B", q5:"B", 
-    q6:"A", q7:"B", q8:"C", q9:"C", q10:"B",
-    q11:"B", q12:"A", q13:"A", q14:"B", q15:"A" 
+const kunci = {
+    q1:"B", q2:"B", q3:"B", q4:"C", q5:"C",
+    q6:"C", q7:"B", q8:"C", q9:"B", q10:"B",
+    q11:"B", q12:"B", q13:"B", q14:"D", q15:"C"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban');
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban');
-            }
-            input.disabled = true;
-        });
-        
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
