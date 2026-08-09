@@ -4,268 +4,215 @@
 <meta charset="UTF-8">
 <title>Kuis Sejarah Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #fff3e0; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #e65100; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #ffe0b2; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #e65100; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #bf360c; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #e65100; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    body { font-family: 'Segoe UI', Arial; background: #efebe9; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #4e342e; }
+    h1 { text-align: center; color: #4e342e; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #4e342e; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #bcaaa4; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #bcaaa4; transition: 0.2s; background: #efebe9; }
+.opsi label:hover { background: #6d4c41; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #4e342e; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #3e2723; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #efebe9; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #4e342e; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>📜 Kuis Sejarah Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <h1>🏛️ Kuis Sejarah Kelas 10</h1>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Kata "sejarah" berasal dari bahasa Arab "syajaratun" yang artinya ....</p>
+            <p><span class="nomor-soal">1.</span> Ilmu yang mempelajari peristiwa masa lalu secara sistematis disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. Catatan</label>
-                <label><input type="radio" name="q1" value="B"> B. Pohon/asal-usul</label>
-                <label><input type="radio" name="q1" value="C"> C. Peristiwa</label>
-                <label><input type="radio" name="q1" value="D"> D. Waktu</label>
+                <label><input type="radio" name="q1" value="A"> A. Geografi</label>
+                <label><input type="radio" name="q1" value="B"> B. Sosiologi</label>
+                <label><input type="radio" name="q1" value="C"> C. Sejarah</label>
+                <label><input type="radio" name="q1" value="D"> D. Antropologi</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Ilmu yang mempelajari tentang waktu disebut ....</p>
+            <p><span class="nomor-soal">2.</span> Zaman di mana manusia sudah mengenal tulisan disebut zaman....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Geologi</label>
-                <label><input type="radio" name="q2" value="B"> B. Kronologi</label>
-                <label><input type="radio" name="q2" value="C"> C. Antropologi</label>
-                <label><input type="radio" name="q2" value="D"> D. Arkeologi</label>
+                <label><input type="radio" name="q2" value="A"> A. Prasejarah</label>
+                <label><input type="radio" name="q2" value="B"> B. Paleolitikum</label>
+                <label><input type="radio" name="q2" value="C"> C. Sejarah</label>
+                <label><input type="radio" name="q2" value="D"> D. Mesolitikum</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Bukti sejarah berupa benda disebut sumber sejarah ....</p>
+            <p><span class="nomor-soal">3.</span> Kerajaan Hindu-Buddha tertua di Indonesia adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. Tertulis</label>
-                <label><input type="radio" name="q3" value="B"> B. Lisan</label>
-                <label><input type="radio" name="q3" value="C"> C. Benda</label>
-                <label><input type="radio" name="q3" value="D"> D. Primer</label>
+                <label><input type="radio" name="q3" value="A"> A. Majapahit</label>
+                <label><input type="radio" name="q3" value="B"> B. Sriwijaya</label>
+                <label><input type="radio" name="q3" value="C"> C. Kutai</label>
+                <label><input type="radio" name="q3" value="D"> D. Singasari</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Kerajaan Hindu tertua di Indonesia adalah ....</p>
+            <p><span class="nomor-soal">4.</span> Raja terkenal dari Kerajaan Sriwijaya adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Kerajaan Majapahit</label>
-                <label><input type="radio" name="q4" value="B"> B. Kerajaan Sriwijaya</label>
-                <label><input type="radio" name="q4" value="C"> C. Kerajaan Kutai</label>
-                <label><input type="radio" name="q4" value="D"> D. Kerajaan Mataram Kuno</label>
+                <label><input type="radio" name="q4" value="A"> A. Gajah Mada</label>
+                <label><input type="radio" name="q4" value="B"> B. Balaputradewa</label>
+                <label><input type="radio" name="q4" value="C"> C. Hayam Wuruk</label>
+                <label><input type="radio" name="q4" value="D"> D. Airlangga</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Prasasti yang berisi tentang asal-usul Kerajaan Kutai adalah ....</p>
+            <p><span class="nomor-soal">5.</span> Masuknya Islam ke Indonesia melalui jalur....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Prasasti Yupa</label>
-                <label><input type="radio" name="q5" value="B"> B. Prasasti Kedukan Bukit</label>
-                <label><input type="radio" name="q5" value="C"> C. Prasasti Ciaruteun</label>
-                <label><input type="radio" name="q5" value="D"> D. Prasasti Tugu</label>
+                <label><input type="radio" name="q5" value="A"> A. Penjajahan</label>
+                <label><input type="radio" name="q5" value="B"> B. Perdagangan</label>
+                <label><input type="radio" name="q5" value="C"> C. Peperangan</label>
+                <label><input type="radio" name="q5" value="D"> D. Pendidikan</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Kerajaan maritim terbesar di Nusantara pada abad ke-7 adalah ....</p>
+            <p><span class="nomor-soal">6.</span> Kerajaan Islam pertama di Indonesia adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Kerajaan Majapahit</label>
-                <label><input type="radio" name="q6" value="B"> B. Kerajaan Sriwijaya</label>
-                <label><input type="radio" name="q6" value="C"> C. Kerajaan Singasari</label>
-                <label><input type="radio" name="q6" value="D"> D. Kerajaan Tarumanegara</label>
+                <label><input type="radio" name="q6" value="A"> A. Demak</label>
+                <label><input type="radio" name="q6" value="B"> B. Mataram</label>
+                <label><input type="radio" name="q6" value="C"> C. Samudra Pasai</label>
+                <label><input type="radio" name="q6" value="D"> D. Banten</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Raja terbesar Kerajaan Majapahit yang memiliki cita-cita "Palapa" adalah ....</p>
+            <p><span class="nomor-soal">7.</span> VOC didirikan pada tahun....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Raja Hayam Wuruk</label>
-                <label><input type="radio" name="q7" value="B"> B. Gajah Mada</label>
-                <label><input type="radio" name="q7" value="C"> C. Ken Arok</label>
-                <label><input type="radio" name="q7" value="D"> D. Raden Wijaya</label>
+                <label><input type="radio" name="q7" value="A"> A. 1596</label>
+                <label><input type="radio" name="q7" value="B"> B. 1602</label>
+                <label><input type="radio" name="q7" value="C"> C. 1619</label>
+                <label><input type="radio" name="q7" value="D"> D. 1800</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Kitab Sutasoma yang berisi semboyan "Bhinneka Tunggal Ika" dikarang oleh ....</p>
+            <p><span class="nomor-soal">8.</span> Sistem tanam paksa diberlakukan oleh....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Empu Prapanca</label>
-                <label><input type="radio" name="q8" value="B"> B. Empu Tantular</label>
-                <label><input type="radio" name="q8" value="C"> C. Empu Sedah</label>
-                <label><input type="radio" name="q8" value="D"> D. Empu Panuluh</label>
+                <label><input type="radio" name="q8" value="A"> A. Inggris</label>
+                <label><input type="radio" name="q8" value="B"> B. Belanda</label>
+                <label><input type="radio" name="q8" value="C"> C. Portugis</label>
+                <label><input type="radio" name="q8" value="D"> D. Jepang</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Faktor utama masuknya agama Islam ke Indonesia adalah melalui ....</p>
+            <p><span class="nomor-soal">9.</span> Pemimpin Perang Diponegoro adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. Penjajahan</label>
-                <label><input type="radio" name="q9" value="B"> B. Perdagangan</label>
-                <label><input type="radio" name="q9" value="C"> C. Peperangan</label>
-                <label><input type="radio" name="q9" value="D"> D. Pendidikan</label>
+                <label><input type="radio" name="q9" value="A"> A. Pangeran Antasari</label>
+                <label><input type="radio" name="q9" value="B"> B. Pangeran Diponegoro</label>
+                <label><input type="radio" name="q9" value="C"> C. Pattimura</label>
+                <label><input type="radio" name="q9" value="D"> D. Imam Bonjol</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Kerajaan Islam pertama di Indonesia adalah ....</p>
+            <p><span class="nomor-soal">10.</span> Peristiwa Sumpah Pemuda terjadi pada tanggal....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Kerajaan Demak</label>
-                <label><input type="radio" name="q10" value="B"> B. Kerajaan Samudera Pasai</label>
-                <label><input type="radio" name="q10" value="C"> C. Kerajaan Mataram Islam</label>
-                <label><input type="radio" name="q10" value="D"> D. Kerajaan Gowa-Tallo</label>
+                <label><input type="radio" name="q10" value="A"> A. 17 Agustus 1945</label>
+                <label><input type="radio" name="q10" value="B"> B. 28 Oktober 1928</label>
+                <label><input type="radio" name="q10" value="C"> C. 20 Mei 1908</label>
+                <label><input type="radio" name="q10" value="D"> D. 10 November 1945</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Walisongo berperan dalam penyebaran agama Islam melalui ....</p>
+            <p><span class="nomor-soal">11.</span> Sumber sejarah yang berupa candi, prasasti termasuk sumber....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Peperangan</label>
-                <label><input type="radio" name="q11" value="B"> B. Jalur kebudayaan dan dakwah</label>
-                <label><input type="radio" name="q11" value="C"> C. Politik</label>
-                <label><input type="radio" name="q11" value="D"> D. Penjajahan</label>
+                <label><input type="radio" name="q11" value="A"> A. Lisan</label>
+                <label><input type="radio" name="q11" value="B"> B. Tertulis</label>
+                <label><input type="radio" name="q11" value="C"> C. Benda</label>
+                <label><input type="radio" name="q11" value="D"> D. Cerita</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Kedatangan bangsa Eropa ke Indonesia dilatarbelakangi oleh semboyan ....</p>
+            <p><span class="nomor-soal">12.</span> Candi Borobudur bercorak....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. 3M: Mencari, Menemukan, Menjajah</label>
-                <label><input type="radio" name="q12" value="B"> B. 3G: Gold, Glory, Gospel</label>
-                <label><input type="radio" name="q12" value="C"> C. 3T: Tenaga, Teknologi, Tujuan</label>
-                <label><input type="radio" name="q12" value="D"> D. 3S: Saudara, Sahabat, Seiman</label>
+                <label><input type="radio" name="q12" value="A"> A. Hindu</label>
+                <label><input type="radio" name="q12" value="B"> B. Buddha</label>
+                <label><input type="radio" name="q12" value="C"> C. Islam</label>
+                <label><input type="radio" name="q12" value="D"> D. Animisme</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Organisasi pergerakan nasional pertama di Indonesia adalah ....</p>
+            <p><span class="nomor-soal">13.</span> Tokoh penyebar Islam di Jawa yang dikenal Walisongo berjumlah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Budi Utomo</label>
-                <label><input type="radio" name="q13" value="B"> B. Sarekat Islam</label>
-                <label><input type="radio" name="q13" value="C"> C. Indische Partij</label>
-                <label><input type="radio" name="q13" value="D"> D. Muhammadiyah</label>
+                <label><input type="radio" name="q13" value="A"> A. 7 orang</label>
+                <label><input type="radio" name="q13" value="B"> B. 8 orang</label>
+                <label><input type="radio" name="q13" value="C"> C. 9 orang</label>
+                <label><input type="radio" name="q13" value="D"> D. 10 orang</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Sumpah Pemuda diikrarkan pada tanggal ....</p>
+            <p><span class="nomor-soal">14.</span> Tujuan utama kedatangan bangsa Barat ke Indonesia adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. 17 Agustus 1945</label>
-                <label><input type="radio" name="q14" value="B"> B. 28 Oktober 1928</label>
-                <label><input type="radio" name="q14" value="C"> C. 20 Mei 1908</label>
-                <label><input type="radio" name="q14" value="D"> D. 10 November 1945</label>
+                <label><input type="radio" name="q14" value="A"> A. Gold, Glory, Gospel</label>
+                <label><input type="radio" name="q14" value="B"> B. Pendidikan</label>
+                <label><input type="radio" name="q14" value="C"> C. Penyebaran agama</label>
+                <label><input type="radio" name="q14" value="D"> D. Pariwisata</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Peristiwa Proklamasi Kemerdekaan Indonesia terjadi pada ....</p>
+            <p><span class="nomor-soal">15.</span> Kebijakan Jepang yang membentuk organisasi pemuda "Jawa Hokokai" bertujuan untuk....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. 17 Agustus 1945</label>
-                <label><input type="radio" name="q15" value="B"> B. 18 Agustus 1945</label>
-                <label><input type="radio" name="q15" value="C"> C. 27 Desember 1949</label>
-                <label><input type="radio" name="q15" value="D"> D. 1 Juni 1945</label>
+                <label><input type="radio" name="q15" value="A"> A. Memerdekakan Indonesia</label>
+                <label><input type="radio" name="q15" value="B"> B. Membantu kepentingan perang Jepang</label>
+                <label><input type="radio" name="q15" value="C"> C. Pendidikan</label>
+                <label><input type="radio" name="q15" value="D"> D. Ekonomi</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
-        
-        </div> <!-- AKHIR WADAH SOAL -->
 
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"B", q2:"B", q3:"C", q4:"C", q5:"A", 
-    q6:"B", q7:"B", q8:"B", q9:"B", q10:"B",
-    q11:"B", q12:"B", q13:"A", q14:"B", q15:"A" 
+const kunci = {
+    q1:"C", q2:"C", q3:"C", q4:"B", q5:"B",
+    q6:"C", q7:"B", q8:"B", q9:"B", q10:"B",
+    q11:"C", q12:"B", q13:"C", q14:"A", q15:"B"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        // Hitung skor
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        // Tandai jawaban benar dan salah
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban'); // Hijau
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban'); // Merah
-            }
-            input.disabled = true;
-        });
-        
-        // Tampilkan kunci jawaban jika salah/kosong
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block';} } let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
