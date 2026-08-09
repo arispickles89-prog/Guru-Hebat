@@ -4,268 +4,215 @@
 <meta charset="UTF-8">
 <title>Kuis Sosiologi Kelas 10</title>
 <style>
-    body { font-family: 'Arial'; background: #f3e5f5; margin: 0; padding: 20px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    body { font-family: 'Segoe UI', Arial; background: #f3e5f5; margin: 0; padding: 20px; }
+.container { max-width: 750px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #6a1b9a; }
     h1 { text-align: center; color: #6a1b9a; }
-    #timer { text-align: center; font-size: 24px; font-weight: bold; color: red; margin-bottom: 20px; background: #e1bee7; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
-    .soal { margin-bottom: 25px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
-    .soal p { line-height: 1.6; }
-    .opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; }
-    .opsi label:hover { background: #f0f0f0; }
-    .benar-jawaban { background: #d4edda !important; border-color: #28a745 !important; color: #155724; }
-    .salah-jawaban { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
-    .btn-submit { width: 100%; padding: 15px; background: #6a1b9a; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-    .btn-submit:hover { background: #4a148c; }
-    .hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #e7f3ff; border-radius: 10px; }
-    .kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #6a1b9a; display: none; }
-    .benar { color: green; }
-    .salah { color: red; }
+    #timer { text-align: center; font-size: 24px; font-weight: bold; color: white; margin-bottom: 20px; background: #6a1b9a; padding: 10px; border-radius: 10px; position: sticky; top: 10px; }
+.soal { margin-bottom: 25px; border-bottom: 2px dashed #ce93d8; padding-bottom: 15px; }
+.soal p { line-height: 1.6; font-size: 16px; }
+.opsi label { display: block; margin: 8px 0; cursor: pointer; padding: 10px; border-radius: 8px; border: 2px solid #ce93d8; transition: 0.2s; background: #f3e5f5; }
+.opsi label:hover { background: #8e24aa; color: white; }
+.benar-jawaban { background: #c8e6c9!important; border-color: #4caf50!important; color: #1b5e20; }
+.salah-jawaban { background: #ffcdd2!important; border-color: #f44336!important; color: #b71c1c; }
+.btn-submit { width: 100%; padding: 15px; background: #6a1b9a; color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.btn-submit:hover { background: #4a148c; }
+.hasil { text-align: center; font-size: 22px; font-weight: bold; margin-top: 20px; padding: 20px; background: #f3e5f5; border-radius: 10px; }
+.kunci-info { font-size: 14px; margin-top: 8px; font-weight: bold; color: #6a1b9a; display: none; }
+.benar { color: green; }
+.salah { color: red; }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>👥 Kuis Sosiologi Kelas 10</h1>
-    <div id="timer">Waktu: 20:00</div>
+    <div id="timer">Waktu: 10:00</div>
     <form id="formKuis">
-        <div id="wadahSoal"> <!-- DIBUNGKUS BIAR BISA DIACAK -->
+        <div id="wadahSoal">
 
         <div class="soal" id="soal1">
-            <p><span class="nomor-soal">1.</span> Sosiologi berasal dari bahasa Latin "socius" dan bahasa Yunani "logos" yang berarti ....</p>
+            <p><span class="nomor-soal">1.</span> Sosiologi berasal dari bahasa Latin "socius" yang artinya....</p>
             <div class="opsi">
-                <label><input type="radio" name="q1" value="A"> A. masyarakat dan ilmu</label>
-                <label><input type="radio" name="q1" value="B"> B. teman dan berbicara</label>
-                <label><input type="radio" name="q1" value="C"> C. kelompok dan penelitian</label>
-                <label><input type="radio" name="q1" value="D"> D. individu dan masyarakat</label>
+                <label><input type="radio" name="q1" value="A"> A. Ilmu</label>
+                <label><input type="radio" name="q1" value="B"> B. Masyarakat</label>
+                <label><input type="radio" name="q1" value="C"> C. Kawan</label>
+                <label><input type="radio" name="q1" value="D"> D. Logika</label>
             </div>
             <div class="kunci-info" id="kunci1"></div>
         </div>
 
         <div class="soal" id="soal2">
-            <p><span class="nomor-soal">2.</span> Tokoh yang pertama kali mencetuskan istilah sosiologi adalah ....</p>
+            <p><span class="nomor-soal">2.</span> Objek kajian utama sosiologi adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q2" value="A"> A. Emile Durkheim</label>
-                <label><input type="radio" name="q2" value="B"> B. Max Weber</label>
-                <label><input type="radio" name="q2" value="C"> C. Auguste Comte</label>
-                <label><input type="radio" name="q2" value="D"> D. Karl Marx</label>
+                <label><input type="radio" name="q2" value="A"> A. Individu</label>
+                <label><input type="radio" name="q2" value="B"> B. Interaksi sosial</label>
+                <label><input type="radio" name="q2" value="C"> C. Ekonomi</label>
+                <label><input type="radio" name="q2" value="D"> D. Politik</label>
             </div>
             <div class="kunci-info" id="kunci2"></div>
         </div>
 
         <div class="soal" id="soal3">
-            <p><span class="nomor-soal">3.</span> Berikut ini yang termasuk ciri-ciri sosiologi adalah ....</p>
+            <p><span class="nomor-soal">3.</span> Hubungan timbal balik antara individu dengan individu disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q3" value="A"> A. Empiris, Teoritis, Kumulatif, dan Non-etis</label>
-                <label><input type="radio" name="q3" value="B"> B. Empiris, Dogmatis, Kumulatif, dan Etis</label>
-                <label><input type="radio" name="q3" value="C"> C. Teoritis, Spekulatif, Abstrak, dan Non-etis</label>
-                <label><input type="radio" name="q3" value="D"> D. Empiris, Abstrak, Kumulatif, dan Etis</label>
+                <label><input type="radio" name="q3" value="A"> A. Interaksi sosial</label>
+                <label><input type="radio" name="q3" value="B"> B. Kontak sosial</label>
+                <label><input type="radio" name="q3" value="C"> C. Komunikasi</label>
+                <label><input type="radio" name="q3" value="D"> D. Asosiasi</label>
             </div>
             <div class="kunci-info" id="kunci3"></div>
         </div>
 
         <div class="soal" id="soal4">
-            <p><span class="nomor-soal">4.</span> Interaksi sosial yang terjadi antara individu dengan individu disebut ....</p>
+            <p><span class="nomor-soal">4.</span> Contoh kelompok primer adalah....</p>
             <div class="opsi">
-                <label><input type="radio" name="q4" value="A"> A. Interaksi individu dengan kelompok</label>
-                <label><input type="radio" name="q4" value="B"> B. Interaksi individu dengan individu</label>
-                <label><input type="radio" name="q4" value="C"> C. Interaksi kelompok dengan kelompok</label>
-                <label><input type="radio" name="q4" value="D"> D. Interaksi sosial sekunder</label>
+                <label><input type="radio" name="q4" value="A"> A. Partai politik</label>
+                <label><input type="radio" name="q4" value="B"> B. Keluarga</label>
+                <label><input type="radio" name="q4" value="C"> C. Perusahaan</label>
+                <label><input type="radio" name="q4" value="D"> D. Sekolah</label>
             </div>
             <div class="kunci-info" id="kunci4"></div>
         </div>
 
         <div class="soal" id="soal5">
-            <p><span class="nomor-soal">5.</span> Contoh interaksi sosial asosiatif adalah ....</p>
+            <p><span class="nomor-soal">5.</span> Perilaku yang tidak sesuai dengan norma masyarakat disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q5" value="A"> A. Persaingan dan pertikaian</label>
-                <label><input type="radio" name="q5" value="B"> B. Kontravensi dan konflik</label>
-                <label><input type="radio" name="q5" value="C"> C. Kerjasama dan akomodasi</label>
-                <label><input type="radio" name="q5" value="D"> D. Demonstrasi dan perkelahian</label>
+                <label><input type="radio" name="q5" value="A"> A. Integrasi</label>
+                <label><input type="radio" name="q5" value="B"> B. Diferensiasi</label>
+                <label><input type="radio" name="q5" value="C"> C. Penyimpangan sosial</label>
+                <label><input type="radio" name="q5" value="D"> D. Stratifikasi</label>
             </div>
             <div class="kunci-info" id="kunci5"></div>
         </div>
 
         <div class="soal" id="soal6">
-            <p><span class="nomor-soal">6.</span> Kelompok sosial yang anggotanya saling mengenal secara pribadi dan memiliki ikatan emosional disebut ....</p>
+            <p><span class="nomor-soal">6.</span> Bentuk interaksi sosial yang bertujuan untuk bersatu disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q6" value="A"> A. Kelompok sekunder</label>
-                <label><input type="radio" name="q6" value="B"> B. Kelompok primer</label>
-                <label><input type="radio" name="q6" value="C"> C. Kelompok formal</label>
-                <label><input type="radio" name="q6" value="D"> D. Kelompok besar</label>
+                <label><input type="radio" name="q6" value="A"> A. Disosiatif</label>
+                <label><input type="radio" name="q6" value="B"> B. Asosiatif</label>
+                <label><input type="radio" name="q6" value="C"> C. Konflik</label>
+                <label><input type="radio" name="q6" value="D"> D. Kompetisi</label>
             </div>
             <div class="kunci-info" id="kunci6"></div>
         </div>
 
         <div class="soal" id="soal7">
-            <p><span class="nomor-soal">7.</span> Contoh kelompok primer adalah ....</p>
+            <p><span class="nomor-soal">7.</span> Perbedaan status dalam masyarakat disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q7" value="A"> A. Partai politik</label>
-                <label><input type="radio" name="q7" value="B"> B. Perusahaan</label>
-                <label><input type="radio" name="q7" value="C"> C. Keluarga</label>
-                <label><input type="radio" name="q7" value="D"> D. Organisasi kemahasiswaan</label>
+                <label><input type="radio" name="q7" value="A"> A. Diferensiasi sosial</label>
+                <label><input type="radio" name="q7" value="B"> B. Stratifikasi sosial</label>
+                <label><input type="radio" name="q7" value="C"> C. Mobilitas sosial</label>
+                <label><input type="radio" name="q7" value="D"> D. Integrasi sosial</label>
             </div>
             <div class="kunci-info" id="kunci7"></div>
         </div>
 
         <div class="soal" id="soal8">
-            <p><span class="nomor-soal">8.</span> Status yang diperoleh seseorang sejak lahir disebut ....</p>
+            <p><span class="nomor-soal">8.</span> Proses naik turunnya status seseorang disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q8" value="A"> A. Status sosial</label>
-                <label><input type="radio" name="q8" value="B"> B. Status yang dicapai</label>
-                <label><input type="radio" name="q8" value="C"> C. Status yang diwariskan</label>
-                <label><input type="radio" name="q8" value="D"> D. Status yang diberikan</label>
+                <label><input type="radio" name="q8" value="A"> A. Asimilasi</label>
+                <label><input type="radio" name="q8" value="B"> B. Akulturasi</label>
+                <label><input type="radio" name="q8" value="C"> C. Mobilitas sosial</label>
+                <label><input type="radio" name="q8" value="D"> D. Sosialisasi</label>
             </div>
             <div class="kunci-info" id="kunci8"></div>
         </div>
 
         <div class="soal" id="soal9">
-            <p><span class="nomor-soal">9.</span> Seseorang menjadi dokter karena belajar di fakultas kedokteran. Status tersebut termasuk ....</p>
+            <p><span class="nomor-soal">9.</span> Lembaga yang bertugas menjaga keamanan disebut lembaga....</p>
             <div class="opsi">
-                <label><input type="radio" name="q9" value="A"> A. Ascribed status</label>
-                <label><input type="radio" name="q9" value="B"> B. Achieved status</label>
-                <label><input type="radio" name="q9" value="C"> C. Assigned status</label>
-                <label><input type="radio" name="q9" value="D"> D. Master status</label>
+                <label><input type="radio" name="q9" value="A"> A. Ekonomi</label>
+                <label><input type="radio" name="q9" value="B"> B. Politik</label>
+                <label><input type="radio" name="q9" value="C"> C. Pendidikan</label>
+                <label><input type="radio" name="q9" value="D"> D. Militer</label>
             </div>
             <div class="kunci-info" id="kunci9"></div>
         </div>
 
         <div class="soal" id="soal10">
-            <p><span class="nomor-soal">10.</span> Proses belajar dan menanamkan nilai-nilai dalam masyarakat disebut ....</p>
+            <p><span class="nomor-soal">10.</span> Proses penyesuaian dua kebudayaan hingga saling mempengaruhi disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q10" value="A"> A. Sosialisasi</label>
+                <label><input type="radio" name="q10" value="A"> A. Asimilasi</label>
                 <label><input type="radio" name="q10" value="B"> B. Akulturasi</label>
-                <label><input type="radio" name="q10" value="C"> C. Asimilasi</label>
-                <label><input type="radio" name="q10" value="D"> D. Mobilitas sosial</label>
+                <label><input type="radio" name="q10" value="C"> C. Akulturasi</label>
+                <label><input type="radio" name="q10" value="D"> D. Amalgamasi</label>
             </div>
             <div class="kunci-info" id="kunci10"></div>
         </div>
 
         <div class="soal" id="soal11">
-            <p><span class="nomor-soal">11.</span> Agen sosialisasi yang paling utama dan pertama bagi seorang anak adalah ....</p>
+            <p><span class="nomor-soal">11.</span> Norma yang berasal dari masyarakat dan pelanggarnya dikucilkan adalah norma....</p>
             <div class="opsi">
-                <label><input type="radio" name="q11" value="A"> A. Sekolah</label>
-                <label><input type="radio" name="q11" value="B"> B. Teman sebaya</label>
-                <label><input type="radio" name="q11" value="C"> C. Media massa</label>
-                <label><input type="radio" name="q11" value="D"> D. Keluarga</label>
+                <label><input type="radio" name="q11" value="A"> A. Agama</label>
+                <label><input type="radio" name="q11" value="B"> B. Hukum</label>
+                <label><input type="radio" name="q11" value="C"> C. Kesusilaan</label>
+                <label><input type="radio" name="q11" value="D"> D. Adat</label>
             </div>
             <div class="kunci-info" id="kunci11"></div>
         </div>
 
         <div class="soal" id="soal12">
-            <p><span class="nomor-soal">12.</span> Norma yang pelanggarannya akan mendapat hukuman dari negara disebut ....</p>
+            <p><span class="nomor-soal">12.</span> Konflik yang terjadi antar individu disebut konflik....</p>
             <div class="opsi">
-                <label><input type="radio" name="q12" value="A"> A. Norma agama</label>
-                <label><input type="radio" name="q12" value="B"> B. Norma kesusilaan</label>
-                <label><input type="radio" name="q12" value="C"> C. Norma kesopanan</label>
-                <label><input type="radio" name="q12" value="D"> D. Norma hukum</label>
+                <label><input type="radio" name="q12" value="A"> A. Pribadi</label>
+                <label><input type="radio" name="q12" value="B"> B. Kelompok</label>
+                <label><input type="radio" name="q12" value="C"> C. Ras</label>
+                <label><input type="radio" name="q12" value="D"> D. Politik</label>
             </div>
             <div class="kunci-info" id="kunci12"></div>
         </div>
 
         <div class="soal" id="soal13">
-            <p><span class="nomor-soal">13.</span> Perpindahan status sosial dari bawah ke atas disebut ....</p>
+            <p><span class="nomor-soal">13.</span> Proses belajar nilai dan norma dalam masyarakat disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q13" value="A"> A. Mobilitas horizontal</label>
-                <label><input type="radio" name="q13" value="B"> B. Mobilitas vertikal naik</label>
-                <label><input type="radio" name="q13" value="C"> C. Mobilitas vertikal turun</label>
-                <label><input type="radio" name="q13" value="D"> D. Mobilitas intragenerasi</label>
+                <label><input type="radio" name="q13" value="A"> A. Enkulturasi</label>
+                <label><input type="radio" name="q13" value="B"> B. Sosialisasi</label>
+                <label><input type="radio" name="q13" value="C"> C. Modernisasi</label>
+                <label><input type="radio" name="q13" value="D"> D. Globalisasi</label>
             </div>
             <div class="kunci-info" id="kunci13"></div>
         </div>
 
         <div class="soal" id="soal14">
-            <p><span class="nomor-soal">14.</span> Contoh konflik yang bersifat konstruktif adalah ....</p>
+            <p><span class="nomor-soal">14.</span> Kelompok sosial yang dibentuk berdasarkan tujuan tertentu disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q14" value="A"> A. Tawuran antar pelajar</label>
-                <label><input type="radio" name="q14" value="B"> B. Perang antar negara</label>
-                <label><input type="radio" name="q14" value="C"> C. Debat untuk mencari solusi terbaik</label>
-                <label><input type="radio" name="q14" value="D"> D. Pengrusakan fasilitas umum</label>
+                <label><input type="radio" name="q14" value="A"> A. Kelompok primer</label>
+                <label><input type="radio" name="q14" value="B"> B. Kelompok sekunder</label>
+                <label><input type="radio" name="q14" value="C"> C. Kelompok formal</label>
+                <label><input type="radio" name="q14" value="D"> D. Kelompok informal</label>
             </div>
             <div class="kunci-info" id="kunci14"></div>
         </div>
 
         <div class="soal" id="soal15">
-            <p><span class="nomor-soal">15.</span> Proses penyesuaian diri untuk menghindari konflik disebut ....</p>
+            <p><span class="nomor-soal">15.</span> Cara untuk mengatasi konflik agar tidak merugikan disebut....</p>
             <div class="opsi">
-                <label><input type="radio" name="q15" value="A"> A. Akomodasi</label>
-                <label><input type="radio" name="q15" value="B"> B. Kompetisi</label>
+                <label><input type="radio" name="q15" value="A"> A. Kompetisi</label>
+                <label><input type="radio" name="q15" value="B"> B. Akomodasi</label>
                 <label><input type="radio" name="q15" value="C"> C. Kontravensi</label>
                 <label><input type="radio" name="q15" value="D"> D. Diferensiasi</label>
             </div>
             <div class="kunci-info" id="kunci15"></div>
         </div>
 
-        </div> <!-- AKHIR WADAH SOAL -->
-
+        </div>
         <button type="button" class="btn-submit" onclick="cekJawaban()">Selesai & Lihat Nilai</button>
         <div id="hasil" class="hasil"></div>
     </form>
 </div>
 
 <script>
-// KUNCI JAWABAN
-const kunci = { 
-    q1:"A", q2:"C", q3:"A", q4:"B", q5:"C", 
-    q6:"B", q7:"C", q8:"C", q9:"B", q10:"A",
-    q11:"D", q12:"D", q13:"B", q14:"C", q15:"A" 
+const kunci = {
+    q1:"C", q2:"B", q3:"A", q4:"B", q5:"C",
+    q6:"B", q7:"B", q8:"C", q9:"D", q10:"B",
+    q11:"D", q12:"A", q13:"B", q14:"B", q15:"B"
 };
-
-// TIMER 20 MENIT
-let waktu = 20 * 60; 
-const timerEl = document.getElementById('timer');
-const countdown = setInterval(() => {
-    let menit = Math.floor(waktu / 60);
-    let detik = waktu % 60;
-    timerEl.innerText = `Waktu: ${menit}:${detik < 10 ? '0' : ''}${detik}`;
-    if(waktu <= 0){
-        clearInterval(countdown);
-        alert('Waktu Habis! Jawaban akan dikumpulkan otomatis.');
-        cekJawaban();
-    }
-    waktu--;
-}, 1000);
-
-// CEK JAWABAN
-function cekJawaban(){
-    clearInterval(countdown);
-    let skor = 0;
-    
-    for(let i=1; i<=15; i++){
-        let jawaban = document.querySelector(`input[name="q${i}"]:checked`);
-        let jawabanBenar = kunci[`q${i}`];
-        let labels = document.querySelectorAll(`input[name="q${i}"]`);
-        
-        // Hitung skor
-        if(jawaban && jawaban.value === jawabanBenar){
-            skor += 100/15;
-        }
-        
-        // Tandai jawaban benar dan salah
-        labels.forEach(input => {
-            let label = input.parentElement;
-            if(input.value === jawabanBenar){
-                label.classList.add('benar-jawaban'); // Hijau
-            }
-            if(jawaban && input.value === jawaban.value && jawaban.value !== jawabanBenar){
-                label.classList.add('salah-jawaban'); // Merah
-            }
-            input.disabled = true;
-        });
-        
-        // Tampilkan kunci jawaban jika salah/kosong
-        let infoEl = document.getElementById(`kunci${i}`);
-        if(!jawaban || jawaban.value !== jawabanBenar){
-            infoEl.innerText = `Jawaban Benar: ${jawabanBenar}`;
-            infoEl.style.display = 'block';
-        }
-    }
-    
-    let nilai = Math.round(skor);
-    let predikat = nilai >= 75 ? "LULUS 🎉" : "BELAJAR LAGI 💪";
-    document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilai >= 75 ? 'benar' : 'salah'}">${nilai} / 100</span><br>${predikat}`;
-    document.querySelector('.btn-submit').style.display = 'none';
-}
+function acakArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+function acakSoal() { let wadah = document.getElementById('wadahSoal'); let soalArray = Array.from(wadah.querySelectorAll('.soal')); acakArray(soalArray); soalArray.forEach(soal => wadah.appendChild(soal)); }
+function renomorSoal() { let wadah = document.getElementById('wadahSoal'); let semuaSoal = wadah.querySelectorAll('.soal'); semuaSoal.forEach((soal, index) => { let nomorEl = soal.querySelector('.nomor-soal'); if(nomorEl) nomorEl.innerText = (index + 1) + "."; }); }
+let waktu = 10 * 60; const timerEl = document.getElementById('timer'); const countdown = setInterval(() => { let menit = Math.floor(waktu / 60); let detik = waktu % 60; timerEl.innerText = `Waktu: ${menit}:${detik < 10? '0' : ''}${detik}`; if(waktu <= 0){ clearInterval(countdown); alert('Waktu Habis!'); cekJawaban(); } waktu--; }, 1000);
+function cekJawaban(){ clearInterval(countdown); let skor = 0; for(let i=1; i<=15; i++){ let jawaban = document.querySelector(`input[name="q${i}"]:checked`); let jawabanBenar = kunci[`q${i}`]; let labels = document.querySelectorAll(`input[name="q${i}"]`); if(jawaban && jawaban.value === jawabanBenar){ skor += 6.66; } labels.forEach(input => { let label = input.parentElement; if(input.value === jawabanBenar){ label.classList.add('benar-jawaban'); } if(jawaban && input.value === jawaban.value && jawaban.value!== jawabanBenar){ label.classList.add('salah-jawaban'); } input.disabled = true; }); let infoEl = document.getElementById(`kunci${i}`); if(!jawaban || jawaban.value!== jawabanBenar){ infoEl.innerText = `Jawaban benar: ${jawabanBenar}`; infoEl.style.display = 'block'; }} let nilaiAkhir = Math.round(skor); let predikat = nilaiAkhir >= 75? "LULUS 🎉" : "BELAJAR LAGI 💪"; document.getElementById('hasil').innerHTML = `Nilai Kamu: <span class="${nilaiAkhir >= 75? 'benar' : 'salah'}">${nilaiAkhir} / 100</span><br>${predikat}`; document.querySelector('.btn-submit').style.display = 'none'; }
+window.onload = function() { acakSoal(); setTimeout(renomorSoal, 50); };
 </script>
-
 </body>
 </html>
